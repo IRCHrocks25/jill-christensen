@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jill Christensen — The 110% Expert™</title>
+<meta name="description" content="Jill Christensen helps leaders and managers build workplaces people can't imagine leaving — and turn that into measurable gains in retention, productivity, customer satisfaction, and revenue growth." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ffffff; --paper2:#f4f2fa; --paper3:#faf9fc;
+  --ink:#070459; --ink-soft:#4a487a;
+  --accent:#C007D9; --lilac:#d8a6e6;
+  --rule:rgba(7,4,89,.14); --rule-lt:rgba(255,255,255,.24);
+  --display:'Jost',system-ui,-apple-system,sans-serif;
+  --sans:'Jost',system-ui,sans-serif;
+  --script:'Parisienne','Segoe Script',cursive;
+  --pad:clamp(20px,5vw,72px); --max:1280px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{background:var(--paper);color:var(--ink-soft);font-family:var(--sans);
+  font-size:clamp(15.5px,1.02vw,17px);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+img,svg{max-width:100%;height:auto;display:block;}
+section{scroll-margin-top:24px;}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--pad);}
+.narrow{max-width:900px;margin-inline:auto;}
+
+h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-height:1.12;letter-spacing:-.02em;}
+.script{font-family:var(--script);font-weight:400;font-size:clamp(24px,2.7vw,36px);
+  line-height:1.15;letter-spacing:0;color:var(--accent);display:block;}
+.eyebrow{font:600 10px/1.5 var(--sans);letter-spacing:.30em;text-transform:uppercase;color:var(--accent);display:block;}
+.display{font-size:clamp(31px,4.6vw,62px);line-height:1.08;letter-spacing:-.03em;font-weight:300;}
+.h2{font-size:clamp(26px,3.4vw,46px);line-height:1.12;letter-spacing:-.025em;font-weight:300;}
+.h3{font-size:clamp(21px,2.3vw,30px);line-height:1.2;letter-spacing:-.02em;font-weight:400;}
+.lede{font-size:clamp(16px,1.35vw,19px);line-height:1.7;}
+.pink{color:var(--accent);}
+.tm{font-size:.62em;vertical-align:super;line-height:0;}
+
+/* buttons — reference uses an outline + solid pair */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font:600 11px/1.35 var(--sans);letter-spacing:.16em;text-transform:uppercase;
+  padding:16px 28px;min-height:50px;cursor:pointer;text-align:center;white-space:normal;
+  transition:.24s;border:1px solid transparent;width:100%;}
+.btn svg{width:16px;height:10px;flex-shrink:0;}
+.btn.solid{background:var(--accent);color:#fff;}
+.btn.solid:hover{background:var(--ink);}
+.btn.line{border-color:var(--accent);color:var(--accent);background:transparent;}
+.btn.line:hover{background:var(--accent);color:#fff;}
+.btn.onDark{background:#fff;color:var(--ink);}
+.btn.onDark:hover{background:var(--accent);color:#fff;}
+.btn.lineDark{border-color:rgba(255,255,255,.55);color:#fff;}
+.btn.lineDark:hover{background:#fff;color:var(--ink);border-color:#fff;}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btns{display:flex;flex-wrap:wrap;gap:12px;}
+@media (min-width:520px){.btn{width:auto;}}
+
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .75s ease,transform .75s ease;}
+.js .rv.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;}html{scroll-behavior:auto;}}
+
+/* ============ NAV ============ */
+.nav{position:absolute;top:0;left:0;right:0;z-index:60;}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-block:22px;}
+.nav-logo{height:clamp(38px,4vw,56px);width:auto;filter:brightness(0) invert(1) drop-shadow(0 2px 14px rgba(0,0,0,.5));}
+.nav-menu{display:none;}
+.nav-menu a{font:600 10.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;
+  color:#fff;position:relative;padding:4px 0;transition:color .2s;}
+.nav-menu a::after{content:"";position:absolute;left:0;right:100%;bottom:-3px;height:1px;
+  background:var(--lilac);transition:right .25s;}
+.nav-menu a:hover{color:var(--lilac);} .nav-menu a:hover::after{right:0;}
+.burger{display:flex;flex-direction:column;gap:5px;width:44px;height:44px;border:0;background:none;
+  cursor:pointer;align-items:center;justify-content:center;}
+.burger span{width:23px;height:1.5px;background:#fff;transition:.3s;}
+.nav.open .burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav.open .burger span:nth-child(2){opacity:0;}
+.nav.open .burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.nav-menu{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-direction:column;
+  align-items:stretch;max-height:0;overflow:hidden;transition:max-height .35s,padding .35s;padding:0 var(--pad);}
+.nav.open .nav-menu{display:flex;max-height:420px;padding:8px var(--pad) 24px;}
+.nav-menu a{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.14);min-height:44px;display:flex;align-items:center;}
+@media (min-width:960px){
+  .burger{display:none;}
+  .nav-menu{display:flex !important;position:static;flex-direction:row;align-items:center;
+    gap:clamp(20px,2.6vw,38px);max-height:none;overflow:visible;padding:0;background:none;}
+  .nav-menu a{padding:4px 0;border:0;min-height:0;}
+}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;
+  text-align:center;color:#fff;overflow:hidden;
+  background:var(--ink) url('https://cdn.katalyst-crm.com/t1/74747.png') center/cover no-repeat;}
+.hero::before{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(7,4,89,.62) 0%,rgba(0,0,0,.34) 38%,rgba(7,4,89,.70) 100%);}
+.hero .wrap{position:relative;z-index:2;padding-block:clamp(120px,16vw,180px) clamp(56px,7vw,90px);}
+.hero .eyebrow{color:#fff;font-size:clamp(11px,1.15vw,13px);letter-spacing:.30em;margin-bottom:clamp(18px,2.2vw,28px);}
+.hero h1{color:#fff;font-size:clamp(33px,5.4vw,74px);font-weight:300;line-height:1.06;
+  letter-spacing:-.032em;max-width:20ch;margin:0 auto;text-shadow:0 2px 40px rgba(0,0,0,.5);}
+.hero h1 em{font-style:normal;color:var(--lilac);}
+.hero .sub{color:rgba(255,255,255,.93);max-width:62ch;margin:clamp(20px,2.4vw,30px) auto 0;
+  font-size:clamp(16px,1.4vw,19px);line-height:1.65;}
+.hero .btns{justify-content:center;margin-top:clamp(26px,3vw,38px);}
+
+/* ============ CREDIBILITY MARQUEE ============ */
+.cred{background:var(--ink);color:#fff;overflow:hidden;position:relative;}
+.cred::before,.cred::after{content:"";position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;}
+.cred::before{left:0;background:linear-gradient(90deg,var(--ink),transparent);}
+.cred::after{right:0;background:linear-gradient(270deg,var(--ink),transparent);}
+.cred-track{display:flex;width:max-content;animation:credroll 40s linear infinite;}
+.cred-track span{display:inline-flex;align-items:center;padding:17px 0;white-space:nowrap;
+  font:600 10.5px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;}
+.cred-track i{font-style:normal;color:var(--accent);padding-inline:24px;}
+@keyframes credroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion:reduce){.cred-track{animation:none;}}
+
+/* ============ SECTION SHELL ============ */
+.sec{padding-block:clamp(60px,8.5vw,124px);}
+.sec.tint{background:var(--paper2);}
+.sec.soft{background:var(--paper3);}
+.sechead{text-align:center;max-width:920px;margin:0 auto clamp(34px,4.6vw,60px);}
+.sechead .script{margin-bottom:6px;}
+.sechead p{margin-top:clamp(16px,2vw,24px);max-width:66ch;margin-inline:auto;}
+
+/* ============ THE REAL PROBLEM ============ */
+.stat-hero{text-align:center;}
+.stat-hero .num{font-family:var(--display);font-weight:200;font-size:clamp(72px,13vw,190px);
+  line-height:.82;letter-spacing:-.05em;color:var(--accent);}
+.prob-body{max-width:760px;margin:clamp(30px,3.6vw,48px) auto 0;}
+.prob-body p+p{margin-top:18px;}
+.pullbar{margin-top:clamp(38px,4.6vw,64px);text-align:center;padding-top:clamp(26px,3vw,40px);
+  border-top:1px solid var(--rule);}
+.pullbar q{quotes:none;font-family:var(--display);font-weight:300;
+  font-size:clamp(24px,3.4vw,46px);line-height:1.14;letter-spacing:-.028em;color:var(--ink);display:block;}
+
+/* ============ THE OPPORTUNITY ============ */
+.opp{position:relative;overflow:hidden;color:#fff;text-align:center;
+  padding-block:clamp(62px,9vw,130px);
+  background:var(--ink) url('https://cdn.katalyst-crm.com/t1/3d-colored-palm-leaves-assortment.jpg') center/cover no-repeat;}
+.opp::before{content:"";position:absolute;inset:0;background:rgba(7,4,89,.72);}
+.opp .wrap{position:relative;z-index:1;}
+.opp .script{color:var(--lilac);}
+.opp h2{color:#fff;max-width:18ch;margin-inline:auto;}
+.opp p{color:rgba(255,255,255,.92);max-width:62ch;margin:clamp(18px,2.2vw,26px) auto 0;}
+.opp-stat{margin-top:clamp(36px,4.4vw,60px);}
+.opp-stat .n{font-family:var(--display);font-weight:200;font-size:clamp(64px,11vw,160px);
+  line-height:.85;letter-spacing:-.05em;color:#fff;text-shadow:0 0 60px rgba(192,7,217,.5);}
+.opp-stat p{font-size:clamp(16px,1.5vw,20px);max-width:44ch;margin-top:14px;}
+.opp-close{margin-top:clamp(28px,3.4vw,44px);font-family:var(--display);font-weight:300;
+  font-size:clamp(20px,2.6vw,34px);letter-spacing:-.022em;color:var(--lilac);}
+
+/* ============ THE METHOD ============ */
+.flow{display:grid;grid-template-columns:1fr;gap:10px;align-items:center;
+  max-width:920px;margin:0 auto clamp(40px,5vw,66px);}
+.flow .step{text-align:center;padding:clamp(20px,2.4vw,30px) clamp(16px,2vw,24px);
+  border:1px solid var(--rule);background:var(--paper);
+  font-family:var(--display);font-weight:400;font-size:clamp(16px,1.6vw,21px);
+  letter-spacing:-.015em;color:var(--ink);min-width:0;}
+.flow .arrow{text-align:center;color:var(--accent);font-size:20px;line-height:1;}
+@media (min-width:800px){
+  .flow{grid-template-columns:1fr auto 1fr auto 1fr;gap:clamp(10px,1.4vw,18px);}
+  .flow .arrow{font-size:22px;}
+}
+.pillars-lbl{text-align:center;margin-bottom:clamp(22px,2.6vw,34px);}
+.pillars{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--rule);}
+.pillars div{padding:clamp(20px,2.4vw,30px) 0;border-bottom:1px solid var(--rule);
+  text-align:center;min-width:0;}
+.pillars .pn{font-family:var(--display);font-weight:200;font-size:clamp(26px,3vw,40px);
+  line-height:1;letter-spacing:-.03em;color:rgba(192,7,217,.24);margin-bottom:10px;}
+.pillars .pt{font-family:var(--display);font-weight:400;font-size:clamp(18px,2vw,26px);
+  letter-spacing:-.018em;color:var(--ink);}
+@media (min-width:760px){
+  .pillars{grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--rule);}
+  .pillars div{border-bottom:0;border-right:1px solid var(--rule);}
+  .pillars div:last-child{border-right:0;}
+}
+.method-close{text-align:center;margin-top:clamp(32px,4vw,52px);
+  font-family:var(--display);font-weight:300;font-size:clamp(19px,2.4vw,32px);
+  line-height:1.28;letter-spacing:-.022em;color:var(--ink);max-width:34ch;margin-inline:auto;}
+
+/* ============ WORK WITH JILL — alternating numbered rows ============ */
+.offer{display:grid;grid-template-columns:1fr;gap:clamp(26px,3.4vw,52px);
+  align-items:center;padding-block:clamp(34px,4.6vw,66px);}
+.offer + .offer{border-top:1px solid var(--rule);}
+.offer-media{position:relative;min-width:0;line-height:0;}
+.offer-media img{width:100%;height:auto;display:block;}
+.offer-body{min-width:0;display:grid;grid-template-columns:auto 1fr;gap:clamp(14px,2vw,28px);align-items:start;}
+.offer-num{font-family:var(--display);font-weight:200;font-size:clamp(46px,6vw,86px);
+  line-height:.82;letter-spacing:-.05em;color:rgba(192,7,217,.26);}
+.offer-txt{min-width:0;}
+.offer-kick{font:600 9.5px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;
+  color:var(--accent);display:block;margin-bottom:10px;}
+.offer-txt h3{padding-bottom:14px;border-bottom:1px solid var(--rule);margin-bottom:14px;}
+.offer-meta{font:600 10px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-soft);margin-bottom:12px;display:block;}
+.offer-txt p{font-size:16px;line-height:1.72;}
+.offer-list{list-style:none;margin-top:18px;}
+.offer-list li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;
+  font-size:15.5px;line-height:1.55;color:var(--ink);min-width:0;}
+.offer-list svg{width:14px;height:14px;flex-shrink:0;margin-top:4px;color:var(--accent);}
+.offer-list .lbl{font:600 10px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);padding:0 0 8px;display:block;}
+.offer .btns{margin-top:22px;}
+.offer-note{font-size:14px;font-style:normal;color:var(--ink-soft);margin-top:12px;}
+@media (min-width:900px){
+  .offer{grid-template-columns:1.02fr .98fr;gap:clamp(40px,5vw,80px);}
+  .offer.flip .offer-media{order:2;}
+  .offer.flip .offer-body{order:1;}
+}
+
+/* books strip */
+.books{margin-top:clamp(30px,4vw,52px);border-top:1px solid var(--rule);
+  padding-top:clamp(26px,3.2vw,42px);text-align:center;}
+.books .script{margin-bottom:12px;}
+.books p{max-width:52ch;margin-inline:auto;}
+
+/* ============ ABOUT ============ */
+.about{display:grid;grid-template-columns:1fr;align-items:stretch;}
+.about-pic{position:relative;min-height:clamp(320px,66vw,540px);overflow:hidden;
+  background:var(--ink) url('https://cdn.katalyst-crm.com/t1/5%20(1).jpg') center top/cover no-repeat;}
+.about-txt{background:var(--ink);color:#fff;padding:clamp(32px,4.4vw,72px);
+  display:flex;flex-direction:column;justify-content:center;min-width:0;}
+.about-txt .script{color:var(--lilac);}
+.about-txt h2{color:#fff;margin:6px 0 18px;max-width:20ch;}
+.about-txt p{color:rgba(255,255,255,.90);font-size:clamp(15.5px,1.28vw,17.5px);line-height:1.78;}
+.about-txt p+p{margin-top:16px;}
+.about-txt .btns{margin-top:26px;}
+@media (min-width:960px){
+  .about{grid-template-columns:.92fr 1.08fr;}
+  .about-pic{min-height:680px;}
+}
+
+/* ============ TESTIMONIALS ============ */
+.quotes{display:grid;grid-template-columns:1fr;gap:clamp(24px,3vw,44px);}
+.qcard{border-top:2px solid var(--accent);padding-top:clamp(22px,2.6vw,32px);min-width:0;}
+.qcard .qm{font-family:var(--display);font-weight:300;font-size:clamp(46px,5vw,70px);
+  line-height:.5;color:rgba(192,7,217,.3);display:block;margin-bottom:16px;}
+.qcard p{font-family:var(--display);font-weight:300;font-size:clamp(18px,1.9vw,24px);
+  line-height:1.42;letter-spacing:-.015em;color:var(--ink);}
+.qcard cite{display:block;margin-top:18px;font:600 10px/1.5 var(--sans);letter-spacing:.2em;
+  text-transform:uppercase;font-style:normal;color:var(--accent);}
+@media (min-width:820px){.quotes{grid-template-columns:1fr 1fr;}}
+
+/* ============ FREE TOOL ============ */
+.tool{position:relative;overflow:hidden;color:#fff;
+  background:var(--ink) url('https://cdn.katalyst-crm.com/t1/99d8e4cb8b46d0be24248a68bf59b08a_LE_upscale_gentle%20(1).jpg') center/cover no-repeat;
+  padding-block:clamp(58px,8vw,116px);}
+.tool::before{content:"";position:absolute;inset:0;background:rgba(7,4,89,.80);}
+.tool .wrap{position:relative;z-index:1;text-align:center;}
+.tool .script{color:var(--lilac);}
+.tool h2{color:#fff;max-width:22ch;margin:6px auto 18px;}
+.tool p{color:rgba(255,255,255,.92);max-width:62ch;margin:0 auto;}
+.tool .btns{justify-content:center;margin-top:28px;}
+
+/* ============ FINAL CTA ============ */
+.final{text-align:center;padding-block:clamp(62px,8.5vw,124px);background:var(--paper2);}
+.final h2{max-width:20ch;margin:0 auto 14px;}
+.final .sub{font-family:var(--display);font-weight:300;font-size:clamp(19px,2.3vw,30px);
+  letter-spacing:-.02em;color:var(--accent);}
+.final .btns{justify-content:center;margin-top:30px;}
+
+/* ============ FOOTER ============ */
+.foot{background:var(--ink);color:rgba(255,255,255,.82);padding-block:clamp(44px,5.6vw,72px) 40px;}
+.foot .cols{display:grid;grid-template-columns:1fr;gap:28px;}
+.foot-logo{height:46px;width:auto;filter:brightness(0) invert(1);}
+.foot h5{font:600 10px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;
+  color:var(--lilac);margin-bottom:14px;}
+.foot a{display:block;padding:7px 0;font-size:15.5px;color:rgba(255,255,255,.82);transition:color .2s;}
+.foot a:hover{color:var(--lilac);}
+.foot .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
+  margin-top:32px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);
+  font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;}
+.foot .legal a{display:inline;padding:0;border-bottom:1px solid currentColor;}
+@media (min-width:760px){.foot .cols{grid-template-columns:1.5fr 1fr 1fr;gap:clamp(28px,4vw,60px);}}
+
+/* long words never blow out a column */
+.offer-txt p,.prob-body p,.about-txt p,.qcard p,.tool p{overflow-wrap:anywhere;}
+
+/* ============ phones ============ */
+@media (max-width:767px){
+  .hero{min-height:94svh;}
+  .hero h1{font-size:clamp(30px,8vw,44px);}
+  .offer-body{grid-template-columns:1fr;gap:10px;}
+  .offer-num{font-size:clamp(40px,11vw,54px);}
+  .about-txt{padding:32px 22px;}
+  .foot{padding-bottom:36px;}
+}
+
+/* ============ HERO: copy left, figure bottom-right ============ */
+.hero{align-items:stretch;text-align:left;}
+.hero .wrap.hero-grid{display:grid;grid-template-columns:1fr;align-items:end;gap:0;
+  padding-block:clamp(112px,14vw,150px) 0;width:100%;}
+.hero-copy{align-self:center;text-align:left;padding-bottom:clamp(44px,6vw,80px);min-width:0;}
+.hero-copy .eyebrow{color:#fff;}
+.hero h1{max-width:16ch;margin:0;}
+.hero .sub{margin:clamp(18px,2.2vw,28px) 0 0;max-width:52ch;}
+.hero .btns{justify-content:flex-start;margin-top:clamp(24px,2.8vw,36px);}
+.hero-figure{align-self:end;min-width:0;line-height:0;display:flex;justify-content:center;align-items:flex-end;}
+.hero-figure img{width:auto;max-width:100%;max-height:clamp(320px,62vh,720px);height:auto;
+  object-fit:contain;object-position:center bottom;
+  filter:drop-shadow(0 24px 60px rgba(0,0,0,.5));}
+@media (min-width:960px){
+  .hero .wrap.hero-grid{grid-template-columns:1.1fr .9fr;gap:clamp(28px,3.4vw,56px);}
+  .hero-figure img{max-height:min(78vh,760px);}
+}
+@media (max-width:959px){
+  .hero-copy{padding-bottom:clamp(28px,4vw,44px);}
+  .hero-figure img{max-height:min(46vh,420px);}
+}
+
+/* ============ METHOD: flow with icons ============ */
+.flow .step{display:flex;flex-direction:column;align-items:center;gap:10px;
+  padding:clamp(24px,2.8vw,36px) clamp(16px,2vw,24px);
+  border:1px solid var(--rule);background:var(--paper);position:relative;overflow:hidden;
+  transition:transform .3s cubic-bezier(.4,0,.2,1),box-shadow .3s ease,border-color .3s ease;}
+.flow .step::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;
+  background:var(--accent);transform:scaleX(0);transform-origin:left;
+  transition:transform .45s cubic-bezier(.4,0,.2,1);}
+.flow .step:hover{transform:translateY(-6px);border-color:var(--accent);
+  box-shadow:0 22px 48px rgba(7,4,89,.12);}
+.flow .step:hover::before{transform:scaleX(1);}
+.flow .fi{width:clamp(38px,4vw,52px);height:clamp(38px,4vw,52px);color:var(--accent);
+  transition:transform .35s cubic-bezier(.4,0,.2,1);}
+.flow .fi svg{width:100%;height:100%;display:block;}
+.flow .step:hover .fi{transform:scale(1.12) rotate(-4deg);}
+.flow .ft{font-family:var(--display);font-weight:400;font-size:clamp(16px,1.6vw,21px);
+  letter-spacing:-.015em;color:var(--ink);line-height:1.2;}
+.flow .fn{font:600 9px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-soft);}
+.flow .arrow{transition:transform .3s ease,color .3s ease;}
+.flow:hover .arrow{color:var(--accent);}
+
+
+/* ============ HERO: wider copy, tighter left ============ */
+.hero .wrap.hero-grid{max-width:1560px;padding-left:clamp(18px,3vw,44px);padding-right:clamp(18px,3.4vw,52px);}
+.hero-copy{max-width:none;}
+.hero h1{max-width:22ch;}
+.hero .sub{max-width:66ch;}
+@media (min-width:960px){
+  .hero .wrap.hero-grid{grid-template-columns:1.32fr .68fr;gap:clamp(24px,3vw,48px);}
+  .hero h1{font-size:clamp(40px,4.9vw,78px);}
+}
+
+/* ============ THE REAL PROBLEM: split ============ */
+.prob-grid{display:grid;grid-template-columns:1fr;gap:clamp(26px,3.6vw,54px);align-items:start;}
+.prob-left{min-width:0;}
+.prob-left .num{font-family:var(--display);font-weight:200;font-size:clamp(72px,11vw,168px);
+  line-height:.82;letter-spacing:-.05em;color:var(--accent);margin:6px 0 clamp(12px,1.6vw,20px);}
+.prob-left h2{max-width:18ch;}
+.prob-right{min-width:0;}
+.prob-right p+p{margin-top:18px;}
+@media (min-width:900px){
+  .prob-grid{grid-template-columns:1.04fr .96fr;gap:clamp(40px,5vw,88px);}
+  .prob-right{padding-top:clamp(20px,3vw,54px);}
+}
+
+
+/* --- Work With Jill heading: wider --- */
+#work .sechead{max-width:1180px;}
+#work .sechead .display{font-size:clamp(33px,5vw,70px);max-width:22ch;margin-inline:auto;}
+@media (min-width:1100px){#work > .wrap{max-width:1400px;}}
+
+/* --- pull quote now sits inside the right column --- */
+.prob-right .pullbar{margin-top:clamp(26px,3vw,38px);padding-top:clamp(22px,2.6vw,30px);
+  border-top:1px solid var(--rule);text-align:left;}
+.prob-right .pullbar q{font-size:clamp(21px,2.6vw,34px);line-height:1.16;max-width:16ch;}
+
+@media (min-width:1040px){
+  .pillars{grid-template-columns:repeat(4,1fr);column-gap:clamp(24px,2.8vw,46px);}
+  .pillars .pillar{padding-block:clamp(30px,3.2vw,44px) clamp(28px,3vw,40px);}
+  /* magazine stagger */
+  .pillars .pillar:nth-child(even){margin-top:clamp(26px,3vw,46px);}
+  .pillars .pillar:nth-child(3),.pillars .pillar:nth-child(4){border-bottom:0;}
+}
+@media (prefers-reduced-motion:reduce){
+  .pillars .pillar:hover{transform:none;}
+  .pillars .pillar:hover .pn{transform:none;}
+}
+
+/* --- final CTA heading locked to two lines --- */
+.final-h{max-width:none;}
+.final-h .ln{display:block;white-space:nowrap;}
+@media (max-width:767px){.final-h .ln{white-space:normal;}}
+
+/* --- hero headline: 20% smaller, two locked lines --- */
+.hero-h .ln{display:block;white-space:nowrap;}
+.hero-h .ln.em{color:var(--lilac);}
+@media (min-width:960px){.hero h1.hero-h{font-size:clamp(32px,3.9vw,62px);max-width:none;}}
+@media (max-width:959px){
+  .hero h1.hero-h{font-size:clamp(24px,6vw,36px);}
+  .hero-h .ln{white-space:normal;}
+}
+
+/* --- Work With Jill heading on one line --- */
+#work .sechead{max-width:1340px;}
+#work .display.fit-one{white-space:nowrap;max-width:none;font-size:clamp(24px,4.2vw,62px);}
+@media (max-width:767px){#work .display.fit-one{white-space:normal;font-size:clamp(26px,6.8vw,38px);}}
+
+/* ============ FOUR PILLARS — bubble graphic ============ */
+.pillars{position:relative;display:grid;grid-template-columns:1fr;gap:clamp(30px,3.6vw,44px);
+  border:0;padding-top:clamp(10px,1.4vw,18px);}
+.pillars .pillar{position:relative;z-index:1;margin:0;padding:0;border:0;background:none;
+  min-height:0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;
+  transition:transform .42s cubic-bezier(.34,1.3,.5,1);}
+
+/* the bubble */
+.bubble{position:relative;display:grid;place-items:center;
+  width:clamp(104px,11vw,150px);height:clamp(104px,11vw,150px);border-radius:50%;
+  background:var(--paper);border:1px solid var(--rule);
+  margin-bottom:clamp(16px,2vw,24px);
+  transition:background .42s ease,border-color .42s ease,box-shadow .42s ease,transform .42s cubic-bezier(.34,1.3,.5,1);}
+/* soft outer halo */
+.bubble::before{content:"";position:absolute;inset:-14px;border-radius:50%;
+  background:radial-gradient(circle,rgba(192,7,217,.20),transparent 68%);
+  opacity:0;transition:opacity .42s ease;pointer-events:none;}
+/* expanding ring */
+.bubble::after{content:"";position:absolute;inset:-6px;border-radius:50%;
+  border:1px solid var(--accent);opacity:0;transform:scale(.86);
+  transition:opacity .5s ease,transform .5s cubic-bezier(.34,1.3,.5,1);pointer-events:none;}
+.bn{font-family:var(--display);font-weight:200;font-size:clamp(30px,3.4vw,46px);
+  line-height:1;letter-spacing:-.04em;color:rgba(192,7,217,.42);
+  transition:color .38s ease,transform .42s cubic-bezier(.34,1.3,.5,1);}
+
+.pillars .pt{font-family:var(--display);font-weight:300;
+  font-size:clamp(19px,2.1vw,28px);line-height:1.2;letter-spacing:-.022em;
+  color:var(--ink);margin:0;text-shadow:none;transition:color .32s ease;}
+
+/* hover */
+.pillars .pillar:hover{transform:translateY(-8px);}
+.pillars .pillar:hover .bubble{background:var(--accent);border-color:var(--accent);
+  transform:scale(1.06);
+  box-shadow:0 18px 44px rgba(192,7,217,.36),0 0 0 6px rgba(192,7,217,.09);}
+.pillars .pillar:hover .bubble::before{opacity:1;}
+.pillars .pillar:hover .bubble::after{opacity:1;transform:scale(1.12);}
+.pillars .pillar:hover .bn{color:#fff;transform:scale(1.06);}
+.pillars .pillar:hover .pt{color:var(--accent);}
+
+/* row layout + connecting baseline */
+@media (min-width:760px){
+  .pillars{grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.2vw,30px);}
+}
+@media (prefers-reduced-motion:reduce){
+  .pillars .pillar:hover,.pillars .pillar:hover .bubble,
+  .pillars .pillar:hover .bn{transform:none;}
+}
+
+/* --- testimonials: drop the accent rule, let the words lead --- */
+.qcard{border-top:0;padding-top:0;}
+.qcard .qm{color:rgba(192,7,217,.18);font-size:clamp(52px,5.6vw,78px);margin-bottom:10px;}
+.qcard p{font-size:clamp(19px,2.1vw,27px);line-height:1.38;color:var(--ink);}
+.qcard cite{color:var(--ink-soft);letter-spacing:.18em;}
+@media (min-width:820px){.quotes{gap:clamp(36px,4.6vw,72px);}}
+
+/* --- pillars: no card background, no gradient, no baseline --- */
+.pillars .pillar{background:none !important;overflow:visible;}
+.pillars .pillar::before,.pillars .pillar::after{content:none !important;}
+.pillars .pillar:hover{background:none !important;box-shadow:none !important;}
+
+/* --- method closer: two locked lines, full width --- */
+.method-close.fit-two{max-width:none;width:100%;}
+.fit-two .ln{display:block;white-space:nowrap;}
+@media (max-width:959px){.fit-two .ln{white-space:normal;}}
+
+/* ============ HERO → light: palm shadows on white wall ============ */
+.hero{color:var(--ink);
+  background:#f7f6f3 url('https://cdn.katalyst-crm.com/t1/abstract-background-shadows-palm-leaves-white-wall.jpg') center/cover no-repeat !important;}
+/* soft light wash from the left so the copy sits clean */
+.hero::before{background:linear-gradient(90deg,
+  rgba(252,251,249,.94) 0%,
+  rgba(252,251,249,.82) 30%,
+  rgba(252,251,249,.42) 58%,
+  rgba(252,251,249,.10) 80%,
+  rgba(252,251,249,0) 100%) !important;}
+@media (max-width:959px){
+  .hero::before{background:linear-gradient(180deg,
+    rgba(252,251,249,.92) 0%,
+    rgba(252,251,249,.80) 46%,
+    rgba(252,251,249,.55) 74%,
+    rgba(252,251,249,.28) 100%) !important;}
+}
+/* dark type on the light hero */
+.hero .eyebrow{color:var(--accent) !important;text-shadow:none;}
+.hero h1,.hero h1.hero-h{color:var(--ink);text-shadow:none;}
+.hero-h .ln.em{color:var(--accent);}
+.hero .sub{color:var(--ink-soft);text-shadow:none;}
+/* ghost button flips to a dark outline */
+.hero .btn.lineDark{border-color:var(--ink);color:var(--ink);background:transparent;}
+.hero .btn.lineDark:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+/* nav goes dark over the light hero */
+.nav-logo{filter:none !important;height:clamp(52px,5.4vw,76px);}
+.nav-menu a{color:var(--ink);}
+.nav-menu a:hover{color:var(--accent);}
+.nav-menu a::after{background:var(--accent);}
+.burger span{background:var(--ink);}
+.nav.open .nav-menu a{color:#fff;}
+
+/* hero figure 20% larger */
+.hero-figure img{filter:drop-shadow(0 26px 60px rgba(7,4,89,.28));}
+@media (min-width:960px){.hero-figure img{max-height:min(94vh,912px);}}
+@media (max-width:959px){.hero-figure img{max-height:min(55vh,504px);}}
+
+/* footer logo bigger */
+.foot-logo{height:clamp(56px,5vw,72px);}
+
+/* free tool: let the photograph read */
+.tool::before{background:rgba(7,4,89,.54) !important;}
+.tool h2,.tool p,.tool .script{text-shadow:0 2px 22px rgba(7,4,89,.7);}
+
+/* --- hero portrait: another 20% --- */
+@media (min-width:960px){
+  .hero .wrap.hero-grid{grid-template-columns:1.18fr .82fr;}
+  .hero-figure img{max-height:min(112vh,1094px) !important;max-width:none;width:auto;}
+}
+@media (max-width:959px){.hero-figure img{max-height:min(66vh,605px) !important;}}
+
+/* --- hero: shorter section --- */
+.hero{min-height:0 !important;}
+.hero .wrap.hero-grid{padding-block:clamp(96px,10vw,124px) 0 !important;}
+@media (min-width:960px){
+  .hero-copy{padding-bottom:clamp(36px,4.4vw,60px);}
+  .hero-figure img{max-height:min(74vh,700px) !important;}
+}
+@media (max-width:959px){
+  .hero .wrap.hero-grid{padding-block:clamp(86px,20vw,112px) 0 !important;}
+  .hero-figure img{max-height:min(48vh,430px) !important;}
+}
+
+/* ================= MOBILE PASS ================= */
+@media (max-width:767px){
+  /* every locked line wraps instead of shrinking */
+  .hero-h .ln,.final-h .ln,.fit-two .ln,.display.fit-one{white-space:normal !important;}
+  .hero h1.hero-h{font-size:clamp(27px,7.4vw,38px) !important;}
+  #work .display.fit-one{font-size:clamp(25px,6.6vw,36px) !important;}
+  .final-h,.final h2{font-size:clamp(25px,6.6vw,36px) !important;}
+  .method-close.fit-two{font-size:clamp(19px,5.2vw,26px) !important;}
+
+  /* hero */
+  .hero .wrap.hero-grid{padding-block:clamp(84px,20vw,108px) 0 !important;}
+  .hero-copy{padding-bottom:26px;}
+  .hero-figure img{max-height:min(42vh,380px) !important;}
+  .nav-logo{height:clamp(42px,12vw,54px) !important;}
+  .hero .btn{width:100%;}
+
+  /* the real problem */
+  .prob-left .num{font-size:clamp(62px,20vw,96px);}
+  .prob-right .pullbar q{font-size:clamp(20px,5.6vw,27px);}
+
+  /* method */
+  .flow .step{padding:22px 18px;}
+  .flow .fi{width:44px;height:44px;}
+  .pillars{gap:26px;}
+  .bubble{width:96px;height:96px;margin-bottom:14px;}
+  .bn{font-size:30px;}
+  .pillars .pt{font-size:clamp(18px,5vw,22px);}
+
+  /* work with jill */
+  .offer{padding-block:26px;gap:22px;}
+  .offer-body{grid-template-columns:1fr;gap:8px;}
+  .offer-num{font-size:clamp(38px,11vw,50px);}
+  .offer-txt h3{font-size:clamp(19px,5.2vw,24px);}
+  .offer .btn{width:100%;}
+
+  /* about + testimonials */
+  .about-txt{padding:30px 20px;}
+  .qcard p{font-size:clamp(18px,5vw,23px);}
+
+  /* tool + close */
+  .tool .btn,.close .btn,.final .btn{width:100%;}
+  .foot{padding-bottom:36px;}
+}
+/* nothing overflows a narrow column */
+.offer-txt p,.prob-right p,.about-txt p,.qcard p,.tool p,.creds li,.beat-txt p{overflow-wrap:anywhere;}
+
+/* --- The Real Problem: smaller stat + headline --- */
+.prob-left .num{font-size:clamp(56px,7.4vw,112px);margin-bottom:clamp(10px,1.3vw,16px);}
+.prob-left h2{font-size:clamp(25px,3.2vw,44px);}
+@media (max-width:767px){
+  .prob-left .num{font-size:clamp(48px,15vw,72px);}
+  .prob-left h2{font-size:clamp(22px,5.8vw,30px);}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+<svg style="position:absolute;width:0;height:0" aria-hidden="true">
+  <symbol id="arw" viewBox="0 0 36 11"><path d="M0 5.5h33M28 1l5 4.5L28 10" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  <symbol id="chk" viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+</svg>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top"><img class="nav-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="260" height="58"></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="#top">Home</a>
+      <a href="#work">Workshop</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#work">Clients</a>
+      <a href="#work">Books</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== 01 · HERO ===== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">The 110% Expert<span class="tm">&trade;</span> &nbsp;·&nbsp; Keynote Speaker &nbsp;·&nbsp; Best-Selling Author</span>
+        <!-- A/B TEST — Alt headline: "Your people aren't the problem. The way they're led is." -->
+        <h1 class="hero-h"><span class="ln">Leaders: Employees don&rsquo;t quit jobs.</span><span class="ln em">They quit management experiences.</span></h1>
+        <p class="sub">Jill Christensen helps leaders and managers build workplaces people can&rsquo;t imagine leaving and turn that into measurable gains in retention, productivity, customer satisfaction, and revenue growth.</p>
+        <div class="btns">
+          <a class="btn solid" href="#final"><span>Book Jill to Speak</span> <svg><use href="#arw"/></svg></a>
+          <a class="btn lineDark" href="#tool"><span>Free Tool &mdash; Manager Readiness Assessment</span></a>
+        </div>
+      </div>
+      <div class="hero-figure">
+        <img src="https://cdn.katalyst-crm.com/t1/d8cd8022-1ad7-45d4-8368-5ab1ff51de31%201.png" alt="Jill Christensen" width="700" height="900">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 02 · CREDIBILITY BAR ===== -->
+  <div class="cred" aria-label="Credentials">
+    <div class="cred-track">
+      <span>Top 200 Global Thought Leader to Watch <i>&#9670;</i> Top 101 Employee Engagement Influencer <i>&#9670;</i> Former Fortune 500 Executive <i>&#9670;</i> Six Sigma Green Belt <i>&#9670;</i> Best-Selling Author <i>&#9670;</i></span>
+      <span>Top 200 Global Thought Leader to Watch <i>&#9670;</i> Top 101 Employee Engagement Influencer <i>&#9670;</i> Former Fortune 500 Executive <i>&#9670;</i> Six Sigma Green Belt <i>&#9670;</i> Best-Selling Author <i>&#9670;</i></span>
+    </div>
+  </div>
+
+  <!-- ===== 03 · THE REAL PROBLEM ===== -->
+  <section class="sec" id="problem">
+    <div class="wrap">
+      <div class="prob-grid">
+        <div class="prob-left rv">
+          <span class="script">The Real Problem</span>
+          <div class="num" data-count="77">77%</div>
+          <h2 class="display">of your employees do the bare minimum. <span class="pink">That&rsquo;s not a people problem; it&rsquo;s a leadership one.</span></h2>
+        </div>
+        <div class="prob-right rv">
+          <p>Most managers were handed a title and a team, but never taught how to lead and what employees need to do their best work. So talent walks. Effort flatlines. And the cost shows up everywhere: in turnover, in slipping customer scores, in revenue that should be higher.</p>
+          <p>Here&rsquo;s the part most managers miss: &lsquo;checked out&rsquo; employees aren&rsquo;t permanent. It&rsquo;s a gap you can close deliberately.</p>
+          <div class="pullbar"><q>You can&rsquo;t leave your culture to chance.</q></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 04 · THE OPPORTUNITY ===== -->
+  <section class="opp" id="opportunity">
+    <div class="wrap">
+      <span class="script rv">The Opportunity</span>
+      <h2 class="display rv" style="margin-top:6px;">Build a workplace <span style="color:var(--lilac);">no one can imagine leaving.</span></h2>
+      <p class="rv">Jill doesn&rsquo;t sell &lsquo;discretionary effort&rsquo; as a feel-good idea. She makes it a business strategy with a number attached. When managers get deliberate about culture, people give their best and the results are measurable.</p>
+      <div class="opp-stat rv">
+        <div class="n" data-count="147">147%</div>
+        <p>Companies in the top tier of engagement outperform their peers by 147% in earnings.</p>
+      </div>
+      <p class="opp-close rv">The upside isn&rsquo;t soft.</p>
+    </div>
+  </section>
+
+  <!-- ===== 05 · THE METHOD ===== -->
+  <section class="sec tint" id="method">
+    <div class="wrap">
+      <div class="sechead rv">
+        <span class="script">The Method</span>
+        <h2 class="display" style="margin-top:4px;">The Irresistible Workplace Formula<span class="tm">&trade;</span></h2>
+        <p>Culture change isn&rsquo;t luck. It follows a sequence and it works in any organization, in any industry, in any country.</p>
+      </div>
+
+      <div class="flow rv">
+        <div class="step">
+          <span class="fi"><svg viewBox="0 0 40 40"><path d="M20 6l3.4 7.6 8.3.9-6.2 5.6 1.7 8.2L20 24.2 12.8 28.3l1.7-8.2-6.2-5.6 8.3-.9z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 34h24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+          <span class="ft">Leadership Involvement</span>
+          <span class="fn">Strategy at the top</span>
+        </div>
+        <div class="arrow" aria-hidden="true">&rarr;</div>
+        <div class="step">
+          <span class="fi"><svg viewBox="0 0 40 40"><path d="M6 21l5-5 4.5 4.5a3 3 0 004.2 0L24 16l10 10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 16h6v6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="3.2" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span>
+          <span class="ft">Manager Commitment</span>
+          <span class="fn">Commitment in the middle</span>
+        </div>
+        <div class="arrow" aria-hidden="true">&rarr;</div>
+        <div class="step">
+          <span class="fi"><svg viewBox="0 0 40 40"><path d="M7 33V22M15.7 33V15M24.3 33V19M33 33V9" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M5 36h30" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".45"/></svg></span>
+          <span class="ft">Employee Effort</span>
+          <span class="fn">Effort everywhere</span>
+        </div>
+      </div>
+
+      <div class="pillars-lbl rv">
+        <span class="eyebrow">The Four Pillars</span>
+        <p class="lede" style="margin-top:10px;">The Environment Great Managers Create</p>
+      </div>
+      <div class="pillars rv">
+        <figure class="pillar">
+          <span class="bubble"><span class="bn">01</span></span>
+          <h3 class="pt">Trust</h3>
+        </figure>
+        <figure class="pillar">
+          <span class="bubble"><span class="bn">02</span></span>
+          <h3 class="pt">Connection</h3>
+        </figure>
+        <figure class="pillar">
+          <span class="bubble"><span class="bn">03</span></span>
+          <h3 class="pt">Two-Way<br>Communication</h3>
+        </figure>
+        <figure class="pillar">
+          <span class="bubble"><span class="bn">04</span></span>
+          <h3 class="pt">Recognition</h3>
+        </figure>
+      </div>
+
+      <p class="method-close rv fit-two"><span class="ln">Strategy at the top. Commitment in the middle. Effort everywhere.</span><span class="ln">That&rsquo;s how you make work irresistible.</span></p>
+    </div>
+  </section>
+
+  <!-- ===== 06 · WORK WITH JILL ===== -->
+  <section class="sec" id="work">
+    <div class="wrap">
+      <div class="sechead rv">
+        <span class="script">Work With Jill</span>
+        <h2 class="display fit-one" style="margin-top:4px;">One message. <span class="pink">Four ways to put it to work.</span></h2>
+      </div>
+
+      <!-- 01 KEYNOTE -->
+      <article class="offer rv">
+        <div class="offer-media">
+          <img src="https://cdn.katalyst-crm.com/t1/5%203.png" alt="Jill Christensen delivering a keynote" loading="lazy">
+        </div>
+        <div class="offer-body">
+          <div class="offer-num">01</div>
+          <div class="offer-txt">
+            <span class="offer-kick">Keynote</span>
+            <h3 class="h3">If Not You, Who? How Ordinary People Achieve Extraordinary Results</h3>
+            <p>A dynamic, industry-tailored keynote that sends leaders and managers home knowing exactly what to do differently on Monday morning to get your people to give 110%. The result? Increased performance, productivity, retention, customer satisfaction and profitable revenue growth. Priceless..</p>
+            <ul class="offer-list">
+              <span class="lbl">The Keynote Bundle Includes</span>
+              <li><svg><use href="#chk"/></svg><span>Dynamic keynote with recording access</span></li>
+              <li><svg><use href="#chk"/></svg><span>Book signing / meet &amp; greet</span></li>
+              <li><svg><use href="#chk"/></svg><span>&ldquo;Ask Me Anything&rdquo; Q&amp;A</span></li>
+              <li><svg><use href="#chk"/></svg><span>Optional panel discussion</span></li>
+              <li><svg><use href="#chk"/></svg><span>Event teaser / promo video</span></li>
+              <li><svg><use href="#chk"/></svg><span>Stress-free logistics (bundled T&amp;E)</span></li>
+            </ul>
+            <div class="btns">
+              <a class="btn solid" href="#final"><span>Book Jill to Speak</span> <svg><use href="#arw"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 BREAKOUT -->
+      <article class="offer flip rv">
+        <div class="offer-media">
+          <img src="https://cdn.katalyst-crm.com/t1/45d3faef6ffa17b4ca0643926519eef7_LE_upscale_prime%20(1).jpg" alt="Leading remote teams session" loading="lazy">
+        </div>
+        <div class="offer-body">
+          <div class="offer-num">02</div>
+          <div class="offer-txt">
+            <span class="offer-kick">Breakout Session</span>
+            <h3 class="h3">Leading From a Distance &mdash; How to Inspire Exceptional Performance in Remote Teams</h3>
+            <p>Between the COVID pandemic and AI, &lsquo;work&rsquo; as we know it has changed forever. The orgs that succeed will allow people to work remotely and lead them effectively. In this session, you&rsquo;ll learn what virtual employees need to remain productive and engaged&mdash;even when miles apart.</p>
+            <div class="btns">
+              <a class="btn solid" href="#final"><span>Book Jill to Speak</span> <svg><use href="#arw"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 FREE AI WEBINAR -->
+      <article class="offer rv">
+        <div class="offer-media">
+          <img src="https://cdn.katalyst-crm.com/t1/d0839a5c56907aab6d8a2b5baa3a835e.jpg" alt="Free AI webinar on Zoom" loading="lazy">
+        </div>
+        <div class="offer-body">
+          <div class="offer-num">03</div>
+          <div class="offer-txt">
+            <span class="offer-kick">Free AI Webinar</span>
+            <h3 class="h3">Lead or Be Left Behind: The One Skill Managers Need Most in the AI Era</h3>
+            <span class="offer-meta">Live on Zoom &mdash; 60 Minutes</span>
+            <p>AI adoption is a people challenge disguised as a technology challenge. In this free session, Jill reveals the one skill that separates managers who thrive from those who struggle, and shows you exactly how to develop it. You&rsquo;ll also learn practical AI strategies that can put you in the top 10% of users.</p>
+            <div class="btns">
+              <a class="btn solid" href="#final"><span>Register Free</span> <svg><use href="#arw"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 TOUGH TALKS -->
+      <article class="offer flip rv">
+        <div class="offer-media">
+          <img src="https://cdn.katalyst-crm.com/t1/JillChristensen21%202.png" alt="The Tough Talks Workshop" loading="lazy">
+        </div>
+        <div class="offer-body">
+          <div class="offer-num">04</div>
+          <div class="offer-txt">
+            <span class="offer-kick">New Tough Talks Workshop</span>
+            <h3 class="h3">The Tough Talks Workshop</h3>
+            <span class="offer-meta">Live on Zoom &mdash; 2 Hours</span>
+            <!-- PRODUCTION NOTE: "Conversartion" below is as supplied in the copy doc — confirm spelling before launch -->
+            <p>Managers who achieve extraordinary results aren&rsquo;t the ones who avoid difficult conversations. They&rsquo;re the ones who know how to have them. This two-hour hands-on workshop teaches managers their natural Tough Talks Conversartion Style, why they avoid difficult situations, and how to confidently handle resistance, change, accountability, and uncertainty via real role-play, Q&amp;A, conversation language, and a 1-on-1 follow-up with Jill. A game changer for anyone who leads a team or regularly has tough conversations.</p>
+            <p class="offer-note">Also available to an Organization for Groups of Managers</p>
+            <div class="btns">
+              <a class="btn solid" href="#final"><span>Explore the Workshop</span> <svg><use href="#arw"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== 07 · ABOUT JILL ===== -->
+  <section class="about" id="about">
+    <div class="about-pic"></div>
+    <div class="about-txt rv">
+      <span class="script">About Jill</span>
+      <h2 class="h2">From laid-off executive to the world&rsquo;s go-to voice on workplace culture.</h2>
+      <p>In 2009, after 22 years climbing the ranks of corporate America &mdash; leading Global Internal Communications inside Fortune 500 companies &mdash; Jill Christensen was laid off. In that moment, she saw the truth she&rsquo;d been living: too many organizations treat people like numbers, and it costs them everything. So she built a company to fix it.</p>
+      <p>Today, Jill is recognized as one of the highest-rated female speakers in the world. A Top 200 Global Thought Leader to Watch and Six Sigma Green Belt, she has shared her methodology with more than 500,000 professionals across 375 events worldwide. Her debut book is a global best-seller, and her award-winning blog was named a Top 100 Corporate Blog alongside Apple and Microsoft.</p>
+      <p>Off the stage: a dual U.S./U.K. citizen based in Arizona, you&rsquo;ll find her at an NFL game, a rock concert, a pickleball court, or a Mahjong table.</p>
+      <div class="btns">
+        <a class="btn onDark" href="#final"><span>More About Jill</span> <svg><use href="#arw"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 08 · WHAT EVENT PLANNERS SAY ===== -->
+  <section class="sec soft" id="reviews">
+    <div class="wrap">
+      <div class="sechead rv">
+        <span class="script">What Event Planners Say</span>
+      </div>
+      <div class="quotes rv">
+        <div class="qcard">
+          <span class="qm">&ldquo;</span>
+          <p>Jill keynoted our conference and the feedback was amazing. Her book was a sell-out, and attendees spoke about her for the remainder of the event. She was a homerun for our members and program.</p>
+          <cite>Amy B. &nbsp;&middot;&nbsp; Kansas State Society of HR Management (SHRM)</cite>
+        </div>
+        <div class="qcard">
+          <span class="qm">&ldquo;</span>
+          <p>Simply put Jill rocks! Her examples are memorable, and she provides tangible, actionable steps to build a great workplace culture. She&rsquo;s everything you could ask for.</p>
+          <cite>Matt U. &nbsp;&middot;&nbsp; Auburn University</cite>
+        </div>
+      </div>
+      <div class="btns rv" style="justify-content:center;margin-top:clamp(30px,3.6vw,46px);">
+        <a class="btn line" href="#reviews"><span>Read All Reviews</span> <svg><use href="#arw"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 09 · FREE TOOL ===== -->
+  <section class="tool" id="tool">
+    <div class="wrap rv">
+      <span class="script">Free Tool</span>
+      <h2 class="display">Is your team set up to give 110%? <span style="color:var(--lilac);">Find out in 2 minutes.</span></h2>
+      <p>The Manager Effectiveness Score is a quick diagnostic that reveals whether you &mdash; or your org&rsquo;s managers &mdash; have the skills to lead a team and drive results, and exactly where the gaps are.</p>
+      <div class="btns">
+        <a class="btn onDark" href="#tool"><span>Get the Free Assessment</span> <svg><use href="#arw"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 10 · FINAL CTA ===== -->
+  <section class="final" id="final">
+    <div class="wrap rv">
+      <h2 class="display final-h"><span class="ln">Your next event could be the one people talk about</span><span class="ln pink">for the rest of the year.</span></h2>
+      <p class="sub">Let&rsquo;s build something unforgettable.</p>
+      <div class="btns">
+        <a class="btn solid" href="mailto:jill@jillchristensenintl.com"><span>Book Jill to Speak</span> <svg><use href="#arw"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img class="foot-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="230" height="52">
+        <p style="margin-top:14px;font-size:15px;line-height:1.7;">Jill Christensen International LLC<br>Goodyear, Arizona, USA</p>
+      </div>
+      <div>
+        <h5>Navigate</h5>
+        <a href="#top">Home</a>
+        <a href="#work">Workshop</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#work">Clients</a>
+        <a href="#work">Books</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="mailto:jill@jillchristensenintl.com">jill@jillchristensenintl.com</a>
+        <a href="https://www.linkedin.com/in/jillchristensen" target="_blank" rel="noopener">LinkedIn: /in/jillchristensen</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 Jill Christensen International LLC</span>
+      <span><a href="https://katek-ai.com" target="_blank" rel="noopener">Built by KATEK</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // nav
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),navMenu=document.getElementById('navMenu');
+  if(nav&&burger&&navMenu){
+    var setOpen=function(o){
+      nav.classList.toggle('open',o);
+      burger.setAttribute('aria-expanded',o?'true':'false');
+      document.body.style.overflow=o?'hidden':'';
+    };
+    burger.addEventListener('click',function(){setOpen(!nav.classList.contains('open'));});
+    navMenu.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
+    document.addEventListener('click',function(e){
+      if(nav.classList.contains('open')&&!e.target.closest('#navMenu')&&!e.target.closest('#burger'))setOpen(false);
+    });
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+    window.addEventListener('resize',function(){if(window.innerWidth>=960)setOpen(false);});
+  }
+
+  // reveals
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},
+      {threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  }else{
+    document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
+  }
+
+  // auto-fit the locked two-line heading
+  var lns=document.querySelectorAll('.final-h .ln,.hero-h .ln,.fit-one,.fit-two .ln');
+  function fitLn(el){
+    el.style.fontSize='';
+    var size=parseFloat(getComputedStyle(el).fontSize),guard=0;
+    while(el.scrollWidth>el.clientWidth+0.5 && size>14 && guard++<300){
+      size-=0.5;el.style.fontSize=size+'px';
+    }
+  }
+  function fitAll(){
+    if(window.innerWidth<960){lns.forEach(function(el){el.style.fontSize='';});return;}
+    lns.forEach(fitLn);
+  }
+  fitAll();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitAll);
+  window.addEventListener('load',fitAll);
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(fitAll,120);});
+
+  // count-up
+  function animateCount(el){
+    var target=parseInt(el.getAttribute('data-count'),10),d=1500,start=null;
+    function ease(t){return t<.5?2*t*t:-1+(4-2*t)*t;}
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/d,1);
+      el.textContent=Math.round(ease(p)*target)+'%';
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var co=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){animateCount(e.target);co.unobserve(e.target);}});},{threshold:.4});
+    document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el);});
+  }
+})();
+</script>
+</body>
+</html>

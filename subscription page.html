@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Manager Effectiveness Lab — Jill Christensen</title>
+<meta name="description" content="Monthly coaching membership for managers. Live training, live Q&amp;A with Jill, recordings included. $49/mo Founder’s rate." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ffffff; --paper2:#f4f2fa; --ink:#070459; --ink-soft:#4a487a; --deep:#070459;
+  --rule:rgba(7,4,89,.16); --rule-light:rgba(255,255,255,.22); --accent:#C007D9; --lilac:#d8a6e6;
+  --display:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif; --serif:var(--display); --sans:'Jost',system-ui,sans-serif; --script:'Parisienne','Segoe Script',cursive;
+  --pad:clamp(20px,5vw,72px); --max:1180px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{background:var(--paper);color:var(--ink-soft);font-family:var(--sans);font-size:clamp(16px,1.05vw,18px);font-weight:400;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+img,video,svg{max-width:100%;height:auto;display:block;}
+section{scroll-margin-top:28px;}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--pad);}
+
+/* type */
+h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-height:1.12;letter-spacing:-.02em;}
+.h-state{font-size:clamp(28px,4.6vw,58px);font-weight:400;line-height:1.12;letter-spacing:-.025em;}
+/* headings forced onto a single line — JS auto-fits so they never overflow */
+.h-oneline{white-space:nowrap;font-size:clamp(15px,4.2vw,54px);max-width:none !important;width:100%;}
+/* headings locked to exactly two lines — JS auto-fits so they never overflow */
+.h-twoline{max-width:none !important;width:100%;}
+.h-twoline .ln{display:block;white-space:nowrap;}
+@media (max-width:767px){
+  .h-oneline,.h-twoline .ln{white-space:normal;}
+  .h-oneline{font-size:clamp(27px,7vw,38px);}
+  .hero-headline{font-size:clamp(34px,8.7vw,48px);}
+  .dark-strip q{font-size:clamp(24px,6.4vw,34px);}
+}
+.h-feat{font-size:clamp(23px,2.8vw,36px);font-weight:400;}
+.it{font-style:normal;font-weight:400;color:var(--accent);}
+.eyebrow{font-family:var(--script);font-weight:400;font-size:clamp(23px,2.4vw,30px);line-height:1.15;letter-spacing:0;text-transform:none;color:var(--accent);display:block;}
+.tm{font-size:.7em;vertical-align:super;line-height:0;}
+.deck{font-family:var(--sans);font-weight:400;font-size:clamp(16px,1.4vw,18px);line-height:1.6;color:var(--ink-soft);}
+
+/* buttons — mobile-first: full width, labels wrap */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;font:600 12px/1.35 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:19px 28px;min-height:52px;cursor:pointer;white-space:normal;text-align:center;transition:.22s;width:100%;border:1px solid transparent;}
+.btn svg{width:19px;height:11px;flex-shrink:0;}
+.btn.outline{border-color:var(--ink);color:var(--ink);}
+.btn.outline:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.btn.solid{background:var(--accent);color:#fff;}
+.btn.solid:hover{background:var(--ink);color:#fff;}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+@media (min-width:640px){.btn{width:auto;}}
+
+.linkarrow{font:600 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:4px;display:inline-flex;align-items:center;gap:8px;transition:gap .25s,color .2s;}
+.linkarrow:hover{gap:14px;color:var(--accent);}
+
+/* placeholder art */
+.ph{position:relative;background:linear-gradient(155deg,#3a2f8a 0%,#1a1266 48%,#070459 100%);overflow:hidden;}
+.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(130% 90% at 26% 16%,rgba(192,7,217,.42),transparent 58%),linear-gradient(0deg,rgba(7,4,89,.5),transparent 52%);}
+.ph .cap{position:absolute;left:16px;bottom:13px;z-index:2;font:500 9.5px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.9);}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease;}
+.js .reveal.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;}html{scroll-behavior:auto;}}
+
+/* ===== HEADER ===== */
+.topbar{position:absolute;top:0;left:0;right:0;z-index:95;}
+.util{background:transparent;color:#fff;font:500 10px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;}
+.util{border-bottom:1px solid rgba(255,255,255,.18);}
+.util .wrap{display:flex;justify-content:center;align-items:center;gap:10px;text-align:center;padding-block:11px;}
+@media (max-width:600px){.util{font-size:9px;letter-spacing:.14em;}}
+.util b{color:var(--lilac);font-weight:600;}
+.nav{position:relative;z-index:90;background:transparent;border-bottom:1px solid rgba(255,255,255,.18);transition:border-color .3s;}
+.brand .brand-logo{filter:brightness(0) invert(1);transition:filter .3s;}
+.nav .wrap{padding-block:14px;display:flex;align-items:center;justify-content:space-between;gap:14px;position:relative;}
+.brand{display:flex;flex-direction:column;line-height:1;}
+.brand .brand-logo{height:clamp(30px,3.2vw,46px);width:auto;display:block;}
+.brand .nm{font-family:var(--display);font-size:clamp(19px,2vw,24px);font-weight:400;color:var(--ink);letter-spacing:.08em;}
+.brand .tag{font:500 8.5px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--lilac);margin-top:7px;transition:color .3s;}
+.topbar.scrolled .brand .tag{color:var(--accent);}
+.nav-menu{display:none;}
+.nav-menu a{font:500 11.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#fff;position:relative;padding:3px 0;transition:color .2s;}
+.nav-menu a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:var(--accent);transition:right .25s;}
+.nav-menu a:hover{color:var(--lilac);} .nav-menu a:hover::after{right:0;}
+.nav-menu .btn{padding:14px 20px;min-height:44px;font-size:11px;}
+.nav-menu .btn.solid{background:#fff;color:var(--ink);}
+.nav-menu .btn.solid:hover{background:var(--accent);color:#fff;}
+.nav-menu .btn::after{display:none;}
+.burger{display:flex;flex-direction:column;gap:5px;width:46px;height:46px;border:0;background:none;cursor:pointer;align-items:center;justify-content:center;flex-shrink:0;}
+.burger span{width:24px;height:1.6px;background:#fff;transition:.3s;}
+.nav.open .burger span:nth-child(1){transform:translateY(6.6px) rotate(45deg);}
+.nav.open .burger span:nth-child(2){opacity:0;}
+.nav.open .burger span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg);}
+.nav-menu{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-direction:column;align-items:stretch;gap:0;max-height:0;overflow:hidden;transition:max-height .35s,padding .35s;border-bottom:1px solid var(--rule);padding:0 var(--pad);}
+.nav.open .nav-menu{display:flex;max-height:520px;padding:6px var(--pad) 24px;box-shadow:0 18px 30px rgba(7,4,89,.08);}
+.nav-menu a:not(.btn){padding:16px 0;border-bottom:1px solid rgba(255,255,255,.16);min-height:44px;display:flex;align-items:center;color:#fff;}
+.nav-menu .btn{margin-top:18px;}
+@media (min-width:900px){
+  .burger{display:none;}
+  .nav-menu{display:flex !important;position:static;flex-direction:row;align-items:center;gap:clamp(16px,2.2vw,32px);max-height:none;overflow:visible;border:0;padding:0;box-shadow:none;background:none;}
+  .nav-menu a:not(.btn){padding:3px 0;border:0;min-height:0;}
+  .topbar.scrolled .nav-menu a:not(.btn){color:var(--ink-soft);}
+  .topbar.scrolled .nav-menu a:not(.btn):hover{color:var(--accent);}
+  .nav-menu .btn{margin-top:0;width:auto;}
+}
+
+/* ===== HERO ===== */
+.hero{position:relative;overflow:hidden;color:#fff;background:var(--ink) url('https://cdn.katalyst-crm.com/t1/7%201.png') center/cover no-repeat;}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.66) 0%,rgba(0,0,0,.44) 42%,rgba(0,0,0,.72) 100%);}
+.hero .wrap{position:relative;z-index:2;padding-block:clamp(150px,15vw,190px) clamp(48px,6vw,84px);}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,56px);align-items:center;justify-content:center;min-height:clamp(520px,72vh,760px);}
+.hero-content{display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(14px,1.6vw,20px);min-width:0;}
+.hero .eyebrow{color:#fff;}
+.hero-headline{font-family:var(--display);color:#fff;font-size:clamp(37px,6vw,71px);line-height:1.1;letter-spacing:-.03em;font-weight:400;}
+.hero-headline .it{color:#fff;font-weight:400;}
+.hero-subhead{font-family:var(--sans);font-weight:400;font-size:clamp(18px,1.72vw,22px);line-height:1.55;color:#fff;max-width:52ch;margin:0 auto;}
+.hero-meta{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid rgba(255,255,255,.2);margin-top:6px;width:100%;text-align:center;}
+.hero-meta div{border-bottom:1px solid rgba(255,255,255,.2);padding:10px 0;min-width:0;}
+.hero-meta .v{font-family:var(--display);font-weight:300;font-size:clamp(26px,3vw,38px);line-height:1;color:#fff;letter-spacing:-.02em;}
+.hero-meta .k{font:500 10px/1.35 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:#fff;margin-top:3px;}
+.hero-risk{font-size:14px;line-height:1.6;color:rgba(255,255,255,.72);}
+.hero-risk b{color:#fff;font-weight:500;}
+@media (min-width:900px){
+  .hero-grid{grid-template-columns:minmax(0,880px);gap:clamp(40px,5vw,72px);}
+  .hero-meta{grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.4vw,20px);border-bottom:1px solid rgba(255,255,255,.2);}
+  .hero-meta div{border-bottom:0;}
+
+}
+
+/* ===== generic sections ===== */
+.section{padding-block:clamp(52px,7vw,104px);}
+.section.tint{background:var(--paper2);}
+.sec-head{text-align:center;max-width:820px;margin:0 auto clamp(34px,5vw,56px);display:flex;flex-direction:column;gap:10px;align-items:center;}
+.sec-head.wide{max-width:min(1080px,100%);}
+.statement{text-align:center;padding-block:clamp(52px,7vw,104px);}
+.statement .eyebrow{display:block;margin-bottom:10px;}
+.statement h2{max-width:20ch;margin:0 auto;}
+.statement .deck{max-width:60ch;margin:18px auto 0;}
+
+/* cost of silence */
+.cost3{display:grid;grid-template-columns:1fr;gap:clamp(20px,2.6vw,34px);margin-top:clamp(34px,4vw,52px);text-align:left;}
+.cc{padding-top:0;min-width:0;}
+.cc .n{display:block;font-family:var(--display);font-weight:300;font-size:clamp(44px,4.6vw,64px);line-height:.9;letter-spacing:-.03em;color:rgba(192,7,217,.30);}
+.cc h3{font-family:var(--display);font-weight:400;font-size:clamp(20px,2vw,26px);margin:14px 0 10px;line-height:1.25;}
+.cc p{font-size:16px;line-height:1.65;}
+@media (min-width:800px){.cost3{grid-template-columns:repeat(3,1fr);}}
+.cost-close{display:grid;grid-template-columns:1fr;gap:clamp(26px,3.5vw,44px);align-items:center;margin-top:clamp(34px,5vw,56px);}
+.cost-close .closer{margin:0;max-width:none;text-align:left;}
+.cost-close .statfull{margin:0;max-width:none;text-align:left;border:0;border-top:1px solid var(--rule);padding:26px 0 0;}
+@media (min-width:900px){
+  .cost-close{grid-template-columns:1.08fr .92fr;gap:clamp(40px,5vw,70px);}
+  .cost-close .statfull{border-top:0;border-left:1px solid var(--rule);padding:8px 0 8px clamp(30px,3.2vw,48px);}
+}
+.closer{text-align:center;font-family:var(--display);font-weight:400;font-size:clamp(19px,2.4vw,30px);line-height:1.45;letter-spacing:-.015em;color:var(--ink);max-width:840px;margin:clamp(34px,5vw,56px) auto 0;}
+.statfull{max-width:820px;margin:clamp(34px,4vw,52px) auto 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:clamp(26px,3vw,40px) 0;text-align:center;}
+.statfull .num{font-family:var(--display);font-weight:300;font-size:clamp(56px,9vw,110px);line-height:.9;letter-spacing:-.04em;color:var(--accent);}
+.statfull p{font-size:clamp(16px,1.4vw,19px);color:var(--ink);margin-top:16px;}
+.statfull .src{font:500 10px/1.5 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-top:12px;}
+
+/* outcomes — image left, checklist right */
+.out-grid{display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,52px);align-items:start;}
+.out-media{min-width:0;line-height:0;}
+.out-media img{width:100%;height:auto;display:block;}
+.out-grid .checklist{max-width:none;margin:0;min-width:0;}
+@media (min-width:900px){
+  .out-grid{grid-template-columns:.88fr 1.12fr;gap:clamp(40px,5vw,72px);}
+  .out-media{position:sticky;top:40px;}
+}
+
+/* checklist */
+.checklist{max-width:900px;margin:0 auto;}
+.ci{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--rule);min-width:0;}
+.ci:first-child{border-top:1px solid var(--rule);}
+.ci .n{font-family:var(--display);font-weight:400;font-size:13px;letter-spacing:.14em;color:var(--accent);flex:0 0 auto;width:30px;padding-top:4px;}
+.ci .ic{flex:0 0 auto;width:clamp(24px,2.4vw,28px);height:clamp(24px,2.4vw,28px);color:var(--accent);margin-top:3px;}
+/* outcomes list — typography matched to the Inside the Lab steps */
+.out-grid .ci{padding:22px 0;}
+.out-grid .ci .n{font:600 10.5px/1 var(--sans);letter-spacing:.26em;color:var(--accent);width:34px;padding-top:9px;}
+.out-grid .ci p{font-family:var(--display);font-size:clamp(20px,2.1vw,28px);font-weight:400;letter-spacing:-.02em;line-height:1.25;color:var(--ink);}
+.out-grid .ci p span{font-family:var(--sans);font-size:16px;font-weight:400;letter-spacing:0;line-height:1.7;color:var(--ink-soft);margin-top:10px;}
+.ci .ic svg{width:100%;height:100%;display:block;}
+.ci p{font-size:clamp(16px,1.5vw,18px);line-height:1.5;color:var(--ink);min-width:0;}
+.ci p span{display:block;font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--ink-soft);margin-top:6px;}
+
+/* lab — collapsible steps left, image right */
+.lab-grid{display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,60px);align-items:start;margin-top:clamp(30px,4vw,48px);}
+.lab-ac{min-width:0;}
+.la-item{border-bottom:1px solid var(--rule);position:relative;transition:background .25s;}
+.la-item:first-child{border-top:1px solid var(--rule);}
+.la-item::before{content:"";position:absolute;left:0;top:-1px;bottom:-1px;width:2px;background:var(--accent);transform:scaleY(0);transform-origin:top;transition:transform .35s ease;}
+.la-item.open::before{transform:scaleY(1);}
+.la-item.open{background:linear-gradient(90deg,rgba(192,7,217,.05),transparent 60%);}
+.la-head{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:none;cursor:pointer;padding:22px 0 22px 18px;min-height:56px;text-align:left;transition:padding .25s;}
+.la-txt{min-width:0;}
+.la-sn{display:block;font:600 10.5px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.la-head h3{font-family:var(--display);font-size:clamp(20px,2.1vw,28px);font-weight:400;letter-spacing:-.02em;color:var(--ink);line-height:1.25;margin:0;}
+.la-icon{flex:0 0 20px;height:20px;position:relative;}
+.la-icon::before,.la-icon::after{content:"";position:absolute;background:var(--accent);border-radius:2px;transition:.3s;}
+.la-icon::before{width:14px;height:1.6px;top:50%;left:50%;transform:translate(-50%,-50%);}
+.la-icon::after{width:1.6px;height:14px;top:50%;left:50%;transform:translate(-50%,-50%);}
+.la-item.open .la-icon::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0;}
+.la-body{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.la-body p{font-size:16px;line-height:1.7;color:var(--ink-soft);padding:0 18px 24px;max-width:56ch;}
+.lab-media{min-width:0;line-height:0;}
+.lab-media img{width:100%;height:auto;display:block;}
+@media (min-width:900px){
+  .lab-grid{grid-template-columns:1.05fr .95fr;gap:clamp(40px,5vw,76px);}
+  .lab-media{position:sticky;top:40px;}
+}
+
+/* dark quote strip */
+.dark-strip{position:relative;overflow:hidden;padding-block:clamp(62px,9vw,124px);background:var(--ink) url('https://cdn.katalyst-crm.com/t1/3d-colored-palm-leaves-assortment.jpg') center/cover no-repeat;}
+.dark-strip::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:rgba(7,4,89,.30);}
+.dark-strip .wrap{position:relative;z-index:2;text-align:center;}
+.dark-strip .qm{display:block;font-family:var(--display);font-weight:400;font-size:clamp(60px,7vw,96px);line-height:.42;color:var(--lilac);opacity:.5;margin-bottom:clamp(2px,0.5vw,8px);}
+.dark-strip q{font-family:var(--display);font-style:normal;font-weight:400;font-size:clamp(25px,3.6vw,46px);line-height:1.24;letter-spacing:-.025em;color:#fff;quotes:none;display:block;max-width:20ch;margin:0 auto;}
+.dark-strip cite{display:block;margin-top:20px;font:500 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;font-style:normal;color:var(--lilac);}
+
+/* who — split */
+.who-grid{display:grid;grid-template-columns:1fr;gap:clamp(28px,5vw,80px);align-items:start;}
+.who-grid .sec-head{text-align:left;align-items:flex-start;margin:0;}
+.who-grid .checklist{max-width:none;margin:0;min-width:0;}
+@media (min-width:900px){
+  .who-grid{grid-template-columns:.85fr 1.15fr;}
+  .who-grid .sec-head{position:sticky;top:40px;}
+}
+
+/* host split */
+.host{display:grid;grid-template-columns:1fr;align-items:stretch;}
+.host .imgside{min-height:clamp(320px,72vw,460px);position:relative;overflow:hidden;}
+.host .imgside img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;}
+.host .textside{position:relative;overflow:hidden;color:#fff;padding:clamp(30px,4vw,58px);display:flex;flex-direction:column;justify-content:center;gap:14px;min-width:0;background:var(--ink) url('https://cdn.katalyst-crm.com/t1/3d-colored-palm-leaves-assortment.jpg') center/cover no-repeat;}
+.host .textside::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:rgba(7,4,89,.88);}
+.host .textside>*{position:relative;z-index:1;}
+.host .lbl{font-family:var(--script);font-weight:400;font-size:clamp(23px,2.4vw,30px);line-height:1.15;letter-spacing:0;text-transform:none;color:var(--lilac);}
+.host h2{color:#fff;font-size:clamp(25px,3vw,40px);line-height:1.1;}
+.host .sub{font-family:var(--sans);font-style:normal;font-weight:400;font-size:clamp(17px,1.7vw,21px);color:var(--lilac);line-height:1.5;}
+.host p.body{font-size:16px;line-height:1.72;color:rgba(255,255,255,.86);}
+.host .credits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-top:1px solid var(--rule-light);border-bottom:1px solid var(--rule-light);padding:20px 0;margin-top:6px;}
+.host .credits div{min-width:0;}
+.host .credits .v{font-family:var(--display);font-weight:300;font-size:clamp(21px,2.4vw,30px);line-height:1;letter-spacing:-.02em;color:#fff;}
+.host .credits .k{font:500 9px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--lilac);margin-top:8px;}
+.host blockquote{position:relative;margin-top:10px;padding:24px 0 0 clamp(34px,3.4vw,46px);border-top:1px solid var(--rule-light);}
+.host blockquote::before{content:"\201C";position:absolute;left:0;top:12px;font-family:var(--display);font-weight:400;font-size:clamp(52px,5.4vw,72px);line-height:.78;color:var(--lilac);opacity:.55;}
+.host blockquote p{font-family:var(--display);font-weight:300;font-size:clamp(17px,1.8vw,21px);line-height:1.55;color:#fff;}
+.host blockquote cite{display:block;font:500 10px/1.5 var(--sans);font-style:normal;letter-spacing:.22em;text-transform:uppercase;color:var(--lilac);margin-top:16px;}
+@media (min-width:900px){.host{grid-template-columns:.9fr 1.1fr;}.host .imgside{min-height:560px;}}
+
+/* enroll */
+.enroll{background:var(--paper2);}
+.enroll-grid{display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,56px);align-items:center;}
+.enroll-head{text-align:left;align-items:flex-start;margin:0;max-width:none;}
+.enroll-grid .pricebox{max-width:none;margin:0;text-align:left;}
+.enroll-grid .pricebox ul{margin-left:0;margin-right:0;max-width:none;}
+.enroll-grid .pricebox .price{letter-spacing:-.04em;}
+.enroll .wrap{max-width:1300px;}
+@media (min-width:900px){.enroll-grid{grid-template-columns:.82fr 1.18fr;gap:clamp(34px,3.8vw,60px);}}
+.pricebox{position:relative;overflow:hidden;max-width:760px;margin:0 auto;padding:clamp(28px,4vw,56px);text-align:center;color:#fff;border:1px solid rgba(255,255,255,.22);border-top:4px solid var(--accent);box-shadow:0 30px 70px rgba(7,4,89,.18);background:var(--ink) url('https://cdn.katalyst-crm.com/t1/purple-green-leaves-plant-perfect-backgroun%20(1).jpg') center/cover no-repeat;}
+.pricebox::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:rgba(7,4,89,.55);}
+.pricebox>*{position:relative;z-index:1;}
+.pricebox .price{font-family:var(--display);font-weight:300;font-size:clamp(52px,8vw,86px);line-height:.95;letter-spacing:-.04em;color:#fff;}
+.pricebox .per{font:500 11px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--lilac);margin-top:14px;}
+.pricebox ul{list-style:none;text-align:left;margin:clamp(24px,3vw,34px) auto 0;max-width:460px;}
+.pricebox li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.22);font-size:16px;line-height:1.5;color:#fff;min-width:0;}
+.pricebox li svg{width:16px;height:16px;flex-shrink:0;margin-top:4px;color:var(--lilac);}
+.pricebox .btn{margin-top:clamp(24px,3vw,34px);}
+.pricebox .fine{font-size:14px;line-height:1.6;color:rgba(255,255,255,.82);margin-top:16px;}
+.pricebox .fine a{color:var(--lilac);border-bottom:1px solid var(--lilac);}
+
+/* accordion */
+.accord{max-width:860px;margin:0 auto;}
+.ac-item{border-bottom:1px solid var(--rule);}
+.ac-item:first-child{border-top:1px solid var(--rule);}
+.ac-head{display:flex;justify-content:space-between;align-items:center;padding:20px 0;min-height:56px;cursor:pointer;gap:16px;background:none;border:none;width:100%;text-align:left;}
+.ac-head h3{font-family:var(--display);font-size:clamp(18px,1.7vw,23px);color:var(--ink);font-weight:400;letter-spacing:-.015em;line-height:1.3;margin:0;min-width:0;}
+.ac-icon{flex:0 0 20px;height:20px;position:relative;}
+.ac-icon::before,.ac-icon::after{content:"";position:absolute;background:var(--accent);border-radius:2px;transition:.3s;}
+.ac-icon::before{width:14px;height:1.6px;top:50%;left:50%;transform:translate(-50%,-50%);}
+.ac-icon::after{width:1.6px;height:14px;top:50%;left:50%;transform:translate(-50%,-50%);}
+.ac-item.open .ac-icon::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0;}
+.ac-body{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.ac-body p{font-size:16px;line-height:1.7;color:var(--ink-soft);padding-bottom:24px;}
+
+/* final CTA */
+.final{position:relative;overflow:hidden;color:#fff;padding-block:clamp(64px,9vw,130px);background:var(--ink) url('https://cdn.katalyst-crm.com/t1/nkk.png') center/cover no-repeat;}
+.final::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:rgba(0,0,0,.58);}
+.final .wrap{position:relative;z-index:1;max-width:900px;text-align:center;}
+.final .eyebrow{color:var(--lilac);display:block;margin-bottom:10px;}
+.final h2{color:#fff;font-size:clamp(28px,4.4vw,54px);line-height:1.05;margin-bottom:20px;}
+.final p{color:rgba(255,255,255,.85);max-width:56ch;margin:0 auto 10px;}
+.final .btn-row{justify-content:center;margin-top:30px;}
+.final .btn.solid{background:#fff;color:var(--ink);}
+.final .btn.solid:hover{background:var(--accent);color:#fff;}
+.final .fine{font-size:14px;color:rgba(255,255,255,.68);margin-top:18px;}
+
+/* sticky mobile CTA */
+.stickybar{position:fixed;left:0;right:0;bottom:0;z-index:95;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-top:1px solid var(--rule);padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;transform:translateY(120%);transition:transform .35s ease;box-shadow:0 -8px 26px rgba(7,4,89,.08);}
+.stickybar.show{transform:none;}
+.stickybar .sb-txt{min-width:0;flex:1;}
+.stickybar .sb-p{font-family:var(--display);font-weight:300;font-size:21px;line-height:1;letter-spacing:-.02em;color:var(--ink);}
+.stickybar .sb-k{font:500 9px/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-top:5px;}
+.stickybar .btn{width:auto;flex:0 1 auto;padding:14px 20px;min-height:46px;font-size:11px;}
+@media (min-width:900px){.stickybar{display:none;}}
+body{padding-bottom:0;}
+
+/* footer */
+.footer{background:var(--paper);color:var(--ink-soft);padding-block:clamp(44px,6vw,72px) 100px;border-top:1px solid var(--rule);}
+.footer .cols{display:grid;grid-template-columns:1fr;gap:28px;align-items:start;}
+.footer .footer-logo{height:clamp(34px,3vw,50px);width:auto;display:block;margin-bottom:14px;}
+.footer .name{font-family:var(--display);font-weight:300;font-size:17px;letter-spacing:.01em;color:var(--ink);}
+.footer .ft-tag{font-family:var(--display);font-weight:400;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:10px;}
+.footer h5{font:500 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
+.footer a{display:block;padding:9px 0;font-size:16px;color:var(--ink-soft);transition:color .2s;}
+.footer a:hover{color:var(--accent);}
+.footer .ft-quote{font-family:var(--display);font-weight:300;font-size:clamp(18px,2.2vw,26px);letter-spacing:-.015em;color:var(--ink);text-align:center;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:clamp(24px,3vw,38px) 0;margin:clamp(32px,4vw,50px) 0 22px;}
+.footer .ft-quote cite{display:block;margin-top:12px;font:500 10px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;font-style:normal;color:var(--accent);}
+.footer .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;}
+.footer .legal a.built{display:inline;padding:0;font-size:12px;letter-spacing:.06em;color:var(--ink-soft);border-bottom:1px solid currentColor;transition:color .2s;}
+.footer .legal a.built:hover{color:var(--accent);}
+.footer .addr{font-size:16px;line-height:1.7;padding:6px 0;}
+.footer .soc{display:flex;gap:14px;flex-wrap:wrap;}
+.footer .soc a{padding:0;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--rule);transition:.22s;}
+.footer .soc svg{width:18px;height:18px;color:var(--ink-soft);transition:color .2s;}
+.footer .soc a:hover{border-color:var(--accent);background:var(--accent);}
+.footer .soc a:hover svg{color:#fff;}
+@media (min-width:700px){.footer .cols{grid-template-columns:1.4fr 1fr 1.15fr auto;gap:clamp(24px,3vw,48px);}}
+@media (min-width:900px){.footer{padding-bottom:40px;}}
+
+/* ============ LAB PAGE — distinct structure ============ */
+
+/* sticky header with CTA (this page converts on a persistent ask) */
+.topbar{position:absolute;}
+
+/* ---- hero: asymmetric, signup card on the right ---- */
+.lab-hero .wrap{padding-block:clamp(150px,14vw,186px) clamp(52px,6vw,88px);}
+.lab-hero .hero-grid{grid-template-columns:1fr;justify-content:stretch;align-items:center;min-height:0;}
+.lab-hero .hero-content{align-items:flex-start;text-align:left;}
+.lab-hero .hero-subhead{margin:0;max-width:56ch;}
+.lab-hero .hero-headline{font-size:clamp(33px,4.6vw,58px);}
+@media (min-width:980px){
+  .lab-hero .hero-grid{grid-template-columns:1.06fr .94fr;gap:clamp(40px,4.6vw,72px);}
+}
+@media (max-width:767px){.lab-hero .hero-headline{font-size:clamp(30px,7.6vw,42px);}}
+
+/* signup card */
+.joincard{position:relative;overflow:hidden;min-width:0;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.30);backdrop-filter:blur(14px);padding:clamp(24px,2.8vw,38px);}
+.joincard::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--accent);}
+.joincard .jc-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+.joincard .jc-price{font-family:var(--display);font-weight:300;font-size:clamp(46px,5vw,62px);line-height:1;letter-spacing:-.04em;color:#fff;}
+.joincard .jc-per{font:500 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:#fff;}
+.joincard .jc-note{font-size:14px;line-height:1.6;color:rgba(255,255,255,.82);margin-top:10px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.24);}
+.joincard form{display:flex;flex-direction:column;gap:10px;margin-top:18px;}
+.joincard input{width:100%;min-width:0;font-family:var(--sans);font-size:16px;color:#fff;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.36);padding:15px 16px;min-height:52px;border-radius:0;transition:border-color .2s,background .2s;}
+.joincard input::placeholder{color:rgba(255,255,255,.62);}
+.joincard input:focus{outline:none;border-color:#fff;background:rgba(255,255,255,.17);}
+.joincard .btn{width:100%;}
+.joincard .jc-fine{font-size:13px;line-height:1.6;color:rgba(255,255,255,.78);margin-top:12px;text-align:center;}
+.joincard .jc-fine b{color:#fff;font-weight:500;}
+
+/* ---- trust bar ---- */
+.trust{background:var(--ink);color:#fff;padding-block:clamp(22px,2.6vw,32px);}
+.trust .wrap{display:grid;grid-template-columns:1fr;gap:16px;text-align:center;}
+.trust div{min-width:0;}
+.trust .v{font-family:var(--display);font-weight:300;font-size:clamp(22px,2.4vw,30px);line-height:1;letter-spacing:-.02em;}
+.trust .k{font:500 9.5px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--lilac);margin-top:6px;}
+@media (min-width:700px){.trust .wrap{grid-template-columns:repeat(3,1fr);}}
+
+/* ---- before / after contrast ---- */
+.contrast{display:grid;grid-template-columns:1fr;gap:0;margin-top:clamp(30px,4vw,48px);border:1px solid var(--rule);}
+.cpane{padding:clamp(26px,3.2vw,42px);min-width:0;}
+.cpane+.cpane{border-top:1px solid var(--rule);}
+.cpane .clbl{display:inline-block;font:600 10px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:9px 13px;margin-bottom:20px;}
+.cpane.now{background:var(--paper);}
+.cpane.now .clbl{color:var(--ink-soft);border:1px solid var(--rule);}
+.cpane.lab{position:relative;background:var(--ink);color:#fff;}
+.cpane.lab .clbl{color:var(--ink);background:#fff;}
+.cpane ul{list-style:none;}
+.cpane li{display:flex;gap:13px;align-items:flex-start;padding:13px 0;font-size:16px;line-height:1.6;min-width:0;}
+.cpane li+li{border-top:1px solid var(--rule);}
+.cpane.lab li+li{border-top-color:rgba(255,255,255,.20);}
+.cpane li svg{width:17px;height:17px;flex-shrink:0;margin-top:4px;}
+.cpane.now li{color:var(--ink-soft);} .cpane.now li svg{color:var(--ink-soft);opacity:.5;}
+.cpane.lab li{color:#fff;} .cpane.lab li svg{color:var(--lilac);}
+@media (min-width:860px){.contrast{grid-template-columns:1fr 1fr;}.cpane+.cpane{border-top:0;border-left:1px solid var(--rule);}}
+
+/* ---- month rhythm ---- */
+.rhythm{display:grid;grid-template-columns:1fr;gap:clamp(18px,2.4vw,28px);}
+.rcard{position:relative;overflow:hidden;background:var(--ink);color:#fff;padding:clamp(26px,3.2vw,42px);min-width:0;}
+.rcard::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--accent);}
+.rcard .when{display:inline-block;font:600 10px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ink);background:#fff;padding:9px 13px;margin-bottom:18px;}
+.rcard h3{color:#fff;font-size:clamp(22px,2.4vw,30px);line-height:1.2;}
+.rcard p{font-size:16px;line-height:1.7;color:rgba(255,255,255,.86);margin-top:10px;}
+@media (min-width:760px){.rhythm{grid-template-columns:1fr 1fr;}}
+
+.always{margin-top:clamp(26px,3vw,40px);}
+.arow{display:flex;gap:16px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--rule);min-width:0;}
+.arow:first-child{border-top:1px solid var(--rule);}
+.arow .ic{flex:0 0 auto;width:clamp(24px,2.4vw,28px);height:clamp(24px,2.4vw,28px);color:var(--accent);margin-top:3px;}
+.arow .ic svg{width:100%;height:100%;display:block;}
+.arow .tx{min-width:0;}
+.arow h3{font-size:clamp(19px,2vw,25px);line-height:1.25;}
+.arow p{font-size:16px;line-height:1.7;margin-top:7px;}
+
+/* ---- 90-day timeline ---- */
+.tl{display:grid;grid-template-columns:1fr;gap:clamp(22px,2.6vw,34px);margin-top:clamp(30px,4vw,48px);position:relative;}
+.tstep{position:relative;padding-top:30px;min-width:0;}
+.tstep::before{content:"";position:absolute;left:0;top:9px;width:13px;height:13px;border-radius:50%;background:var(--accent);}
+.tstep::after{content:"";position:absolute;left:13px;right:0;top:15px;height:1px;background:var(--rule);}
+.tstep:last-child::after{display:none;}
+.tstep .tm{display:block;font:600 10px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.tstep h3{font-size:clamp(20px,2.1vw,26px);line-height:1.25;}
+.tstep p{font-size:16px;line-height:1.68;margin-top:9px;}
+@media (min-width:820px){.tl{grid-template-columns:repeat(3,1fr);}}
+
+/* ---- value framing + centred price ---- */
+.pricewrap{max-width:820px;margin:0 auto;}
+.anchor{text-align:center;font-family:var(--display);font-weight:300;font-size:clamp(19px,2.3vw,28px);line-height:1.45;letter-spacing:-.015em;color:var(--ink);max-width:44ch;margin:0 auto clamp(28px,3.4vw,44px);}
+.anchor b{color:var(--accent);font-weight:400;}
+.enroll .pricebox{max-width:none;text-align:center;}
+.enroll .pricebox ul{margin-inline:auto;}
+.risk{display:grid;grid-template-columns:1fr;gap:14px;max-width:820px;margin:clamp(24px,3vw,36px) auto 0;}
+.rk{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border:1px solid var(--rule);background:var(--paper);min-width:0;}
+.rk svg{width:18px;height:18px;flex-shrink:0;margin-top:3px;color:var(--accent);}
+.rk span{font-size:15px;line-height:1.6;color:var(--ink);min-width:0;}
+@media (min-width:760px){.risk{grid-template-columns:repeat(3,1fr);}}
+
+/* ---- host mirrored ---- */
+@media (min-width:900px){
+  .host.flip{grid-template-columns:1.1fr .9fr;}
+  .host.flip .imgside{order:2;}
+  .host.flip .textside{order:1;}
+  .host.flip .textside::before{left:auto;right:0;}
+}
+
+/* --- 3. animated top rule + hover on the month cards --- */
+.rcard{transition:transform .3s ease,box-shadow .3s ease;}
+.rcard::before{transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.4,0,.2,1);}
+.rcard.seen::before{transform:scaleX(1);}
+.rcard:hover{transform:translateY(-5px);box-shadow:0 26px 54px rgba(7,4,89,.20);}
+.rcard:hover::before{transform:scaleX(1);transition-duration:.35s;}
+.joincard::before{transform-origin:left;animation:linegrow .8s cubic-bezier(.4,0,.2,1) .2s both;}
+@keyframes linegrow{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+@media (prefers-reduced-motion:reduce){.rcard::before{transform:scaleX(1);}.joincard::before{animation:none;}}
+
+/* --- 4. always-on benefits in one row --- */
+@media (min-width:860px){
+  .always{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(26px,3vw,48px);}
+  .arow{flex-direction:column;gap:14px;padding:24px 0 0;border-bottom:0;border-top:1px solid var(--rule);}
+  .arow:first-child{border-top:1px solid var(--rule);}
+  .arow .ic{margin-top:0;width:30px;height:30px;}
+}
+
+/* --- 5. bigger trust figures --- */
+.trust{padding-block:clamp(34px,4.4vw,58px);}
+.trust .wrap{gap:clamp(24px,3vw,40px);}
+.trust .v{font-size:clamp(40px,5.2vw,68px);letter-spacing:-.035em;line-height:.95;}
+.trust .k{font-size:10.5px;letter-spacing:.22em;margin-top:12px;}
+
+/* --- 6. wider hero copy block --- */
+.lab-hero .wrap{max-width:1300px;}
+.lab-hero .hero-subhead{max-width:64ch;}
+@media (min-width:980px){
+  .lab-hero .hero-grid{grid-template-columns:1.42fr .84fr;gap:clamp(36px,4vw,64px);}
+  .lab-hero .hero-headline{font-size:clamp(38px,4.9vw,64px);}
+}
+
+/* --- host: one shared background across the whole section, portrait floats right --- */
+.host{position:relative;overflow:hidden;background:var(--ink) url('https://cdn.katalyst-crm.com/t1/3d-colored-palm-leaves-assortment.jpg') center/cover no-repeat;}
+.host::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:rgba(7,4,89,.86);}
+.host>*{position:relative;z-index:1;}
+/* text panel is now transparent — the section carries the image */
+.host .textside{background:none;}
+.host .textside::before{display:none;}
+/* portrait sits over the background rather than filling a column */
+.host .imgside{background:none;min-height:0;overflow:visible;display:flex;align-items:flex-end;justify-content:center;padding:clamp(22px,3vw,48px) clamp(20px,3vw,48px) 0;}
+.host .imgside img{position:static;inset:auto;width:auto;max-width:100%;height:auto;max-height:clamp(340px,52vw,620px);object-fit:contain;object-position:center bottom;}
+@media (min-width:900px){
+  .host.flip{grid-template-columns:1.06fr .94fr;align-items:stretch;}
+  .host .imgside{min-height:560px;padding-bottom:0;}
+  .host .textside{padding-block:clamp(48px,5vw,84px);}
+}
+
+/* --- host: larger, more readable type + lighter scrim so the image reads --- */
+.host::after{background:rgba(7,4,89,.42);}
+.host .textside{gap:18px;}
+.host .lbl{font-size:clamp(27px,2.8vw,36px);}
+.host h2{font-size:clamp(34px,4vw,54px);}
+.host .sub{font-size:clamp(19px,2vw,25px);line-height:1.45;color:#fff;}
+.host p.body{font-size:clamp(17px,1.4vw,19px);line-height:1.75;color:#fff;}
+.host .credits{padding:26px 0;gap:18px;border-color:rgba(255,255,255,.34);}
+.host .credits .v{font-size:clamp(26px,2.9vw,38px);}
+.host .credits .k{font-size:10.5px;letter-spacing:.18em;margin-top:10px;color:#fff;}
+/* legibility over a lighter background */
+.host .textside{text-shadow:0 1px 16px rgba(7,4,89,.85),0 1px 3px rgba(7,4,89,.7);}
+@media (min-width:900px){
+  .host.flip{grid-template-columns:1.12fr .88fr;}
+  .host .textside{padding-inline:clamp(34px,4vw,64px);}
+}
+
+/* --- timeline: glowing connector + hover --- */
+.tl{margin-top:clamp(34px,4.4vw,56px);}
+.tstep{padding:38px 0 0;transition:transform .32s cubic-bezier(.4,0,.2,1);}
+.tstep::before{width:15px;height:15px;top:10px;background:var(--accent);
+  box-shadow:0 0 0 5px rgba(192,7,217,.15),0 0 20px 3px rgba(192,7,217,.60);
+  transition:box-shadow .35s ease,transform .35s ease;}
+.tstep::after{left:17px;top:17px;height:2px;background:linear-gradient(90deg,var(--accent),rgba(192,7,217,.16));
+  box-shadow:0 0 12px rgba(192,7,217,.45);
+  transform:scaleX(0);transform-origin:left;transition:transform .8s cubic-bezier(.4,0,.2,1) .1s;}
+.tstep.seen::after{transform:scaleX(1);}
+.tstep h3,.tstep .tm{transition:color .25s ease;}
+.tstep:hover{transform:translateY(-6px);}
+.tstep:hover::before{transform:scale(1.25);box-shadow:0 0 0 8px rgba(192,7,217,.18),0 0 30px 6px rgba(192,7,217,.85);}
+.tstep:hover h3{color:var(--accent);}
+@media (prefers-reduced-motion:reduce){.tstep::after{transform:scaleX(1);}.tstep:hover{transform:none;}}
+
+/* --- host copy shifted right --- */
+@media (min-width:900px){
+  .host .textside{padding-left:clamp(48px,7vw,120px);}
+}
+
+/* --- join: copy left, price + assurances right --- */
+.join-grid{display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,60px);align-items:center;}
+.join-left .sec-head{text-align:left;align-items:flex-start;margin:0 0 clamp(18px,2vw,26px);max-width:none;}
+.join-left .anchor{text-align:left;margin:0;max-width:34ch;}
+.join-right{min-width:0;}
+.enroll .pricewrap{max-width:none;margin:0;}
+.risk{grid-template-columns:1fr;max-width:none;margin-top:clamp(16px,2vw,22px);}
+@media (min-width:940px){
+  .join-grid{grid-template-columns:.92fr 1.08fr;gap:clamp(40px,4.6vw,76px);}
+  .enroll .wrap{max-width:1300px;}
+}
+
+/* --- month cards: taller, image-backed --- */
+.rcard{min-height:clamp(360px,40vw,470px);display:flex;flex-direction:column;justify-content:flex-end;
+  background-color:var(--ink);background-size:cover;background-position:center;background-repeat:no-repeat;}
+.rcard.r1{background-image:url('https://cdn.katalyst-crm.com/t1/5%203.png');}
+.rcard.r2{background-image:url('https://cdn.katalyst-crm.com/t1/JillChristensen21%202.png');}
+.rcard::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(7,4,89,.42) 0%,rgba(7,4,89,.70) 48%,rgba(7,4,89,.92) 100%);}
+.rcard>*{position:relative;z-index:1;}
+.rcard::before{z-index:2;}
+.rcard:hover::after{background:linear-gradient(180deg,rgba(7,4,89,.34) 0%,rgba(7,4,89,.64) 48%,rgba(7,4,89,.90) 100%);}
+.rcard::after{transition:background .35s ease;}
+
+/* --- month cards: no flat overlay, soft bottom fade only, taller --- */
+.rcard{min-height:clamp(440px,50vw,600px);}
+.rcard::after{background:linear-gradient(180deg,
+  rgba(7,4,89,0) 0%,
+  rgba(7,4,89,0) 30%,
+  rgba(7,4,89,.16) 48%,
+  rgba(7,4,89,.44) 66%,
+  rgba(7,4,89,.70) 83%,
+  rgba(7,4,89,.84) 100%);}
+.rcard:hover::after{background:linear-gradient(180deg,
+  rgba(7,4,89,0) 0%,
+  rgba(7,4,89,0) 34%,
+  rgba(7,4,89,.12) 52%,
+  rgba(7,4,89,.38) 70%,
+  rgba(7,4,89,.66) 86%,
+  rgba(7,4,89,.82) 100%);}
+.rcard h3,.rcard p{text-shadow:0 1px 14px rgba(7,4,89,.75);}
+
+/* --- timeline: connector on every step, including the last --- */
+.tstep:last-child::after{display:block;}
+
+/* --- assurance tiles: full width under both columns, one row --- */
+.risk{max-width:none;margin:clamp(30px,3.6vw,52px) 0 0;grid-template-columns:1fr;}
+@media (min-width:760px){.risk{grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.8vw,22px);}}
+
+/* --- contrast pane labels: skewed tag, Lab side in fuchsia --- */
+.cpane .clbl{transform:skewX(-12deg);padding:10px 18px;}
+.cpane .clbl i{display:inline-block;transform:skewX(12deg);font-style:normal;}
+.cpane.lab .clbl{background:var(--accent);color:#fff;border:0;}
+.cpane.now .clbl{background:var(--paper2);color:var(--ink-soft);border:1px solid var(--rule);}
+
+/* --- month cards: chips top-aligned, copy bottom-aligned, chip as plain text --- */
+.rcard{justify-content:space-between;}
+.rcard .when{background:none;border:0;padding:0;margin:0;color:#fff;
+  font:600 clamp(11px,1.05vw,13px)/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;
+  text-shadow:0 1px 14px rgba(7,4,89,.85),0 1px 3px rgba(7,4,89,.6);}
+.rc-body{min-width:0;}
+.rc-body h3{color:#fff;font-size:clamp(22px,2.4vw,30px);line-height:1.2;}
+.rc-body p{font-size:16px;line-height:1.7;color:rgba(255,255,255,.90);margin-top:10px;
+  text-shadow:0 1px 14px rgba(7,4,89,.75);}
+
+/* --- hero fully centred + more presence --- */
+.lab-hero .hero-content{align-items:center;text-align:center;}
+.lab-hero .hero-subhead{margin:0 auto;max-width:62ch;}
+.lab-hero .hero-headline{text-shadow:0 2px 40px rgba(0,0,0,.45);}
+.lab-hero .eyebrow{text-shadow:0 2px 22px rgba(0,0,0,.5);}
+.lab-hero .hero-meta{text-align:center;}
+.lab-hero .hero-meta .v{text-shadow:0 2px 22px rgba(0,0,0,.5);}
+
+/* join card: centred, lifted, glowing */
+.joincard{text-align:center;
+  background:rgba(255,255,255,.11);
+  border-color:rgba(255,255,255,.42);
+  box-shadow:0 0 90px rgba(192,7,217,.38),0 34px 80px rgba(0,0,0,.48);
+  animation:cardin .8s cubic-bezier(.4,0,.2,1) .15s both;}
+@keyframes cardin{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
+.joincard::before{height:4px;box-shadow:0 0 22px rgba(192,7,217,.95);}
+.joincard .jc-top{justify-content:center;gap:8px;}
+.joincard .jc-price{font-size:clamp(54px,5.8vw,74px);text-shadow:0 2px 30px rgba(0,0,0,.4);}
+.joincard .jc-note{max-width:44ch;margin-left:auto;margin-right:auto;}
+.joincard input{text-align:center;}
+.joincard .jc-fine{text-align:center;}
+
+/* CTA shine */
+.joincard .btn.solid{position:relative;overflow:hidden;box-shadow:0 14px 38px rgba(192,7,217,.55);}
+.joincard .btn.solid::after{content:"";position:absolute;top:0;left:-60%;width:38%;height:100%;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.38),transparent);
+  transform:skewX(-20deg);animation:shine 4s ease-in-out infinite;}
+@keyframes shine{0%,70%{left:-60%;}100%{left:135%;}}
+
+@media (prefers-reduced-motion:reduce){
+  .joincard{animation:none;}
+  .joincard .btn.solid::after{animation:none;opacity:0;}
+}
+
+/* --- month cards: chip, title and copy share rows so titles sit on one line --- */
+.rc-gap{display:block;}
+.rcard>h3{color:#fff;font-size:clamp(22px,2.4vw,30px);line-height:1.2;margin:0;
+  text-shadow:0 1px 14px rgba(7,4,89,.75);}
+.rcard>p{font-size:16px;line-height:1.7;color:rgba(255,255,255,.90);margin:10px 0 0;
+  text-shadow:0 1px 14px rgba(7,4,89,.75);}
+@media (min-width:760px){
+  .rhythm{grid-template-rows:auto 1fr auto auto;}
+  .rcard{display:grid;grid-template-rows:subgrid;grid-row:span 4;align-content:stretch;}
+}
+/* fallback where subgrid is unavailable: equalise the copy block instead */
+@supports not (grid-template-rows: subgrid){
+  @media (min-width:760px){
+    .rcard{display:flex;flex-direction:column;}
+    .rc-gap{flex:1 1 auto;}
+    .rcard>h3{min-height:calc(2 * 1.2em);display:flex;align-items:flex-end;}
+  }
+}
+
+/* --- assurance tiles now sit in the left column under the anchor --- */
+.join-left .risk{grid-template-columns:1fr;gap:12px;margin:clamp(24px,2.8vw,34px) 0 0;max-width:44ch;}
+@media (min-width:760px){.join-left .risk{grid-template-columns:1fr;}}
+
+/* --- header removed: hero starts at the top --- */
+.lab-hero .wrap{padding-block:clamp(52px,7vw,96px) clamp(52px,6vw,88px);}
+.hero-logo{height:clamp(64px,8.5vw,116px);width:auto;margin:0 auto clamp(10px,1.4vw,18px);
+  filter:brightness(0) invert(1) drop-shadow(0 4px 26px rgba(0,0,0,.5));}
+
+/* --- join: one centred column --- */
+.join-grid.one-col{grid-template-columns:1fr;gap:clamp(26px,3vw,40px);justify-items:center;text-align:center;}
+@media (min-width:940px){.join-grid.one-col{grid-template-columns:1fr;}}
+.one-col .join-left{display:flex;flex-direction:column;align-items:center;text-align:center;width:100%;}
+.one-col .join-left .sec-head{text-align:center;align-items:center;margin:0 0 clamp(16px,2vw,24px);}
+.one-col .join-left .anchor{text-align:center;margin:0 auto;max-width:46ch;}
+.one-col .join-left .risk{margin:clamp(26px,3vw,38px) auto 0;max-width:900px;width:100%;grid-template-columns:1fr;gap:12px;}
+@media (min-width:760px){.one-col .join-left .risk{grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.8vw,20px);}}
+.one-col .rk{justify-content:flex-start;}
+.one-col .join-right{width:100%;display:flex;justify-content:center;}
+.one-col .join-right .pricebox{max-width:720px;width:100%;}
+
+/* --- price box: glowing pink --- */
+.enroll .pricebox{border:1px solid rgba(192,7,217,.55);border-top:4px solid var(--accent);
+  box-shadow:0 0 100px rgba(192,7,217,.45),0 34px 84px rgba(7,4,89,.30);}
+.enroll .pricebox::after{background:linear-gradient(165deg,rgba(120,6,150,.62),rgba(52,4,96,.66) 55%,rgba(7,4,89,.72));}
+.enroll .pricebox .price{text-shadow:0 2px 34px rgba(192,7,217,.65);}
+.enroll .pricebox .per{color:var(--lilac);}
+.enroll .pricebox .btn.solid{box-shadow:0 14px 40px rgba(192,7,217,.6);}
+
+/* --- hero: single centred column, card sits under the copy --- */
+.lab-hero .hero-grid{grid-template-columns:1fr !important;justify-items:center;gap:clamp(28px,3.4vw,46px);}
+.lab-hero .hero-content{width:100%;max-width:900px;}
+.lab-hero .hero-meta{max-width:820px;margin-left:auto;margin-right:auto;}
+.joincard{width:100%;max-width:600px;margin:0 auto;}
+
+/* --- hero headline: two wide lines --- */
+.lab-hero .wrap{max-width:1440px;}
+.lab-hero .hero-content{max-width:1240px;}
+.lab-hero .hero-headline{font-size:clamp(30px,4.4vw,60px);}
+@media (max-width:767px){.lab-hero .hero-headline{font-size:clamp(27px,6.6vw,38px);}}
+
+/* --- stats now sit under the card, smaller --- */
+.lab-hero .hero-meta{order:3;max-width:620px;margin:clamp(4px,1vw,12px) auto 0;border-top:0;}
+.lab-hero .hero-meta div{padding:10px 0;border-bottom:0;}
+.lab-hero .hero-meta .v{font-size:clamp(17px,1.6vw,21px);letter-spacing:-.01em;}
+.lab-hero .hero-meta .k{font-size:8.5px;letter-spacing:.18em;margin-top:5px;color:rgba(255,255,255,.86);}
+@media (min-width:900px){
+  .lab-hero .hero-meta{grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.2vw,18px);border-bottom:0;}
+}
+
+/* --- card: bigger type, more presence --- */
+.joincard{max-width:640px;padding:clamp(30px,3.2vw,46px);
+  border-color:rgba(255,255,255,.55);
+  background:rgba(255,255,255,.13);
+  box-shadow:0 0 120px rgba(192,7,217,.50),0 40px 90px rgba(0,0,0,.55);}
+.joincard::before{height:5px;box-shadow:0 0 28px rgba(192,7,217,1);}
+.joincard .jc-price{font-size:clamp(62px,6.6vw,86px);}
+.joincard .jc-per{font-size:clamp(12px,1.15vw,14px);letter-spacing:.24em;}
+.joincard .jc-note{font-size:clamp(16px,1.35vw,18px);line-height:1.6;max-width:46ch;padding-bottom:22px;}
+.joincard form{gap:12px;margin-top:22px;}
+.joincard input{font-size:17px;min-height:56px;padding:16px 18px;}
+.joincard .btn.solid{font-size:clamp(12px,1.15vw,13.5px);min-height:60px;padding:20px 28px;letter-spacing:.14em;}
+.joincard .jc-fine{font-size:clamp(14px,1.2vw,15.5px);margin-top:15px;}
+
+/* --- trust strip: glowing animated pink band --- */
+.trust{position:relative;overflow:hidden;
+  background:linear-gradient(100deg,#070459 0%,#4a0470 22%,#9006ad 42%,#C007D9 52%,#9006ad 62%,#4a0470 80%,#070459 100%);
+  background-size:280% 100%;
+  animation:trustflow 16s ease-in-out infinite;}
+@keyframes trustflow{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+/* glowing hairlines top and bottom */
+.trust::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:
+    linear-gradient(90deg,transparent,rgba(192,7,217,.9),#fff,rgba(192,7,217,.9),transparent) top left/100% 2px no-repeat,
+    linear-gradient(90deg,transparent,rgba(192,7,217,.9),#fff,rgba(192,7,217,.9),transparent) bottom left/100% 2px no-repeat;
+  filter:drop-shadow(0 0 12px rgba(192,7,217,.95));}
+/* slow shine sweep */
+.trust::after{content:"";position:absolute;top:0;bottom:0;left:-35%;width:26%;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.20),transparent);
+  transform:skewX(-18deg);animation:trustshine 7s ease-in-out infinite;}
+@keyframes trustshine{0%,62%{left:-35%;}100%{left:125%;}}
+.trust .wrap{position:relative;z-index:2;}
+.trust .v{color:#fff;animation:numglow 3.6s ease-in-out infinite;}
+@keyframes numglow{
+  0%,100%{text-shadow:0 0 16px rgba(255,255,255,.35),0 0 44px rgba(255,120,235,.55);}
+  50%{text-shadow:0 0 26px rgba(255,255,255,.6),0 0 78px rgba(255,120,235,.95);}}
+.trust .k{color:rgba(255,255,255,.92);text-shadow:0 1px 12px rgba(7,4,89,.6);}
+@media (prefers-reduced-motion:reduce){
+  .trust{animation:none;background:linear-gradient(100deg,#4a0470,#C007D9 52%,#4a0470);}
+  .trust::after{animation:none;opacity:0;}
+  .trust .v{animation:none;text-shadow:0 0 22px rgba(255,120,235,.7);}
+}
+
+/* --- month cards: 30% taller, tighter title-to-copy spacing --- */
+.rcard{min-height:clamp(572px,65vw,780px);}
+.rcard>h3{line-height:1.15;}
+.rcard>p{margin-top:4px;}
+@media (min-width:760px){
+  .rhythm{row-gap:0;}
+  .rcard>h3{margin-bottom:0;}
+}
+
+/* --- final CTA: anchor the image to the top so faces stay in frame --- */
+.final{background-position:center top;}
+
+/* --- join: image beside the price box, cropped to its right edge --- */
+.price-row{display:grid;grid-template-columns:1fr;width:100%;max-width:1140px;margin:0 auto;align-items:stretch;}
+.price-media{position:relative;overflow:hidden;min-height:clamp(260px,50vw,360px);}
+.price-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;}
+.one-col .join-right{display:block;}
+.one-col .join-right .pricebox{max-width:none;width:auto;}
+@media (min-width:900px){
+  .price-row{grid-template-columns:.92fr 1.08fr;}
+  .price-media{min-height:100%;}
+}
+
+/* --- month cards: height must sit on the grid, not the subgrid items --- */
+.rcard{min-height:clamp(560px,80vw,700px);}
+@media (min-width:760px){
+  .rhythm{min-height:clamp(620px,60vw,900px);}
+  .rcard{min-height:0;}
+}
+
+/* --- month cards: white chip boxes, smaller titles, 20% shorter --- */
+.rcard .when{display:inline-block;justify-self:start;align-self:start;width:auto;
+  background:#fff;color:var(--ink);border:0;padding:8px 13px;margin:0;
+  font:600 10px/1 var(--sans);letter-spacing:.20em;text-transform:uppercase;text-shadow:none;}
+.rcard>h3{font-size:clamp(19px,2vw,25px);}
+.rcard{min-height:clamp(448px,64vw,560px);}
+@media (min-width:760px){
+  .rhythm{min-height:clamp(496px,48vw,720px);}
+  .rcard{min-height:0;}
+}
+
+/* ================= MOBILE PASS ================= */
+@media (max-width:767px){
+  /* locked headings wrap instead of shrinking */
+  .h-oneline,.h-twoline .ln{white-space:normal;}
+  .h-oneline{font-size:clamp(26px,6.8vw,36px);}
+  .lab-hero .hero-headline{font-size:clamp(28px,7.4vw,40px);}
+  .final h2{font-size:clamp(26px,7vw,38px);}
+
+  /* hero card + logo */
+  .hero-logo{height:clamp(52px,15vw,78px);}
+  .lab-hero .wrap{padding-block:clamp(38px,10vw,60px) clamp(40px,10vw,64px);}
+  .joincard{padding:22px 18px;box-shadow:0 0 60px rgba(192,7,217,.42),0 22px 50px rgba(0,0,0,.5);}
+  .joincard .jc-price{font-size:clamp(48px,15vw,62px);}
+  .joincard .btn.solid{font-size:11.5px;letter-spacing:.10em;padding:18px 16px;min-height:56px;}
+
+  /* trust strip: stack, smaller */
+  .trust{padding-block:30px;}
+  .trust .v{font-size:clamp(32px,10vw,42px);}
+
+  /* month cards: no fixed tall boxes on a phone */
+  .rhythm{min-height:0;}
+  .rcard{min-height:clamp(380px,88vw,470px);padding:22px 20px;}
+  .rcard>h3{font-size:clamp(20px,5.6vw,25px);}
+
+  /* timeline connectors run vertically when stacked */
+  .tstep{padding-top:34px;}
+  .tstep::after{left:7px;right:auto;top:24px;bottom:-24px;width:2px;height:auto;
+    background:linear-gradient(180deg,var(--accent),rgba(192,7,217,.12));
+    transform:scaleY(0);transform-origin:top;}
+  .tstep.seen::after{transform:scaleY(1);}
+  .tstep:last-child::after{display:none;}
+
+  /* contrast panes */
+  .cpane{padding:24px 20px;}
+
+  /* join */
+  .price-media{min-height:220px;}
+  .one-col .join-left .anchor{font-size:clamp(17px,4.8vw,21px);}
+  .pricebox{padding:26px 20px;}
+  .pricebox .price{font-size:clamp(46px,14vw,62px);}
+  .pricebox .btn.solid{font-size:11.5px;letter-spacing:.10em;padding:18px 16px;}
+  .rk{padding:14px 15px;}
+
+  /* host */
+  .host .textside{padding:30px 22px;}
+  .host .imgside{padding:20px 18px 0;}
+
+  /* footer clears the sticky bar */
+  .footer{padding-bottom:110px;}
+}
+@media (min-width:900px){.footer{padding-bottom:40px;}}
+
+/* never let a long word blow out a narrow column */
+.rcard>p,.arow p,.tstep p,.cpane li span,.rk span,.pricebox li span,.joincard .jc-note{overflow-wrap:anywhere;}
+
+/* --- hero: +20% darker overlay --- */
+.hero::before{background:linear-gradient(180deg,
+  rgba(0,0,0,.79) 0%,
+  rgba(0,0,0,.53) 42%,
+  rgba(0,0,0,.86) 100%) !important;}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+<svg style="position:absolute;width:0;height:0" aria-hidden="true">
+  <symbol id="arw" viewBox="0 0 36 11"><path d="M0 5.5h33M28 1l5 4.5L28 10" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  <symbol id="chk" viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+  <symbol id="i-step" viewBox="0 0 24 24"><path d="M2.5 20.5h5v-5h5v-5h5v-5h4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 5.5h4v4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-loop" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 1 1-2.49-6.01" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M20.5 3.5v5h-5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12h6M12 9v6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity=".45"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5.5 21.5V3" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M5.5 4h12l-2.4 3.6L17.5 11.5h-12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-talk" viewBox="0 0 24 24"><path d="M3.5 14.5V6.2A1.7 1.7 0 0 1 5.2 4.5h8.6a1.7 1.7 0 0 1 1.7 1.7v4.6a1.7 1.7 0 0 1-1.7 1.7H7z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 9.5h.8a1.7 1.7 0 0 1 1.7 1.7v4.6a1.7 1.7 0 0 1-1.7 1.7H18l-3 2.9v-2.9h-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/></symbol>
+  <symbol id="li" viewBox="0 0 24 24"><path d="M4.5 8.5h3.4V20H4.5zM6.2 3.2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM10.4 8.5h3.3v1.6c.5-.9 1.7-1.9 3.6-1.9 3.1 0 4 2 4 5V20h-3.4v-6c0-1.6-.5-2.7-2-2.7-1.2 0-1.9.8-2.2 1.6-.1.3-.1.7-.1 1.1V20h-3.4z" fill="currentColor"/></symbol>
+  <symbol id="fb" viewBox="0 0 24 24"><path d="M14.3 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6A22 22 0 0 0 15.1 3.5c-2.4 0-4 1.45-4 4.1v2.3H8.4V13h2.7v8z" fill="currentColor"/></symbol>
+  <symbol id="yt" viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.28 5 12 5 12 5s-6.28 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.72 19 12 19 12 19s6.28 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z" fill="currentColor"/></symbol>
+  <symbol id="i-library" viewBox="0 0 24 24"><path d="M4 5.5h6.2a1.8 1.8 0 0 1 1.8 1.8V20a2.4 2.4 0 0 0-2.4-2.4H4z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 5.5h-6.2A1.8 1.8 0 0 0 12 7.3V20a2.4 2.4 0 0 1 2.4-2.4H20z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/></symbol>
+  <symbol id="i-peers" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.1" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3 20.5v-1.2A4.3 4.3 0 0 1 7.3 15h3.4a4.3 4.3 0 0 1 4.3 4.3v1.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M16.2 5.4a3.1 3.1 0 0 1 0 5.9M17.8 15a4.3 4.3 0 0 1 3.2 4.1v1.4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity=".55"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3.5 9.6h17M8 3.5v3M16 3.5v3" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 2.8v5.6c0 4.2-2.9 7.6-7 9.1-4.1-1.5-7-4.9-7-9.1V5.8z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></symbol>
+</svg>
+
+
+<main id="top">
+
+  <!-- ===== HERO — asymmetric, card-led ===== -->
+  <section class="hero lab-hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <img class="hero-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="360" height="82">
+          <span class="eyebrow">Monthly Coaching Membership for Managers</span>
+          <h1 class="hero-headline h-twoline"><span class="ln">You were promoted. You were never trained.</span><span class="ln it">This is where that changes.</span></h1>
+          <p class="hero-subhead">Ongoing leadership development for the managers business forgot to develop &mdash; live monthly training, live coaching with Jill, and a room full of peers, so you build a team that stops depending on you for everything.</p>
+        </div>
+
+        <aside class="joincard reveal">
+          <div class="jc-top"><span class="jc-price">$49</span><span class="jc-per">per month &middot; Founder&rsquo;s rate</span></div>
+          <p class="jc-note">Live monthly training, live Q&amp;A with Jill, the full Lab Library, and a peer room of managers on the same mission.</p>
+          <form id="signup" novalidate>
+            <input type="text" name="name" placeholder="First name" autocomplete="given-name" aria-label="First name">
+            <input type="email" name="email" placeholder="Email address" autocomplete="email" aria-label="Email address">
+            <button class="btn solid" type="submit"><span>Join the Lab &mdash; Founder&rsquo;s Pricing</span> <svg><use href="#arw"/></svg></button>
+          </form>
+          <!-- PRODUCTION NOTE: confirm Founder's mechanics — locked lifetime rate? member cap or deadline? -->
+          <p class="jc-fine">Lock in <b>$49/mo</b> &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; No start date to wait for</p>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <section class="trust">
+    <div class="wrap">
+      <div><div class="v" data-count="500000" data-suffix="+">500,000+</div><div class="k">Professionals taught</div></div>
+      <div><div class="v" data-count="375">375</div><div class="k">Events delivered</div></div>
+      <div><div class="v" data-count="200" data-prefix="Top ">Top 200</div><div class="k">Global thought leader</div></div>
+    </div>
+  </section>
+
+  <!-- ===== THE GAP — before / after ===== -->
+  <section class="section" id="gap">
+    <div class="wrap">
+      <div class="sec-head wide reveal">
+        <span class="eyebrow">Does This Sound Familiar?</span>
+        <h2 class="h-state h-twoline"><span class="ln">It&rsquo;s not a character flaw.</span><span class="ln it">It&rsquo;s a training gap.</span></h2>
+      </div>
+      <div class="contrast reveal">
+        <div class="cpane now">
+          <span class="clbl"><i>Managing right now</i></span>
+          <ul>
+            <li><svg><use href="#i-x"/></svg><span>Promoted for being great at the job &mdash; then left to work out the leading part alone.</span></li>
+            <li><svg><use href="#i-x"/></svg><span>Your Manager Effectiveness Score surfaced real gaps, and now you know where you&rsquo;re exposed.</span></li>
+            <li><svg><use href="#i-x"/></svg><span>You want to keep getting better, but there&rsquo;s nowhere to turn for ongoing help.</span></li>
+            <li><svg><use href="#i-x"/></svg><span>Every decision still routes back through you.</span></li>
+          </ul>
+        </div>
+        <div class="cpane lab">
+          <span class="clbl"><i>Managing in the Lab</i></span>
+          <ul>
+            <li><svg><use href="#chk"/></svg><span>A new leadership topic every month, taught practically enough to use the next morning.</span></li>
+            <li><svg><use href="#chk"/></svg><span>Your real situations coached live by Jill &mdash; not hypotheticals from a slide.</span></li>
+            <li><svg><use href="#chk"/></svg><span>Ongoing development that keeps compounding instead of one course that fades.</span></li>
+            <li><svg><use href="#chk"/></svg><span>A team that makes decisions without waiting on you.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="closer reveal">That&rsquo;s the reality for most managers in business. And it&rsquo;s exactly why we built the Manager Effectiveness Lab.</p>
+    </div>
+  </section>
+
+  <!-- ===== WHAT YOU GET EVERY MONTH ===== -->
+  <section class="section tint" id="rhythm">
+    <div class="wrap">
+      <div class="sec-head wide reveal">
+        <span class="eyebrow">Your Month in the Lab</span>
+        <h2 class="h-state h-twoline"><span class="ln">Two live sessions a month.</span><span class="ln it">Everything else, always on.</span></h2>
+      </div>
+      <div class="rhythm reveal">
+        <div class="rcard r1">
+          <span class="when">60 min &middot; First Thursday</span>
+          <span class="rc-gap" aria-hidden="true"></span>
+          <h3>Monthly Training</h3>
+          <p>A focused, practical session on one leadership challenge &mdash; delegating without dropping the ball, coaching an underperformer, recognition that actually drives effort. No theory, no fluff.</p>
+        </div>
+        <div class="rcard r2">
+          <span class="when">60 min &middot; Third Thursday</span>
+          <span class="rc-gap" aria-hidden="true"></span>
+          <h3>Live Q&amp;A + Coaching</h3>
+          <p>Bring the situation you&rsquo;re actually stuck on. Jill coaches you through it, live, in front of a room that&rsquo;s facing the same thing.</p>
+        </div>
+      </div>
+      <div class="always reveal">
+        <div class="arow">
+          <span class="ic"><svg><use href="#i-library"/></svg></span>
+          <div class="tx"><h3>The Lab Library</h3><p>Every session recorded and posted. Calendar conflict? Nothing is ever missed &mdash; watch on your schedule.</p></div>
+        </div>
+        <div class="arow">
+          <span class="ic"><svg><use href="#i-talk"/></svg></span>
+          <div class="tx"><h3>Direct Access to Jill</h3><p>She guides you, coaches you, and challenges you &mdash; your business coach in your corner, month after month.</p></div>
+        </div>
+        <div class="arow">
+          <span class="ic"><svg><use href="#i-peers"/></svg></span>
+          <div class="tx"><h3>A Room of Peers</h3><p>Learn from, collaborate with, and grow alongside managers facing exactly what you&rsquo;re facing.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FIRST 90 DAYS ===== -->
+  <section class="section" id="first90">
+    <div class="wrap">
+      <div class="sec-head wide reveal">
+        <span class="eyebrow">Join Any Time</span>
+        <h2 class="h-state h-twoline"><span class="ln">No start date to miss.</span><span class="ln it">Here&rsquo;s your first 90 days.</span></h2>
+      </div>
+      <div class="tl reveal">
+        <div class="tstep">
+          <span class="tm">Month One</span>
+          <h3>You stop guessing</h3>
+          <p>Your first training lands a framework you can use that week, and your first Q&amp;A puts your real situation in front of Jill.</p>
+        </div>
+        <div class="tstep">
+          <span class="tm">Month Two</span>
+          <h3>Your team feels it</h3>
+          <p>A second topic stacks on the first. The conversations you used to avoid start happening earlier, while they&rsquo;re still small.</p>
+        </div>
+        <div class="tstep">
+          <span class="tm">Month Three</span>
+          <h3>It stops running through you</h3>
+          <p>Delegation holds. Standards hold. The team makes calls without waiting on your inbox &mdash; and you get your week back.</p>
+        </div>
+      </div>
+      <p class="closer reveal">Drop in whenever you join and you&rsquo;re immediately caught up. Stay for a year, or stay for good &mdash; the longer you&rsquo;re in, the better you lead and the better your team performs.</p>
+    </div>
+  </section>
+
+  <!-- ===== HOST (mirrored) ===== -->
+  <section class="host flip" id="host">
+    <div class="imgside"><img src="https://cdn.katalyst-crm.com/t1/d8cd8022-1ad7-45d4-8368-5ab1ff51de31%201.png" alt="Jill Christensen" loading="lazy"></div>
+    <div class="textside reveal">
+      <span class="lbl">The 110% Expert&trade;</span>
+      <h2>Jill Christensen</h2>
+      <p class="sub">Helping managers build teams that choose to give their all.</p>
+      <p class="body">Jill is a former Fortune 500 executive and one of the highest-rated female speakers in the world. A Top 200 Global Thought Leader and best-selling author, she has shared her methodology with more than 500,000 professionals across 375 events. In the Lab, she brings that same methodology to your desk every month &mdash; practical, direct, and built to move real results.</p>
+      <div class="credits">
+        <div><div class="v">Monthly</div><div class="k">Live with Jill</div></div>
+        <div><div class="v">2 hrs</div><div class="k">Coaching per month</div></div>
+        <div><div class="v">Always</div><div class="k">Recorded &amp; archived</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== JOIN ===== -->
+  <section class="section enroll" id="join">
+    <div class="wrap">
+      <div class="join-grid one-col">
+      <div class="join-left">
+      <div class="sec-head wide reveal">
+        <span class="eyebrow">Join the Lab</span>
+        <h2 class="h-state h-twoline"><span class="ln">Founder&rsquo;s rate.</span><span class="ln it">Locked in while it lasts.</span></h2>
+      </div>
+        <p class="anchor reveal">One seat at the Tough Talks Workshop is $497. <b>That covers ten months in the Lab</b> &mdash; with Jill live, twice a month, the whole way.</p>
+        <div class="risk reveal">
+          <div class="rk"><svg><use href="#i-cal"/></svg><span>No start date. Join today, you&rsquo;re caught up today.</span></div>
+          <div class="rk"><svg><use href="#i-shield"/></svg><span>Cancel any time &mdash; no contract, no penalty.</span></div>
+          <div class="rk"><svg><use href="#i-library"/></svg><span>Miss a session and it&rsquo;s already waiting in the Library.</span></div>
+        </div>
+      </div>
+      <div class="join-right">
+        <div class="price-row">
+        <div class="price-media reveal"><img src="https://cdn.katalyst-crm.com/t1/jkjjh.png" alt="Managers in a Lab session" loading="lazy"></div>
+        <div class="pricebox reveal">
+          <div class="price">$49<span style="font-size:.30em;letter-spacing:0;">/mo</span></div>
+          <div class="per">Founder&rsquo;s rate</div>
+          <ul>
+            <li><svg><use href="#chk"/></svg><span>Live monthly training &mdash; 60 min, First Thursday</span></li>
+            <li><svg><use href="#chk"/></svg><span>Live Q&amp;A and coaching with Jill &mdash; Third Thursday</span></li>
+            <li><svg><use href="#chk"/></svg><span>Full access to the Lab Library of recordings</span></li>
+            <li><svg><use href="#chk"/></svg><span>A peer community of managers on the same mission</span></li>
+          </ul>
+          <a class="btn solid" href="#top"><span>Claim Founder&rsquo;s Pricing</span> <svg><use href="#arw"/></svg></a>
+          <!-- PRODUCTION NOTE: add guarantee line here if approved -->
+          <p class="fine">Cancel anytime &nbsp;·&nbsp; Recordings included</p>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Questions, Answered</span>
+        <h2 class="h-state h-oneline">Before you <span class="it">join the Lab.</span></h2>
+      </div>
+      <div class="accord reveal">
+        <div class="ac-item">
+          <button class="ac-head"><h3>What do I get each month?</h3><span class="ac-icon"></span></button>
+          <div class="ac-body"><p>Two live 60-minute sessions &mdash; a training on the First Thursday and a Q&amp;A/coaching session on the Third Thursday &mdash; plus recordings of both.</p></div>
+        </div>
+        <div class="ac-item">
+          <button class="ac-head"><h3>What if I can&rsquo;t attend live?</h3><span class="ac-icon"></span></button>
+          <div class="ac-body"><p>Every session is recorded and posted to the Lab Library. You never miss a thing.</p></div>
+        </div>
+        <div class="ac-item">
+          <button class="ac-head"><h3>Is there a start date I need to wait for?</h3><span class="ac-icon"></span></button>
+          <div class="ac-body"><p>No. The Lab is ongoing &mdash; join whenever you like and you&rsquo;re immediately caught up.</p></div>
+        </div>
+        <div class="ac-item">
+          <button class="ac-head"><h3>Do I have to commit for a year?</h3><span class="ac-icon"></span></button>
+          <!-- PRODUCTION NOTE: answer depends on the open pricing decision -->
+          <div class="ac-body"><p>[Answer pending the pricing decision &mdash; see open decisions.]</p></div>
+        </div>
+        <div class="ac-item">
+          <button class="ac-head"><h3>Can I cancel?</h3><span class="ac-icon"></span></button>
+          <!-- PRODUCTION NOTE: confirm cancellation terms -->
+          <div class="ac-body"><p>[Cancellation terms to be confirmed.]</p></div>
+        </div>
+        <div class="ac-item">
+          <button class="ac-head"><h3>Who is the Lab for?</h3><span class="ac-icon"></span></button>
+          <div class="ac-body"><p>Managers who were promoted on the strength of their work and never formally trained to lead &mdash; new or experienced &mdash; plus HR professionals who coach managers day to day.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL ===== -->
+  <section class="final">
+    <div class="wrap reveal">
+      <span class="eyebrow">The Last Word</span>
+      <h2 class="h-twoline"><span class="ln">Great managers aren&rsquo;t born.</span><span class="ln">They&rsquo;re developed.</span></h2>
+      <p>You were promoted. You were never trained. Two hours a month is where that starts to change &mdash; and your team feels it long before the year is out.</p>
+      <div class="btn-row">
+        <a class="btn solid" href="#join"><span>Join the Lab &mdash; $49/mo</span> <svg><use href="#arw"/></svg></a>
+      </div>
+      <p class="fine">Founder&rsquo;s rate &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; Recordings included</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img class="footer-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="220" height="50">
+        <div class="name">Jill Christensen International LLC</div>
+        <div class="ft-tag">The 110% Expert&trade;</div>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <a href="#gap">The Gap</a><a href="#rhythm">What You Get</a><a href="#first90">First 90 Days</a><a href="#host">Your Host</a><a href="#join">Join the Lab</a><a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <div class="addr">3051 N 16th Lane<br>Goodyear, AZ 85395<br>USA</div>
+        <a href="mailto:jill@jillchristensenintl.com">jill@jillchristensenintl.com</a>
+        <a href="tel:+13039999224">+1.303.999.9224</a>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <div class="soc">
+          <a href="https://www.linkedin.com/in/jillchristensen" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#li"/></svg></a>
+          <a href="https://www.facebook.com/JillChristensenInternational" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#fb"/></svg></a>
+          <a href="https://www.youtube.com/channel/UC4cgiW1hgHaCu69gTIThN3g" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#yt"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="ft-quote">&ldquo;Great managers aren&rsquo;t born. They&rsquo;re developed.&rdquo;<cite>Jill Christensen</cite></div>
+    <div class="legal"><span>&copy; 2026 Jill Christensen International LLC. All rights reserved.</span><span><a class="built" href="https://katek-ai.com" target="_blank" rel="noopener">Built by KATEK</a></span></div>
+  </div>
+</footer>
+
+<div class="stickybar" id="stickybar">
+  <div class="sb-txt"><div class="sb-p">$49<span style="font-size:.6em;">/mo</span></div><div class="sb-k">Founder&rsquo;s rate · Cancel anytime</div></div>
+  <a class="btn solid" href="#join">Join the Lab</a>
+</div>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),navMenu=document.getElementById('navMenu');
+  if(nav&&burger&&navMenu){
+    var setOpen=function(open){
+      nav.classList.toggle('open',open);
+      burger.setAttribute('aria-expanded',open?'true':'false');
+      document.body.style.overflow=open?'hidden':'';
+    };
+    burger.addEventListener('click',function(){setOpen(!nav.classList.contains('open'));});
+    navMenu.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
+    document.addEventListener('click',function(e){
+      if(nav.classList.contains('open') && !e.target.closest('#navMenu') && !e.target.closest('#burger'))setOpen(false);
+    });
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+    window.addEventListener('resize',function(){if(window.innerWidth>=900)setOpen(false);});
+  }
+
+  var sticky=document.getElementById('stickybar');
+  function onScroll(){
+    if(sticky)sticky.classList.toggle('show',window.scrollY>640);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  }else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
+
+  // accordion
+  function openAc(item){item.classList.add('open');item.querySelector('.ac-body').style.maxHeight=item.querySelector('.ac-body').scrollHeight+'px';}
+  function closeAc(item){item.classList.remove('open');item.querySelector('.ac-body').style.maxHeight='';}
+  document.querySelectorAll('.ac-head').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=this.closest('.ac-item'),isOpen=item.classList.contains('open');
+      document.querySelectorAll('.ac-item').forEach(closeAc);
+      if(!isOpen)openAc(item);
+    });
+  });
+  var first=document.querySelector('.ac-item');if(first)openAc(first);
+
+  if('IntersectionObserver' in window){
+    var ro=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('seen');ro.unobserve(en.target);}});},{threshold:.25});
+    document.querySelectorAll('.rcard,.tstep').forEach(function(el){ro.observe(el);});
+  }else{document.querySelectorAll('.rcard,.tstep').forEach(function(el){el.classList.add('seen');});}
+
+  // lab steps accordion (scoped so it doesn't collide with the FAQ)
+  function openLa(item){item.classList.add('open');item.querySelector('.la-body').style.maxHeight=item.querySelector('.la-body').scrollHeight+'px';}
+  function closeLa(item){item.classList.remove('open');item.querySelector('.la-body').style.maxHeight='';}
+  document.querySelectorAll('.la-head').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=this.closest('.la-item'),isOpen=item.classList.contains('open');
+      document.querySelectorAll('.la-item').forEach(closeLa);
+      if(!isOpen)openLa(item);
+    });
+  });
+  var firstLa=document.querySelector('.la-item');if(firstLa)openLa(firstLa);
+
+  // auto-fit single-line headings: shrink until the text fits its container
+  var oneliners=document.querySelectorAll('.h-oneline,.h-twoline');
+  function fitOne(el){
+    el.style.fontSize='';
+    var size=parseFloat(getComputedStyle(el).fontSize);
+    var guard=0;
+    while(el.scrollWidth>el.clientWidth+0.5 && size>11 && guard++<300){
+      size-=0.5;
+      el.style.fontSize=size+'px';
+    }
+  }
+  function fitAll(){
+    if(window.innerWidth<768){oneliners.forEach(function(el){el.style.fontSize='';});return;}
+    oneliners.forEach(fitOne);
+  }
+  fitAll();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitAll);
+  window.addEventListener('load',fitAll);
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(fitAll,120);});
+
+  // count-up
+  function animateCount(el){
+    var target=parseInt(el.getAttribute('data-count'),10),
+        pre=el.getAttribute('data-prefix')||'',
+        suf=el.getAttribute('data-suffix')||'',
+        duration=1600,start=null;
+    function ease(t){return t<.5?2*t*t:-1+(4-2*t)*t;}
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/duration,1),
+          v=Math.round(ease(p)*target);
+      el.textContent=pre+v.toLocaleString('en-US')+suf;
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var co=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){animateCount(en.target);co.unobserve(en.target);}});},{threshold:.4});
+    document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el);});
+  }
+})();
+
+  var su=document.getElementById('signup');
+  if(su)su.addEventListener('submit',function(e){e.preventDefault();var t=document.getElementById('join');if(t)t.scrollIntoView({behavior:'smooth'});});
+</script>
+</body>
+</html>
