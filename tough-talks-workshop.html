@@ -365,6 +365,38 @@ body{padding-bottom:0;}
 @media (min-width:900px){.footer{padding-bottom:40px;}}
 
 .cc p,.ci p,.step p,.la-body p,.ac-body p,.rk span,.pricebox li span{overflow-wrap:anywhere;}
+
+/* ===== reserve-seat modal ===== */
+.rs-overlay{position:fixed;inset:0;z-index:200;background:rgba(7,4,89,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+  display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s ease;}
+.rs-overlay.open{opacity:1;visibility:visible;}
+.rs-modal{position:relative;background:var(--paper);width:100%;max-width:440px;border-radius:14px;
+  padding:clamp(28px,5vw,44px);box-shadow:0 30px 80px rgba(7,4,89,.35);transform:translateY(14px) scale(.98);
+  transition:transform .25s ease;max-height:90vh;overflow-y:auto;}
+.rs-overlay.open .rs-modal{transform:translateY(0) scale(1);}
+.rs-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border:0;background:transparent;cursor:pointer;
+  color:var(--ink-soft);display:flex;align-items:center;justify-content:center;border-radius:50%;transition:.2s;}
+.rs-close:hover{background:var(--paper2);color:var(--ink);}
+.rs-close svg{width:16px;height:16px;}
+.rs-modal .eyebrow{margin-bottom:4px;}
+.rs-modal h3{font-size:clamp(22px,3.2vw,28px);margin-bottom:8px;}
+.rs-modal .rs-sub{font-size:14.5px;line-height:1.6;margin-bottom:22px;}
+.rs-field{margin-bottom:16px;}
+.rs-field label{display:block;font:600 11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:8px;}
+.rs-field input{width:100%;font:400 16px/1.3 var(--sans);color:var(--ink);padding:14px 16px;border:1px solid var(--rule);
+  border-radius:8px;background:var(--paper);transition:.2s;}
+.rs-field input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(192,7,217,.14);}
+.rs-field input:invalid.touched{border-color:#d64545;}
+.rs-err{display:none;color:#d64545;font-size:12.5px;margin-top:6px;}
+.rs-field input:invalid.touched ~ .rs-err{display:block;}
+.rs-modal .btn{width:100%;margin-top:6px;}
+.rs-fine{font-size:12.5px;color:var(--ink-soft);margin-top:14px;text-align:center;}
+.rs-success{display:none;text-align:center;padding:8px 0;}
+.rs-success svg{width:52px;height:52px;color:var(--accent);margin:0 auto 18px;}
+.rs-success h3{font-size:clamp(21px,3vw,26px);margin-bottom:10px;}
+.rs-success p{font-size:14.5px;line-height:1.6;}
+.rs-modal.sent .rs-form,.rs-modal.sent .eyebrow,.rs-modal.sent h3.rs-title,.rs-modal.sent .rs-sub{display:none;}
+.rs-modal.sent .rs-success{display:block;}
 </style>
 </head>
 <body>
@@ -396,7 +428,7 @@ body{padding-bottom:0;}
       <a href="#lab">Inside</a>
       <a href="#host">Your Host</a>
       <a href="#faq">FAQ</a>
-      <a class="btn solid" href="#enroll">Reserve Your Seat</a>
+      <a class="btn solid js-reserve" href="#enroll">Reserve Your Seat</a>
     </nav>
   </div>
 </header>
@@ -417,7 +449,7 @@ body{padding-bottom:0;}
             <div><div class="v">Virtual</div><div class="k">Or in-person for teams</div></div>
             <div><div class="v">$497</div><div class="k">Per seat</div></div>
           </div>
-          <a class="btn solid" href="#enroll"><span>Reserve Your Seat</span> <svg><use href="#arw"/></svg></a>
+          <a class="btn solid js-reserve" href="#enroll"><span>Reserve Your Seat</span> <svg><use href="#arw"/></svg></a>
           <p class="hero-risk">Limited seats &nbsp;·&nbsp; Includes <b>live role-play</b> + <b>1-on-1 follow-up time with Jill</b></p>
         </div>
       </div>
@@ -478,7 +510,7 @@ body{padding-bottom:0;}
         </div>
       </div>
       <div class="btn-row reveal" style="justify-content:center;margin-top:clamp(30px,4vw,44px);">
-        <a class="btn solid" href="#enroll"><span>Reserve Your Seat</span> <svg><use href="#arw"/></svg></a>
+        <a class="btn solid js-reserve" href="#enroll"><span>Reserve Your Seat</span> <svg><use href="#arw"/></svg></a>
       </div>
     </div>
   </section>
@@ -580,7 +612,7 @@ body{padding-bottom:0;}
           <li><svg><use href="#chk"/></svg><span>Take-home conversation language</span></li>
           <li><svg><use href="#chk"/></svg><span>1-on-1 follow-up session with Jill</span></li>
         </ul>
-        <a class="btn solid" href="#"><span>Reserve Your Seat</span> <svg><use href="#arw"/></svg></a>
+        <a class="btn solid js-reserve" href="#enroll"><span>Reserve Your Seat</span> <svg><use href="#arw"/></svg></a>
         <p class="fine">Limited seats. Prefer to train your whole team? <a href="mailto:jill@jillchristensenintl.com">Ask about group rates.</a></p>
       </div>
       </div>
@@ -632,7 +664,7 @@ body{padding-bottom:0;}
       <h2 class="h-twoline"><span class="ln">You already know which conversation</span><span class="ln">you&rsquo;ve been putting off.</span></h2>
       <p>Two hours from now, you could have the framework, the language, and the confidence to lead it &mdash; instead of another quarter of working around it.</p>
       <div class="btn-row">
-        <a class="btn solid" href="#enroll"><span>Reserve Your Seat &mdash; $497</span> <svg><use href="#arw"/></svg></a>
+        <a class="btn solid js-reserve" href="#enroll"><span>Reserve Your Seat &mdash; $497</span> <svg><use href="#arw"/></svg></a>
       </div>
       <p class="fine">Limited seats &nbsp;·&nbsp; 120 minutes live &nbsp;·&nbsp; Includes 1-on-1 follow-up with Jill</p>
     </div>
@@ -674,7 +706,37 @@ body{padding-bottom:0;}
 
 <div class="stickybar" id="stickybar">
   <div class="sb-txt"><div class="sb-p">$497</div><div class="sb-k">120 min · Live · Limited seats</div></div>
-  <a class="btn solid" href="#enroll">Reserve Seat</a>
+  <a class="btn solid js-reserve" href="#enroll">Reserve Seat</a>
+</div>
+
+<div class="rs-overlay" id="rsOverlay">
+  <div class="rs-modal" id="rsModal" role="dialog" aria-modal="true" aria-labelledby="rsTitle">
+    <button type="button" class="rs-close" id="rsClose" aria-label="Close">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l12 12M16 4L4 16"/></svg>
+    </button>
+    <span class="eyebrow">Reserve Your Seat</span>
+    <h3 class="rs-title" id="rsTitle">The Tough Talks Workshop &mdash; $497</h3>
+    <p class="rs-sub">Enter your details and we&rsquo;ll hold your seat and send you the Zoom link and next steps.</p>
+    <form class="rs-form" id="rsForm" novalidate>
+      <div class="rs-field">
+        <label for="rsName">Full Name</label>
+        <input type="text" id="rsName" name="name" autocomplete="name" required>
+        <span class="rs-err">Please enter your name.</span>
+      </div>
+      <div class="rs-field">
+        <label for="rsEmail">Email Address</label>
+        <input type="email" id="rsEmail" name="email" autocomplete="email" required>
+        <span class="rs-err">Please enter a valid email address.</span>
+      </div>
+      <button type="submit" class="btn solid"><span>Reserve My Seat</span> <svg><use href="#arw"/></svg></button>
+      <p class="rs-fine">Limited seats. No payment is taken on this step &mdash; we&rsquo;ll follow up with checkout details.</p>
+    </form>
+    <div class="rs-success">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.8 2.8L16 9.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3>You&rsquo;re on the list!</h3>
+      <p>Thanks, <span id="rsNameOut">friend</span> &mdash; we&rsquo;ve got your seat reserved. Check <span id="rsEmailOut"></span> shortly for the Zoom link and next steps.</p>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -764,6 +826,52 @@ body{padding-bottom:0;}
     var co=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){animateCount(en.target);co.unobserve(en.target);}});},{threshold:.4});
     document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el);});
   }
+
+  // reserve-your-seat modal
+  var rsOverlay=document.getElementById('rsOverlay'),rsModal=document.getElementById('rsModal'),
+      rsClose=document.getElementById('rsClose'),rsForm=document.getElementById('rsForm'),
+      rsName=document.getElementById('rsName'),rsEmail=document.getElementById('rsEmail'),
+      rsNameOut=document.getElementById('rsNameOut'),rsEmailOut=document.getElementById('rsEmailOut'),
+      rsLastFocus=null;
+
+  function openReserve(){
+    rsLastFocus=document.activeElement;
+    rsModal.classList.remove('sent');
+    rsForm.reset();
+    rsForm.querySelectorAll('input').forEach(function(el){el.classList.remove('touched');});
+    rsOverlay.classList.add('open');
+    document.body.style.overflow='hidden';
+    setTimeout(function(){rsName.focus();},50);
+  }
+  function closeReserve(){
+    rsOverlay.classList.remove('open');
+    document.body.style.overflow='';
+    if(rsLastFocus)rsLastFocus.focus();
+  }
+
+  document.querySelectorAll('.js-reserve').forEach(function(el){
+    el.addEventListener('click',function(e){
+      e.preventDefault();
+      openReserve();
+    });
+  });
+  rsClose.addEventListener('click',closeReserve);
+  rsOverlay.addEventListener('click',function(e){if(e.target===rsOverlay)closeReserve();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&rsOverlay.classList.contains('open'))closeReserve();});
+
+  rsForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    rsName.classList.add('touched');
+    rsEmail.classList.add('touched');
+    if(!rsForm.checkValidity()){
+      var firstInvalid=rsForm.querySelector('input:invalid');
+      if(firstInvalid)firstInvalid.focus();
+      return;
+    }
+    rsNameOut.textContent=rsName.value.trim().split(' ')[0]||'friend';
+    rsEmailOut.textContent=rsEmail.value.trim();
+    rsModal.classList.add('sent');
+  });
 })();
 </script>
 </body>
