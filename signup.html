@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Guide — 5 Ways Great Managers Lead in the AI Age | Jill Christensen</title>
+<meta name="description" content="Get instant access to 5 Ways Great Managers Lead in the AI Age — a free guide, plus practical leadership tips to build high-performing teams and achieve better results." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ffffff; --paper2:#f4f2fa; --ink:#070459; --ink-soft:#4a487a;
+  --accent:#C007D9; --lilac:#d8a6e6; --rule:rgba(7,4,89,.14);
+  --display:'Jost',system-ui,-apple-system,sans-serif; --sans:'Jost',system-ui,sans-serif;
+  --script:'Jost',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px); --max:1180px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{background:var(--paper);color:var(--ink-soft);font-family:var(--sans);
+  font-size:clamp(15.5px,1.02vw,17px);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+img,svg{max-width:100%;height:auto;display:block;}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--pad);}
+h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-height:1.14;letter-spacing:-.02em;}
+.script{font-family:var(--script);font-style:italic;font-weight:300;font-size:clamp(14px,1.15vw,17px);
+  line-height:1.35;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:block;}
+
+/* buttons — mobile-first: full width, labels wrap */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font:600 12px/1.35 var(--sans);letter-spacing:.14em;text-transform:uppercase;
+  padding:17px 28px;min-height:54px;cursor:pointer;text-align:center;white-space:normal;
+  transition:.24s;border:1px solid transparent;width:100%;}
+.btn svg{width:16px;height:10px;flex-shrink:0;}
+.btn.solid{background:var(--accent);color:#fff;}
+.btn.solid:hover{background:var(--ink);}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+@media (min-width:560px){.btn{width:auto;}}
+
+/* ============ NAV ============ */
+.nav{background:var(--ink);position:sticky;top:0;z-index:60;}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-block:16px;}
+.nav-logo{height:clamp(40px,4vw,54px);width:auto;filter:brightness(0) invert(1);}
+.nav-menu{display:none;}
+.nav-menu a{font:600 10.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;
+  color:#fff;position:relative;padding:4px 0;transition:color .2s;}
+.nav-menu a:hover{color:var(--lilac);}
+.nav-menu .nav-cta{width:auto;padding:12px 20px;min-height:40px;background:var(--accent);color:#fff;}
+.nav-menu .nav-cta:hover{background:#fff;color:var(--ink);}
+.burger{display:flex;flex-direction:column;gap:5px;width:44px;height:44px;border:0;background:none;
+  cursor:pointer;align-items:center;justify-content:center;flex-shrink:0;}
+.burger span{width:23px;height:1.5px;background:#fff;transition:.3s;}
+.nav.open .burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav.open .burger span:nth-child(2){opacity:0;}
+.nav.open .burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.nav-menu{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-direction:column;
+  align-items:stretch;max-height:0;overflow:hidden;transition:max-height .35s,padding .35s;padding:0 var(--pad);}
+.nav.open .nav-menu{display:flex;max-height:480px;padding:8px var(--pad) 24px;}
+.nav.open .nav-menu a{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.14);min-height:44px;display:flex;align-items:center;}
+.nav.open .nav-menu .nav-cta{border-bottom:0;margin-top:12px;justify-content:center;}
+@media (min-width:960px){
+  .burger{display:none;}
+  .nav-menu{display:flex !important;position:static;flex-direction:row;align-items:center;
+    gap:clamp(16px,2.2vw,30px);max-height:none;overflow:visible;padding:0;background:none;}
+  .nav-menu a{padding:4px 0;border:0;min-height:0;}
+}
+
+/* ============ OPT-IN HERO ============ */
+.optin{position:relative;overflow:hidden;color:#fff;
+  background:radial-gradient(120% 90% at 78% 8%,rgba(192,7,217,.34),transparent 55%),
+    radial-gradient(120% 90% at 12% 96%,rgba(228,77,255,.18),transparent 55%),
+    linear-gradient(160deg,#160b6b 0%,#0a0763 46%,#070459 100%);}
+.optin .wrap{position:relative;z-index:1;padding-block:clamp(40px,6vw,84px);}
+.optin-grid{display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,56px);align-items:center;}
+@media (min-width:900px){.optin-grid{grid-template-columns:1.06fr .94fr;gap:clamp(40px,4vw,64px);}}
+
+/* left column */
+.optin-copy{min-width:0;}
+.optin-copy .script{color:var(--lilac);}
+.optin-copy h1{color:#fff;font-weight:300;font-size:clamp(30px,5.4vw,54px);letter-spacing:-.03em;
+  margin:10px 0 clamp(16px,2vw,22px);max-width:16ch;}
+.optin-copy .lede{color:rgba(255,255,255,.9);font-size:clamp(16px,1.5vw,19px);line-height:1.65;max-width:52ch;}
+.optin-copy .lede b{color:#fff;font-weight:600;}
+.inside{list-style:none;margin-top:clamp(22px,2.6vw,30px);display:flex;flex-direction:column;gap:12px;}
+.inside li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.5;color:rgba(255,255,255,.94);overflow-wrap:anywhere;}
+.inside li svg{width:20px;height:20px;flex-shrink:0;margin-top:1px;color:var(--lilac);}
+
+/* right column: form card */
+.form-card{background:#fff;color:var(--ink);padding:clamp(24px,3.4vw,40px);
+  box-shadow:0 40px 90px rgba(7,4,89,.32);min-width:0;}
+.form-card .fc-badge{display:inline-block;font:600 10px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;
+  color:#fff;background:var(--accent);padding:8px 12px;margin-bottom:16px;}
+.form-card h2{font-size:clamp(20px,2.4vw,27px);font-weight:400;line-height:1.2;margin-bottom:6px;}
+.form-card .fc-sub{font-size:14.5px;color:var(--ink-soft);margin-bottom:22px;}
+.form-card form{display:flex;flex-direction:column;gap:12px;}
+.form-card label{display:block;font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.form-card input{width:100%;font-family:var(--sans);font-size:16px;color:var(--ink);
+  background:#fff;border:1px solid var(--rule);padding:14px 16px;min-height:52px;transition:border-color .2s;}
+.form-card input:focus{outline:none;border-color:var(--accent);}
+.form-card .btn{margin-top:6px;}
+.reducer{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;
+  font:600 11px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+  margin-top:14px;text-align:center;}
+.reducer svg{width:13px;height:13px;color:var(--accent);flex-shrink:0;}
+.consent{font-size:12px;line-height:1.55;color:var(--ink-soft);margin-top:18px;padding-top:16px;border-top:1px solid var(--rule);}
+.consent a{color:var(--accent);border-bottom:1px solid currentColor;}
+.fc-success{display:none;text-align:center;padding:14px 4px;}
+.fc-success.show{display:block;}
+.fc-success svg{width:46px;height:46px;margin:0 auto 12px;color:var(--accent);}
+.fc-success h3{font-size:22px;font-weight:400;margin-bottom:8px;}
+.fc-success p{font-size:15px;line-height:1.6;color:var(--ink-soft);}
+form.hidden{display:none;}
+.reducer.hidden,.consent.hidden{display:none;}
+
+/* ============ GET SOCIAL ============ */
+.social{background:var(--paper2);text-align:center;padding-block:clamp(40px,5vw,72px);}
+.social h2{font-size:clamp(22px,3vw,34px);font-weight:300;margin-top:6px;}
+.social p{max-width:46ch;margin:12px auto 0;}
+.social-links{display:flex;justify-content:center;gap:14px;margin-top:clamp(22px,2.6vw,30px);flex-wrap:wrap;}
+.social-links a{width:56px;height:56px;border:1px solid var(--rule);background:#fff;
+  display:inline-flex;align-items:center;justify-content:center;transition:.22s;}
+.social-links svg{width:22px;height:22px;color:var(--ink);transition:color .2s;}
+.social-links a:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-3px);}
+.social-links a:hover svg{color:#fff;}
+
+/* ============ FOOTER ============ */
+.foot{background:var(--ink);color:rgba(255,255,255,.82);padding-block:clamp(36px,4.4vw,56px) 34px;text-align:center;}
+.foot-logo{height:clamp(44px,4.4vw,58px);width:auto;filter:brightness(0) invert(1);margin:0 auto clamp(16px,2vw,22px);}
+.foot-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-bottom:22px;}
+.foot-nav a{font:600 10.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.82);padding:6px 0;transition:color .2s;}
+.foot-nav a:hover{color:var(--lilac);}
+.foot .copyright{font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.6);
+  padding-top:20px;border-top:1px solid rgba(255,255,255,.16);max-width:var(--max);margin:0 auto;}
+
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto;}.social-links a:hover{transform:none;}}
+</style>
+</head>
+<body>
+<svg style="position:absolute;width:0;height:0" aria-hidden="true">
+  <symbol id="arw" viewBox="0 0 36 11"><path d="M0 5.5h33M28 1l5 4.5L28 10" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  <symbol id="chk" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.4l2.6 2.6L16 9.4" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="li" viewBox="0 0 24 24"><path d="M4.5 8.5h3.4V20H4.5zM6.2 3.2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM10.4 8.5h3.3v1.6c.5-.9 1.7-1.9 3.6-1.9 3.1 0 4 2 4 5V20h-3.4v-6c0-1.6-.5-2.7-2-2.7-1.2 0-1.9.8-2.2 1.6-.1.3-.1.7-.1 1.1V20h-3.4z" fill="currentColor"/></symbol>
+  <symbol id="fb" viewBox="0 0 24 24"><path d="M14.3 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6A22 22 0 0 0 15.1 3.5c-2.4 0-4 1.45-4 4.1v2.3H8.4V13h2.7v8z" fill="currentColor"/></symbol>
+  <symbol id="yt" viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.28 5 12 5 12 5s-6.28 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.72 19 12 19 12 19s6.28 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z" fill="currentColor"/></symbol>
+</svg>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="jill-christensen-homepage.html"><img class="nav-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="240" height="54"></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="jill-christensen-homepage.html">Home</a>
+      <a href="jill-christensen-homepage.html#work">Speaking</a>
+      <a href="jill-christensen-clients.html">Clients</a>
+      <a href="jill-christensen-books-blog.html">Books &amp; Blog</a>
+      <a href="jill-christensen-about.html">About</a>
+      <a class="btn solid nav-cta" href="jill-christensen-book-jill.html"><span>Book Jill</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== OPT-IN ===== -->
+<section class="optin">
+  <div class="wrap">
+    <div class="optin-grid">
+
+      <!-- copy -->
+      <div class="optin-copy">
+        <span class="script">Free Leadership Guide</span>
+        <h1>Ready to Lead at a Higher Level?</h1>
+        <p class="lede">Get instant access to <b>5 Ways Great Managers Lead in the AI Age</b> &mdash; a free guide, plus practical leadership tips to help you build high-performing teams and achieve better results.</p>
+        <ul class="inside">
+          <li><svg><use href="#chk"/></svg><span>The free guide: <b style="color:#fff;font-weight:600;">5 Ways Great Managers Lead in the AI Age</b></span></li>
+          <li><svg><use href="#chk"/></svg><span>Practical leadership tips to build high-performing teams</span></li>
+          <li><svg><use href="#chk"/></svg><span>Proven ideas to achieve better results &mdash; straight to your inbox</span></li>
+        </ul>
+      </div>
+
+      <!-- form -->
+      <div class="form-card">
+        <form id="signup" novalidate>
+          <span class="fc-badge">Free Instant Access</span>
+          <h2>Send me the free guide</h2>
+          <p class="fc-sub">Enter your details and we&rsquo;ll email it right over.</p>
+          <div>
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" name="firstName" autocomplete="given-name" placeholder="Your first name" required>
+          </div>
+          <div>
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@company.com" required>
+          </div>
+          <button class="btn solid" type="submit"><span>Send Me the Free Guide</span> <svg><use href="#arw"/></svg></button>
+        </form>
+        <p class="reducer" id="reducer"><svg><use href="#lock"/></svg> Free &middot; Instant access &middot; Unsubscribe anytime</p>
+        <p class="consent" id="consent">By submitting this form, you are consenting to receive marketing emails from Jill Christensen International. Your data is fully protected and private &mdash; you can unsubscribe or have your data removed at any time. We use Proze as our email messaging platform, which is GDPR compliant.</p>
+
+        <div class="fc-success" id="successMsg">
+          <svg><use href="#chk"/></svg>
+          <h3>Check your inbox!</h3>
+          <p>Your copy of <b>5 Ways Great Managers Lead in the AI Age</b> is on its way. If you don&rsquo;t see it in a minute or two, check your spam or promotions folder.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== GET SOCIAL ===== -->
+<section class="social">
+  <div class="wrap">
+    <span class="script">Stay Connected</span>
+    <h2>Get Social With Jill</h2>
+    <p>Follow along for leadership insight, culture ideas, and the occasional reality check.</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/jillchristensen" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#li"/></svg></a>
+      <a href="https://www.facebook.com/JillChristensenInternational" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#fb"/></svg></a>
+      <a href="https://www.youtube.com/channel/UC4cgiW1hgHaCu69gTIThN3g" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#yt"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="foot">
+  <div class="wrap">
+    <img class="foot-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="230" height="52">
+    <nav class="foot-nav">
+      <a href="jill-christensen-homepage.html">Home</a>
+      <a href="jill-christensen-homepage.html#work">Speaking</a>
+      <a href="jill-christensen-clients.html">Clients</a>
+      <a href="jill-christensen-books-blog.html">Books &amp; Blog</a>
+      <a href="jill-christensen-about.html">About</a>
+      <a href="jill-christensen-book-jill.html">Book Jill</a>
+    </nav>
+    <div class="copyright">&copy; 2026 Employee Engagement. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // mobile nav
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),navMenu=document.getElementById('navMenu');
+  if(nav && burger && navMenu){
+    var setOpen=function(o){
+      nav.classList.toggle('open',o);
+      burger.setAttribute('aria-expanded',o?'true':'false');
+      document.body.style.overflow=o?'hidden':'';
+    };
+    burger.addEventListener('click',function(){setOpen(!nav.classList.contains('open'));});
+    navMenu.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
+    document.addEventListener('click',function(e){
+      if(nav.classList.contains('open') && !e.target.closest('#navMenu') && !e.target.closest('#burger'))setOpen(false);
+    });
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+    window.addEventListener('resize',function(){if(window.innerWidth>=960)setOpen(false);});
+  }
+
+  // form submit → success (stub; wire to Proze form endpoint)
+  var form=document.getElementById('signup'),success=document.getElementById('successMsg'),
+      reducer=document.getElementById('reducer'),consent=document.getElementById('consent');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      // TODO: POST to Proze (email platform) or connect via GHL/embed the Proze form action here
+      form.classList.add('hidden');
+      if(reducer)reducer.classList.add('hidden');
+      if(consent)consent.classList.add('hidden');
+      if(success)success.classList.add('show');
+    });
+  }
+})();
+</script>
+</body>
+</html>
