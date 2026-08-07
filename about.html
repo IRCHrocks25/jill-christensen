@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>About Jill Christensen — The 110% Expert™</title>
+<title>About Jill Christensen — The 110% Expert</title>
 <meta name="description" content="She didn't study broken workplaces. She survived one. How a Fortune 500 layoff became the mission that's reshaped culture for half a million leaders and counting." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#ffffff; --paper2:#f4f2fa; --paper3:#faf9fc; --cream:#fcfbf9;
@@ -16,7 +16,7 @@
   --rule:rgba(7,4,89,.14); --rule-lt:rgba(255,255,255,.24);
   --display:'Jost',system-ui,-apple-system,sans-serif;
   --sans:'Jost',system-ui,sans-serif;
-  --script:'Parisienne','Segoe Script',cursive;
+  --script:'Instrument Serif',Georgia,serif;
   --pad:clamp(20px,5vw,72px); --max:1280px;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
@@ -30,7 +30,7 @@ section{scroll-margin-top:24px;}
 .narrow{max-width:860px;margin-inline:auto;}
 
 h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-height:1.12;letter-spacing:-.02em;}
-.script{font-family:var(--script);font-weight:400;font-size:clamp(24px,2.7vw,36px);
+.script{font-family:var(--script);font-style:italic;font-weight:400;font-size:clamp(22px,2.5vw,33px);
   line-height:1.15;letter-spacing:0;color:var(--accent);display:block;}
 .eyebrow{font:600 10px/1.5 var(--sans);letter-spacing:.30em;text-transform:uppercase;color:var(--accent);display:block;}
 .display{font-size:clamp(31px,4.6vw,62px);line-height:1.08;letter-spacing:-.03em;font-weight:300;}
@@ -151,9 +151,10 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 
 /* ============ 3 · WHAT SHE STANDS FOR ============ */
 .stands{position:relative;overflow:hidden;color:#fff;
-  background:var(--ink) url('https://cdn.katalyst-crm.com/t1/3d-colored-palm-leaves-assortment.jpg') center/cover no-repeat;
+  background:linear-gradient(150deg,#070459 0%,#170a6e 52%,#3a0b78 100%);
   padding-block:clamp(60px,8.5vw,124px);}
-.stands::before{content:"";position:absolute;inset:0;background:rgba(7,4,89,.76);}
+.stands::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 88% -20%,rgba(192,7,217,.32),transparent 62%);}
 .stands .wrap{position:relative;z-index:1;}
 .stands .script{color:var(--lilac);}
 .stands h2{color:#fff;max-width:20ch;}
@@ -271,41 +272,34 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 
 /* ============ TURNING POINT — collapsible 2×2 ============ */
 .beats{display:grid;grid-template-columns:1fr;gap:clamp(16px,2vw,26px);
-  max-width:1160px;margin:0 auto;align-items:start;}
-.beat{display:block;padding:0;border:1px solid var(--rule);border-top:1px solid var(--rule);
+  max-width:1160px;margin:0 auto;align-items:stretch;}
+.beat{display:flex;flex-direction:column;padding:0;border:1px solid var(--rule);border-top:1px solid var(--rule);
   background:var(--paper);position:relative;overflow:hidden;
   transition:border-color .3s ease,box-shadow .3s ease;}
 .beat::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--accent);
-  transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.4,0,.2,1);}
-.beat.open{border-color:var(--accent);box-shadow:0 20px 46px rgba(7,4,89,.09);}
-.beat.open::before{transform:scaleX(1);}
+  transform:scaleX(1);transform-origin:left;}
+.beat.open{border-color:var(--rule);box-shadow:none;}
 
 .beat-head{display:grid;grid-template-columns:auto 1fr auto;align-items:center;
-  gap:clamp(14px,1.8vw,22px);width:100%;background:none;border:0;cursor:pointer;text-align:left;
-  padding:clamp(22px,2.6vw,32px);min-height:64px;}
+  gap:clamp(14px,1.8vw,22px);width:100%;background:none;border:0;cursor:default;text-align:left;
+  padding:clamp(22px,2.6vw,32px) clamp(22px,2.6vw,32px) 0;min-height:0;}
 .beat-num{font-family:var(--display);font-weight:200;font-size:clamp(30px,3.2vw,44px);
-  line-height:.9;letter-spacing:-.04em;color:rgba(192,7,217,.26);
-  transition:color .3s ease;}
-.beat.open .beat-num{color:rgba(192,7,217,.6);}
+  line-height:.9;letter-spacing:-.04em;color:rgba(192,7,217,.5);}
 .beat-head h3{font-family:var(--display);font-weight:400;
   font-size:clamp(19px,2.1vw,27px);letter-spacing:-.02em;line-height:1.2;
-  color:var(--ink);margin:0;transition:color .3s ease;min-width:0;}
-.beat.open .beat-head h3{color:var(--accent);}
-.beat-icon{position:relative;width:20px;height:20px;flex-shrink:0;}
-.beat-icon::before,.beat-icon::after{content:"";position:absolute;background:var(--accent);
-  border-radius:2px;transition:.32s;}
-.beat-icon::before{width:14px;height:1.6px;top:50%;left:50%;transform:translate(-50%,-50%);}
-.beat-icon::after{width:1.6px;height:14px;top:50%;left:50%;transform:translate(-50%,-50%);}
-.beat.open .beat-icon::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0;}
+  color:var(--ink);margin:0;min-width:0;}
+.beat-icon{display:none;}
 
-.beat-body{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.4,0,.2,1);}
-.bb-inner{padding:0 clamp(22px,2.6vw,32px) clamp(24px,2.8vw,34px);}
+.beat-body{max-height:none !important;overflow:visible;flex:1;}
+.bb-inner{padding:clamp(18px,2vw,24px) clamp(22px,2.6vw,32px) clamp(24px,2.8vw,34px);height:100%;}
 .bb-inner p{font-size:clamp(15.5px,1.28vw,17.5px);line-height:1.78;}
 .bb-inner p+p{margin-top:14px;}
 .bb-inner .pq{margin-block:clamp(20px,2.4vw,28px) 0;padding-left:clamp(16px,2vw,24px);}
 .bb-inner .pq p{font-size:clamp(17px,1.9vw,23px);line-height:1.3;max-width:none;}
 
-@media (min-width:860px){.beats{grid-template-columns:1fr 1fr;gap:clamp(20px,2.4vw,32px);}}
+@media (min-width:860px){
+  .beats{grid-template-columns:1fr 1fr;gap:clamp(20px,2.4vw,32px);grid-auto-rows:1fr;}
+}
 @media (prefers-reduced-motion:reduce){.beat-body{transition:none;}}
 
 /* --- What She Stands For: two columns --- */
@@ -380,11 +374,11 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 }
 @media (max-width:959px){.hook h1 .ln.fit{white-space:normal;}}
 
-/* --- Off the Stage panel: floral backdrop --- */
+/* --- Off the Stage panel --- */
 .off-txt{position:relative;overflow:hidden;
-  background:var(--ink) url('https://cdn.katalyst-crm.com/t1/3d-colored-palm-leaves-assortment.jpg') center/cover no-repeat !important;}
+  background:var(--ink) !important;}
 .off-txt::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
-  background:rgba(7,4,89,.80);}
+  background:radial-gradient(circle at 15% 110%,rgba(192,7,217,.28),transparent 60%);}
 .off-txt > *{position:relative;z-index:1;}
 
 /* --- culture quote spans the full two-column width --- */
@@ -450,10 +444,10 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 
   /* turning point cards */
   .beats{gap:14px;}
-  .beat-head{padding:20px 18px;gap:12px;}
+  .beat-head{padding:20px 18px 0;gap:12px;}
   .beat-num{font-size:clamp(26px,7.4vw,34px);}
   .beat-head h3{font-size:clamp(18px,5vw,22px);}
-  .bb-inner{padding:0 18px 22px;}
+  .bb-inner{padding:14px 18px 22px;}
   .bb-inner .pq p{font-size:clamp(17px,4.8vw,21px);}
 
   /* stands + quote */
@@ -482,15 +476,15 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 <!-- ===== NAV ===== -->
 <header class="nav" id="nav">
   <div class="wrap">
-    <a href="index.html"><img class="nav-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="260" height="58"></a>
+    <a href="jill-christensen-homepage-revised.html"><img class="nav-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="260" height="58"></a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
     <nav class="nav-menu" id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="#turning">Her Story</a>
-      <a href="#stands">What She Stands For</a>
-      <a href="#proof">The Proof</a>
-      <a href="#off">Off the Stage</a>
-      <a href="#close">Book Jill</a>
+      <a href="jill-christensen-homepage-revised.html">Home</a>
+      <a href="jill-christensen-homepage-revised.html#work">Speaking</a>
+      <a href="jill-christensen-books-blog.html">Books &amp; Blog</a>
+      <a href="jill-christensen-clients.html">Clients</a>
+      <a href="jill-christensen-about-preview.html">About</a>
+      <a href="jill-christensen-book-jill.html">Book Jill</a>
     </nav>
   </div>
 </header>
@@ -630,7 +624,7 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
       <div class="proof-split">
         <!-- PRODUCTION NOTE: strong on-stage action shot; marquee client and conference logos can sit beneath the bullets. Confirm all counts against current live profiles before publishing. -->
         <div class="proof-media rv">
-          <img src="https://cdn.katalyst-crm.com/t1/india%201.png" alt="Jill Christensen on stage" loading="lazy">
+          <img src="https://cdn.katalyst-crm.com/t1/about%20jill%20(1).jpg" alt="Jill Christensen" loading="lazy">
         </div>
         <div class="proof-txt rv">
           <p class="lede">The credentials are real, but they aren&rsquo;t the point. The point is what they add up to: a methodology that works in any industry, on any stage.</p>
@@ -678,12 +672,11 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
   <div class="wrap">
     <div class="cols">
       <div>
-        <a href="index.html"><img class="foot-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="230" height="52"></a>
+        <img class="foot-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="230" height="52">
         <p style="margin-top:14px;font-size:15px;line-height:1.7;">Jill Christensen International LLC<br>Goodyear, AZ</p>
       </div>
       <div>
         <h5>Navigate</h5>
-        <a href="index.html">Home</a>
         <a href="#turning">Her Story</a>
         <a href="#stands">What She Stands For</a>
         <a href="#proof">The Proof</a>
@@ -748,30 +741,7 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
   window.addEventListener('load',fitAll);
   var rtf;window.addEventListener('resize',function(){clearTimeout(rtf);rtf=setTimeout(fitAll,120);});
 
-  // turning-point accordion
-  function openBeat(b){
-    b.classList.add('open');
-    var body=b.querySelector('.beat-body');
-    body.style.maxHeight=body.scrollHeight+'px';
-    b.querySelector('.beat-head').setAttribute('aria-expanded','true');
-  }
-  function closeBeat(b){
-    b.classList.remove('open');
-    b.querySelector('.beat-body').style.maxHeight='';
-    b.querySelector('.beat-head').setAttribute('aria-expanded','false');
-  }
-  document.querySelectorAll('.beat-head').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var b=this.closest('.beat');
-      b.classList.contains('open')?closeBeat(b):openBeat(b);
-    });
-  });
-  var firstBeat=document.querySelector('.beat');if(firstBeat)openBeat(firstBeat);
-  window.addEventListener('resize',function(){
-    document.querySelectorAll('.beat.open .beat-body').forEach(function(bd){
-      bd.style.maxHeight=bd.scrollHeight+'px';
-    });
-  });
+  // turning-point tiles are static and uniform — no accordion behavior needed
 
   function animateCount(el){
     var target=parseFloat(el.getAttribute('data-count')),

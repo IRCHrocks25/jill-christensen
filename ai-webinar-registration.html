@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Manager Effectiveness Lab — Jill Christensen</title>
-<meta name="description" content="Monthly coaching membership for managers. Live monthly training, live Q&amp;A and coaching with Jill, recordings included. $49/mo Founder's rate." />
+<title>Free AI Webinar for Managers — Jill Christensen</title>
+<meta name="description" content="Free live webinar for managers. A practical, no-jargon introduction to AI for leaders — and the one skill that will decide who thrives as the tools take over." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#ffffff; --paper2:#f4f2fa; --ink:#070459; --ink-soft:#4a487a;
   --accent:#C007D9; --lilac:#d8a6e6; --rule:rgba(7,4,89,.16); --rule-lt:rgba(255,255,255,.22);
   --display:'Jost',system-ui,-apple-system,sans-serif; --sans:'Jost',system-ui,sans-serif;
-  --script:'Parisienne','Segoe Script',cursive;
+  --script:'Instrument Serif',Georgia,serif;
   --pad:clamp(20px,5vw,72px); --max:1240px;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
@@ -26,7 +26,7 @@ section{scroll-margin-top:24px;}
 .wide{max-width:1440px;}
 
 h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-height:1.12;letter-spacing:-.02em;}
-.script{font-family:var(--script);font-weight:400;font-size:clamp(24px,2.6vw,34px);line-height:1.15;letter-spacing:0;color:var(--accent);display:block;}
+.script{font-family:var(--script);font-style:italic;font-weight:400;font-size:clamp(22px,2.4vw,32px);line-height:1.1;letter-spacing:0;color:var(--accent);display:block;}
 .kicker{font:600 10px/1.4 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--accent);}
 .lede{font-size:clamp(17px,1.5vw,20px);line-height:1.7;}
 .big{font-size:clamp(30px,4.4vw,58px);line-height:1.1;letter-spacing:-.028em;}
@@ -51,7 +51,7 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 
 /* ============ 1. HERO — full-bleed image, copy anchored bottom-left ============ */
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
-  background:var(--ink) url('https://cdn.katalyst-crm.com/t1/74747.png') center/cover no-repeat;color:#fff;overflow:hidden;}
+  background:var(--ink) url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1800&q=75&auto=format&fit=crop') center/cover no-repeat;color:#fff;overflow:hidden;}
 .hero::before{content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.22) 34%,rgba(7,4,89,.68) 78%,rgba(7,4,89,.90) 100%);}
 .hero-top{position:relative;z-index:2;padding:clamp(22px,3vw,40px) var(--pad) 0;
@@ -68,8 +68,8 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 .hero h1 em{font-style:normal;color:var(--lilac);}
 .hero p{color:rgba(255,255,255,.92);max-width:70ch;font-size:clamp(16px,1.4vw,19px);line-height:1.62;}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:clamp(22px,2.6vw,32px);}
-.hero-note{font-size:14px;color:rgba(255,255,255,.82);}
-.hero-note b{color:#fff;font-weight:500;}
+.hero-note{font-size:14.5px;color:rgba(255,255,255,.92);font-weight:600;letter-spacing:.02em;}
+.hero-note b{color:#fff;font-weight:700;}
 
 /* ============ 2. MARQUEE ============ */
 .marq{background:var(--ink);color:#fff;overflow:hidden;border-block:1px solid rgba(255,255,255,.16);position:relative;}
@@ -85,7 +85,7 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 @media (prefers-reduced-motion:reduce){.marq-track{animation:none;}}
 
 /* ============ section shell + running index ============ */
-.sec{padding-block:clamp(56px,8vw,116px);}
+.sec{padding-block:clamp(44px,5.8vw,86px);}
 .sec.tint{background:var(--paper2);}
 .sechead{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:clamp(30px,4vw,52px);}
 .secnum{font-family:var(--display);font-weight:200;font-size:clamp(46px,6vw,86px);line-height:.85;
@@ -195,7 +195,7 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 
 /* ============ 8. JOIN — horizontal price bar ============ */
 .pricebar{position:relative;overflow:hidden;color:#fff;
-  background:var(--ink) url('https://cdn.katalyst-crm.com/t1/3d-colored-palm-leaves-assortment.jpg') center/cover no-repeat;
+  background:linear-gradient(150deg,#070459 0%,#170a6e 52%,#3a0b78 100%);
   border-top:4px solid var(--accent);
   box-shadow:0 0 100px rgba(192,7,217,.42),0 30px 70px rgba(7,4,89,.24);}
 .pricebar::before{content:"";position:absolute;inset:0;
@@ -223,14 +223,14 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 @media (min-width:840px){.qa{grid-template-columns:1fr 1fr;}}
 
 /* ============ 10. CLOSE ============ */
-.close{position:relative;overflow:hidden;color:#fff;padding-block:clamp(60px,9vw,130px);text-align:center;
+.close{position:relative;overflow:hidden;color:#fff;padding-block:clamp(50px,7vw,100px);text-align:center;
   background:var(--ink) url('https://cdn.katalyst-crm.com/t1/6.png') center/cover no-repeat;}
 .close::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.56);}
 .close .wrap{position:relative;z-index:1;max-width:900px;}
 .close h2{color:#fff;font-size:clamp(28px,4.6vw,58px);font-weight:300;line-height:1.06;margin:12px 0 18px;}
 .close p{color:rgba(255,255,255,.9);max-width:56ch;margin:0 auto;}
 .close .btn{margin-top:28px;}
-.close .fine{font-size:13.5px;color:rgba(255,255,255,.74);margin-top:16px;}
+.close .fine{font-size:14px;color:#fff;font-weight:600;letter-spacing:.02em;margin-top:16px;}
 
 /* ============ sticky bar ============ */
 .sbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(255,255,255,.97);
@@ -262,7 +262,7 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 
 /* ============ phones ============ */
 @media (max-width:767px){
-  .hero{min-height:77svh;}
+  .hero{min-height:92svh;}
   .hero h1{font-size:clamp(29px,8vw,42px);}
   .marq-track span{font-size:10px;letter-spacing:.2em;}
   .slab{padding:26px 20px;}
@@ -346,11 +346,12 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 .jc-assure svg{width:20px;height:20px;flex-shrink:0;color:var(--accent);}
 @media (min-width:700px){.jc-assure{grid-template-columns:repeat(3,1fr);max-width:820px;}}
 
-/* ============ slab: full-width floral band, centred, word-by-word reveal ============ */
+/* ============ slab: full-width band, centred, word-by-word reveal ============ */
 .slab-full{position:relative;overflow:hidden;color:#fff;text-align:center;
-  padding-block:clamp(64px,9vw,130px);
-  background:var(--ink) url('https://cdn.katalyst-crm.com/t1/3d-colored-palm-leaves-assortment.jpg') center/cover no-repeat;}
-.slab-full::before{content:"";position:absolute;inset:0;background:rgba(7,4,89,.48);pointer-events:none;}
+  padding-block:clamp(46px,6.4vw,96px);
+  background:linear-gradient(150deg,#070459 0%,#170a6e 52%,#3a0b78 100%);}
+.slab-full::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 82% -20%,rgba(192,7,217,.34),transparent 62%);}
 .slab-full .wrap{position:relative;z-index:1;}
 .slab-txt{font-family:var(--display);font-weight:300;font-size:clamp(24px,3.6vw,48px);
   line-height:1.22;letter-spacing:-.025em;color:#fff;max-width:42ch;margin:0 auto;text-shadow:0 2px 22px rgba(0,0,0,.6);}
@@ -378,9 +379,9 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
 @keyframes ribbonshine{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
 @media (prefers-reduced-motion:reduce){.ribbon span{animation:none;}}
 
-/* --- hero logo: 30% bigger, tighter to title --- */
+/* --- hero logo: 30% bigger, with real space beneath --- */
 .hero-logo{height:clamp(60px,7vw,96px) !important;}
-.hero-top{gap:clamp(6px,0.8vw,10px) !important;margin-bottom:-8px;margin-top:clamp(-40px,-4vw,-60px);}
+.hero-top{gap:clamp(6px,0.8vw,10px) !important;margin-bottom:clamp(28px,4vw,56px);margin-top:clamp(-40px,-4vw,-60px);}
 
 /* --- statement numbers: soft display weight --- */
 .stmt li .n{font-family:var(--display);font-weight:200;font-size:clamp(36px,4.4vw,56px);
@@ -456,17 +457,33 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
   padding:clamp(32px,4.4vw,58px) clamp(26px,3.4vw,48px);
   box-shadow:0 30px 80px rgba(7,4,89,.08);}
 .reg-dates{margin-bottom:clamp(22px,2.6vw,32px);padding-bottom:clamp(18px,2vw,24px);border-bottom:1px solid var(--rule);}
-.date-row{display:flex;justify-content:center;gap:clamp(14px,2vw,26px);margin:14px 0 10px;}
-.date-row .d{font-family:var(--display);font-weight:300;font-size:clamp(28px,3.2vw,40px);
-  letter-spacing:-.02em;color:var(--ink);}
-.dt-note{font:500 11px/1.5 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--accent);}
+.date-pick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 12px;}
+.date-opt{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:88px;padding:14px 8px;border:1.5px solid var(--rule);background:#fff;cursor:pointer;
+  transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease;text-align:center;}
+.date-opt input{position:absolute;opacity:0;pointer-events:none;}
+.date-opt:hover{border-color:var(--accent);}
+.date-opt:has(input:checked){border-color:var(--accent);background:rgba(192,7,217,.06);
+  box-shadow:0 8px 22px rgba(192,7,217,.18);}
+.date-opt:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px;}
+.date-opt .dt-main{font-family:var(--display);font-weight:300;font-size:clamp(22px,2.6vw,30px);
+  line-height:1;letter-spacing:-.02em;color:var(--ink);}
+.date-opt .dt-sub{font:600 9.5px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-soft);margin-top:6px;}
+.date-opt:has(input:checked) .dt-sub{color:var(--accent);}
+@media (max-width:520px){
+  .date-pick{grid-template-columns:1fr;}
+  .date-opt{flex-direction:row;justify-content:flex-start;gap:16px;min-height:60px;padding:12px 18px;}
+  .date-opt .dt-sub{margin-top:0;}
+}
+.dt-note{font:600 11px/1.5 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--accent);}
 .reg-form{display:flex;flex-direction:column;gap:12px;}
-.reg-form input{width:100%;font-family:var(--sans);font-size:16px;color:var(--ink);
+.reg-form input[type="text"],.reg-form input[type="email"]{width:100%;font-family:var(--sans);font-size:16px;color:var(--ink);
   background:var(--paper);border:1px solid var(--rule);padding:16px 18px;min-height:54px;
   text-align:center;transition:border-color .2s;}
 .reg-form input:focus{outline:none;border-color:var(--accent);}
 .reg-form .btn{width:100%;}
-.reg-fine{font-size:14px;line-height:1.6;color:var(--ink-soft);margin-top:16px;}
+.reg-fine{font-size:14px;line-height:1.6;color:var(--ink);font-weight:600;letter-spacing:.02em;margin-top:16px;}
 
 /* ============ host quote ============ */
 .host-quote{margin-top:22px;padding-top:20px;border-top:1px solid var(--rule-lt);}
@@ -492,8 +509,6 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
   .scard{padding:24px 20px;}
   .scard h3{font-size:clamp(19px,5.2vw,24px);}
   .reg-card{padding:28px 20px;}
-  .date-row{gap:14px;}
-  .date-row .d{font-size:clamp(24px,7vw,32px);}
   .host .textside{padding:30px 20px;}
   .host .imgside{padding:20px 18px 0;}
   .btn{width:100%;}
@@ -529,13 +544,13 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
       <img class="hero-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="300" height="68">
     </div>
     <div class="hero-body">
-      <span class="kicker hero-kick">Monthly Coaching Membership for Managers</span>
+      <span class="kicker hero-kick">Free Webinar for Managers</span>
       <h1 class="h-twoline"><span class="ln">The one skill managers need most</span><span class="ln">in the AI Era.</span></h1>
-      <p>A practical, no-jargon introduction to AI for leaders &mdash; and the one skill that will decide who thrives as the tools take over.</p>
+      <p>A practical, no-jargon introduction to AI for leaders that will put you in the top 10% of users &mdash; and the one skill that will decide who thrives as the tools take over.</p>
       <div class="hero-cta">
         <a class="btn solid" href="#register"><span>Save My Spot</span> <svg><use href="#arw"/></svg></a>
       </div>
-      <span class="hero-note"><b>Free</b> &nbsp;·&nbsp; <b>Live online</b> &nbsp;·&nbsp; Can&rsquo;t make it live? Register and we&rsquo;ll send the replay.</span>
+      <span class="hero-note"><b>Free &nbsp;&middot;&nbsp; Live online &nbsp;&middot;&nbsp; Can&rsquo;t make it live? Register and we&rsquo;ll send the replay.</b></span>
     </div>
   </header>
 
@@ -612,7 +627,7 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
     <div class="grid">
       <div class="pic"></div>
       <div class="panel rv">
-        <span class="script">The 110% Expert&trade;</span>
+        <span class="script">The 110% Expert</span>
         <h2>Jill Christensen</h2>
         <p class="sub">Helping Managers Build Teams That Choose to Give Their All</p>
         <p class="bio">Jill Christensen is a former Fortune 500 executive, best-selling author, and one of the highest-rated female speakers in the world. She has helped more than 500,000 leaders build workplaces people don&rsquo;t want to leave &mdash; and she&rsquo;s here to help you lead through the biggest workplace shift in a generation.</p>
@@ -636,16 +651,32 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
       <p class="lede rv" style="text-align:center;max-width:56ch;margin:0 auto clamp(28px,3vw,40px);">Register now, and bring the questions your team is already asking about AI.</p>
       <div class="reg-card rv">
         <div class="reg-dates">
-          <span class="script" style="font-size:clamp(20px,2vw,26px);">Upcoming Sessions</span>
-          <div class="date-row"><span class="d">Oct. 1</span><span class="d">Nov. 5</span><span class="d">Dec. 3</span></div>
-          <p class="dt-note">First Thursday &middot; 9&ndash;10 a.m. MST</p>
+          <span class="script" style="font-size:clamp(20px,2vw,26px);">Pick a Session</span>
+          <div class="date-pick" role="radiogroup" aria-label="Choose a session date">
+            <label class="date-opt">
+              <input type="radio" name="session" value="2026-10-01" checked>
+              <span class="dt-main">Oct. 1</span>
+              <span class="dt-sub">Thu &middot; 9 am MST</span>
+            </label>
+            <label class="date-opt">
+              <input type="radio" name="session" value="2026-11-05">
+              <span class="dt-main">Nov. 5</span>
+              <span class="dt-sub">Thu &middot; 9 am MST</span>
+            </label>
+            <label class="date-opt">
+              <input type="radio" name="session" value="2026-12-03">
+              <span class="dt-main">Dec. 3</span>
+              <span class="dt-sub">Thu &middot; 9 am MST</span>
+            </label>
+          </div>
+          <p class="dt-note">Tap a date &mdash; then reserve your seat below</p>
         </div>
         <form id="signup" novalidate class="reg-form">
           <input type="text" name="name" placeholder="First name" autocomplete="given-name" aria-label="First name">
           <input type="email" name="email" placeholder="Email address" autocomplete="email" aria-label="Email address">
           <button class="btn solid" type="submit"><span>Save My Spot</span> <svg><use href="#arw"/></svg></button>
         </form>
-        <p class="reg-fine">Free &nbsp;·&nbsp; Live online &nbsp;·&nbsp; Replay sent to all registrants</p>
+        <p class="reg-fine"><b>Free &nbsp;&middot;&nbsp; Live online &nbsp;&middot;&nbsp; Replay sent to all registrants</b></p>
       </div>
     </div>
   </section>
@@ -659,7 +690,7 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-hei
       <h2>The one skill managers need most in the AI Era.</h2>
       <p>Seats are limited and the session is free. Register now, and bring the questions your team is already asking about AI.</p>
       <a class="btn solid" href="#register"><span>Save My Spot &mdash; It&rsquo;s Free</span> <svg><use href="#arw"/></svg></a>
-      <p class="fine">Free &nbsp;·&nbsp; Live online &nbsp;·&nbsp; Replay sent to all registrants</p>
+      <p class="fine"><b>Free &nbsp;&middot;&nbsp; Live online &nbsp;&middot;&nbsp; Replay sent to all registrants</b></p>
     </div>
   </section>
 

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book Jill — Jill Christensen</title>
+<meta name="description" content="Book Jill Christensen to speak. Reach out by phone, email, or the inquiry form to bring the 110% Expert to your next event." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ffffff; --paper2:#f5f3fa; --paper3:#faf9fc;
+  --ink:#070459; --ink-soft:#4a487a;
+  --accent:#C007D9; --accent-2:#7B10D8; --lilac:#d8a6e6;
+  --rule:rgba(7,4,89,.13);
+  --display:'Jost',system-ui,-apple-system,sans-serif;
+  --sans:'Jost',system-ui,sans-serif;
+  --edit:'Instrument Serif',Georgia,serif;
+  --pad:clamp(18px,5vw,64px); --max:1280px;
+  --sec:clamp(44px,5.6vw,84px);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{background:var(--paper);color:var(--ink-soft);font-family:var(--sans);
+  font-size:clamp(15.5px,1vw,16.5px);line-height:1.68;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img,svg{max-width:100%;height:auto;display:block;}
+section{scroll-margin-top:70px;}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--pad);}
+h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-height:1.12;letter-spacing:-.02em;}
+.label{font-family:var(--edit);font-style:italic;font-weight:400;
+  font-size:clamp(21px,2.3vw,30px);line-height:1.1;color:var(--accent);display:block;}
+.eyebrow{font:600 10px/1.5 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--accent);display:block;}
+.display{font-size:clamp(29px,4.1vw,54px);line-height:1.08;letter-spacing:-.03em;font-weight:300;}
+.h2{font-size:clamp(25px,3.1vw,40px);line-height:1.14;letter-spacing:-.025em;font-weight:300;}
+.lede{font-size:clamp(15.5px,1.25vw,18px);line-height:1.62;}
+.pink{color:var(--accent);}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font:600 11px/1.35 var(--sans);letter-spacing:.15em;text-transform:uppercase;
+  padding:15px 26px;min-height:48px;cursor:pointer;text-align:center;white-space:normal;
+  transition:.22s;border:1px solid transparent;width:100%;}
+.btn svg{width:16px;height:10px;flex-shrink:0;}
+.btn.solid{background:var(--accent);color:#fff;}
+.btn.solid:hover{background:var(--ink);}
+.btn.onDark{background:#fff;color:var(--ink);}
+.btn.onDark:hover{background:var(--accent);color:#fff;}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btns{display:flex;flex-wrap:wrap;gap:10px;}
+@media (min-width:560px){.btn{width:auto;}}
+
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+.js .rv.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;}html{scroll-behavior:auto;}}
+
+/* ===== NAV ===== */
+.nav{position:absolute;top:0;left:0;right:0;z-index:60;}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:16px;}
+.nav-logo{height:clamp(40px,4.4vw,58px);width:auto;filter:brightness(0) invert(1) drop-shadow(0 2px 12px rgba(0,0,0,.35));}
+.burger{display:flex;flex-direction:column;gap:5px;width:44px;height:44px;border:0;background:none;
+  cursor:pointer;align-items:center;justify-content:center;}
+.burger span{width:23px;height:1.5px;background:#fff;transition:.3s;}
+.nav.open .burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav.open .burger span:nth-child(2){opacity:0;}
+.nav.open .burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.nav-menu{position:absolute;top:100%;left:0;right:0;background:var(--ink);display:flex;flex-direction:column;
+  align-items:stretch;max-height:0;overflow:hidden;transition:max-height .35s,padding .35s;padding:0 var(--pad);}
+.nav.open .nav-menu{max-height:600px;padding:6px var(--pad) 22px;}
+.nav-menu a{font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#fff;
+  padding:15px 0;border-bottom:1px solid rgba(255,255,255,.14);min-height:44px;display:flex;align-items:center;}
+.nav-cta{display:flex;flex-direction:column;gap:10px;padding-top:16px;}
+.nav-cta .btn{width:100%;}
+@media (min-width:1080px){
+  .burger{display:none;}
+  .nav-menu{position:static;flex-direction:row;align-items:center;gap:clamp(16px,1.9vw,28px);
+    max-height:none;overflow:visible;padding:0;background:none;}
+  .nav-menu a{color:#fff;padding:4px 0;border:0;min-height:0;position:relative;transition:color .2s;}
+  .nav-menu a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;
+    background:var(--lilac);transition:right .25s;}
+  .nav-menu a:hover{color:var(--lilac);} .nav-menu a:hover::after{right:0;}
+  .nav-cta{flex-direction:row;padding-top:0;gap:8px;margin-left:6px;}
+  .nav-cta .btn{width:auto;min-height:40px;padding:11px 18px;font-size:10px;}
+}
+
+/* ===== HERO ===== */
+.phero{position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(150deg,#070459 0%,#170a6e 52%,#3a0b78 100%);}
+.phero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(120% 80% at 82% -10%,rgba(192,7,217,.34),transparent 60%);}
+.phero .wrap{position:relative;z-index:2;padding-block:clamp(120px,15vw,168px) clamp(44px,5.6vw,84px);text-align:center;}
+.phero .eyebrow{color:var(--lilac);}
+.phero h1{color:#fff;font-size:clamp(30px,5vw,62px);font-weight:300;line-height:1.06;letter-spacing:-.03em;
+  margin:14px auto 0;max-width:18ch;}
+.phero h1 em{font-style:normal;color:var(--lilac);}
+.phero p{color:rgba(255,255,255,.9);max-width:58ch;margin:16px auto 0;font-size:clamp(15.5px,1.3vw,18px);line-height:1.6;}
+
+/* ===== CONTACT GRID ===== */
+.contact{padding-block:var(--sec);}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,64px);align-items:start;}
+@media (min-width:920px){.contact-grid{grid-template-columns:.82fr 1.18fr;}}
+
+.info .label{margin-bottom:6px;}
+.info h2{margin-bottom:16px;max-width:16ch;}
+.info-list{list-style:none;margin-top:clamp(20px,2.6vw,30px);}
+.info-list li{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-top:1px solid var(--rule);min-width:0;}
+.info-list li:last-child{border-bottom:1px solid var(--rule);}
+.info-ic{flex:0 0 auto;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--accent),var(--accent-2));color:#fff;}
+.info-ic svg{width:19px;height:19px;}
+.info-txt{min-width:0;}
+.info-txt .k{font:600 9.5px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);}
+.info-txt .v{font-family:var(--display);font-weight:400;font-size:clamp(17px,1.6vw,20px);letter-spacing:-.01em;
+  color:var(--ink);margin-top:4px;overflow-wrap:anywhere;}
+.info-txt .v a:hover{color:var(--accent);}
+.socs{display:flex;gap:12px;margin-top:clamp(22px,2.6vw,30px);}
+.socs a{width:44px;height:44px;border:1px solid var(--rule);display:grid;place-items:center;
+  color:var(--ink);transition:.2s;}
+.socs a:hover{background:var(--accent);border-color:var(--accent);color:#fff;}
+.socs svg{width:18px;height:18px;}
+
+/* form */
+.form-card{background:var(--paper2);border:1px solid var(--rule);border-top:4px solid var(--accent);
+  padding:clamp(26px,3.4vw,48px);min-width:0;}
+.form-card .label{margin-bottom:4px;}
+.form-card h2{margin-bottom:6px;}
+.form-card p.intro{margin-bottom:clamp(20px,2.4vw,28px);}
+.field-row{display:grid;grid-template-columns:1fr;gap:14px;}
+@media (min-width:560px){.field-row.two{grid-template-columns:1fr 1fr;}}
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:14px;min-width:0;}
+.field label{font:600 9.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);}
+.field label .req{color:var(--accent);}
+.field input,.field textarea{width:100%;font-family:var(--sans);font-size:16px;color:var(--ink);
+  background:#fff;border:1px solid var(--rule);padding:14px 16px;min-height:50px;transition:border-color .2s;}
+.field textarea{min-height:130px;resize:vertical;line-height:1.6;}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--accent);}
+.form-card .btn{width:100%;margin-top:6px;}
+.form-note{font-size:13px;color:var(--ink-soft);margin-top:12px;text-align:center;}
+
+/* ===== CTA ===== */
+.cta{position:relative;overflow:hidden;color:#fff;text-align:center;padding-block:var(--sec);
+  background:linear-gradient(150deg,#070459 0%,#170a6e 52%,#3a0b78 100%);}
+.cta::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 15% 110%,rgba(192,7,217,.3),transparent 60%);}
+.cta .wrap{position:relative;z-index:1;}
+.cta .label{color:var(--lilac);}
+.cta h2{color:#fff;max-width:24ch;margin:4px auto 12px;}
+.cta p{color:rgba(255,255,255,.9);max-width:56ch;margin:0 auto;}
+.cta .btns{justify-content:center;margin-top:22px;}
+
+/* ===== FOOTER ===== */
+.foot{background:var(--ink);color:rgba(255,255,255,.8);padding-block:clamp(36px,4.4vw,60px) 32px;}
+.foot .cols{display:grid;grid-template-columns:1fr;gap:24px;}
+.foot-logo{height:clamp(48px,4.4vw,62px);width:auto;filter:brightness(0) invert(1);}
+.foot h5{font:600 10px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--lilac);margin-bottom:12px;}
+.foot a{display:block;padding:6px 0;font-size:15px;color:rgba(255,255,255,.8);transition:color .2s;}
+.foot a:hover{color:var(--lilac);}
+.foot .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
+  margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);
+  font-size:11px;letter-spacing:.06em;text-transform:uppercase;}
+.foot .legal a{display:inline;padding:0;border-bottom:1px solid currentColor;}
+@media (min-width:760px){.foot .cols{grid-template-columns:1.5fr 1fr 1fr;gap:clamp(24px,3.4vw,54px);}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+<svg style="position:absolute;width:0;height:0" aria-hidden="true">
+  <symbol id="arw" viewBox="0 0 36 11"><path d="M0 5.5h33M28 1l5 4.5L28 10" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.4a11 11 0 0 0 5.1 5.1l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="li" viewBox="0 0 24 24"><path d="M4.5 8.5h3.4V20H4.5zM6.2 3.2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM10.4 8.5h3.3v1.6c.5-.9 1.7-1.9 3.6-1.9 3.1 0 4 2 4 5V20h-3.4v-6c0-1.6-.5-2.7-2-2.7-1.2 0-1.9.8-2.2 1.6-.1.3-.1.7-.1 1.1V20h-3.4z" fill="currentColor"/></symbol>
+  <symbol id="fb" viewBox="0 0 24 24"><path d="M14.3 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6A22 22 0 0 0 15.1 3.5c-2.4 0-4 1.45-4 4.1v2.3H8.4V13h2.7v8z" fill="currentColor"/></symbol>
+  <symbol id="yt" viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.28 5 12 5 12 5s-6.28 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.72 19 12 19 12 19s6.28 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z" fill="currentColor"/></symbol>
+</svg>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="jill-christensen-homepage-revised.html"><img class="nav-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="260" height="58"></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="jill-christensen-homepage-revised.html">Home</a>
+      <a href="jill-christensen-homepage-revised.html#work">Speaking</a>
+      <a href="jill-christensen-books-blog.html">Books &amp; Blog</a>
+      <a href="jill-christensen-clients.html">Clients</a>
+      <a href="jill-christensen-about-preview.html">About</a>
+      <div class="nav-cta">
+        <a class="btn solid" href="jill-christensen-book-jill.html">Book Jill</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="phero">
+    <div class="wrap">
+      <span class="eyebrow">Book Jill</span>
+      <h1>Let&rsquo;s build something <em>unforgettable.</em></h1>
+      <p>Ready to bring the 110% Expert to your stage? Reach out by phone, email, or the form below, and let&rsquo;s start planning your next event.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <div class="info rv">
+          <span class="label">We Want to Hear From You</span>
+          <h2 class="h2">Three easy ways to reach Jill.</h2>
+          <ul class="info-list">
+            <li>
+              <span class="info-ic"><svg><use href="#i-phone"/></svg></span>
+              <span class="info-txt"><span class="k">Phone</span><span class="v"><a href="tel:+13039999224">+1.303.999.9224</a></span></span>
+            </li>
+            <li>
+              <span class="info-ic"><svg><use href="#i-mail"/></svg></span>
+              <span class="info-txt"><span class="k">Email</span><span class="v"><a href="mailto:jill@jillchristensenintl.com">jill@jillchristensenintl.com</a></span></span>
+            </li>
+            <li>
+              <span class="info-ic"><svg><use href="#i-pin"/></svg></span>
+              <span class="info-txt"><span class="k">Address</span><span class="v"><a href="https://maps.app.goo.gl/AaYyWB86j5E2gzTR7" target="_blank" rel="noopener">3150 N 165th Ln, Goodyear, AZ 85395, USA</a></span></span>
+            </li>
+          </ul>
+          <div class="socs">
+            <a href="https://www.linkedin.com/in/jillchristensen" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#li"/></svg></a>
+            <a href="https://www.facebook.com/JillChristensenInternational" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#fb"/></svg></a>
+            <a href="https://www.youtube.com/channel/UC4cgiW1hgHaCu69gTIThN3g" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#yt"/></svg></a>
+          </div>
+        </div>
+
+        <div class="form-card rv">
+          <span class="label">Inquiry</span>
+          <h2 class="h2">Tell Jill about your event.</h2>
+          <p class="intro lede">Share a few details and Jill&rsquo;s team will be in touch to talk dates, format, and how to tailor the message to your organization.</p>
+          <form id="contactForm" novalidate>
+            <div class="field-row two">
+              <div class="field">
+                <label for="fn">First Name <span class="req">*</span></label>
+                <input id="fn" type="text" name="first" autocomplete="given-name" required>
+              </div>
+              <div class="field">
+                <label for="ln">Last Name <span class="req">*</span></label>
+                <input id="ln" type="text" name="last" autocomplete="family-name" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="em">Email <span class="req">*</span></label>
+              <input id="em" type="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="cm">Comment</label>
+              <textarea id="cm" name="comment" placeholder="Tell us about your event, audience, and dates."></textarea>
+            </div>
+            <button class="btn solid" type="submit"><span>Send Your Inquiry</span> <svg><use href="#arw"/></svg></button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="wrap">
+      <span class="label">Your Next Event</span>
+      <h2 class="display">The one people talk about <span style="color:var(--lilac);">for the rest of the year.</span></h2>
+      <p>Prefer to skip the form? Email Jill directly and let&rsquo;s find a date.</p>
+      <div class="btns">
+        <a class="btn onDark" href="mailto:jill@jillchristensenintl.com"><span>Email Jill Directly</span> <svg><use href="#arw"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img class="foot-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="230" height="52">
+        <p style="margin-top:12px;font-size:15px;line-height:1.65;">Jill Christensen International LLC<br>3150 N 165th Ln, Goodyear, AZ 85395, USA</p>
+      </div>
+      <div>
+        <h5>Navigate</h5>
+        <a href="jill-christensen-homepage-revised.html">Home</a>
+        <a href="jill-christensen-homepage-revised.html#work">Speaking</a>
+        <a href="jill-christensen-books-blog.html">Books &amp; Blog</a>
+        <a href="jill-christensen-clients.html">Clients</a>
+        <a href="jill-christensen-about-preview.html">About</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="mailto:jill@jillchristensenintl.com">jill@jillchristensenintl.com</a>
+        <a href="tel:+13039999224">+1.303.999.9224</a>
+        <a href="https://www.linkedin.com/in/jillchristensen" target="_blank" rel="noopener">LinkedIn: /in/jillchristensen</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 Jill Christensen International LLC</span>
+      <span><a href="https://katek-ai.com" target="_blank" rel="noopener">Built by KATEK</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),navMenu=document.getElementById('navMenu');
+  var setOpen=function(o){nav.classList.toggle('open',o);burger.setAttribute('aria-expanded',o?'true':'false');document.body.style.overflow=o?'hidden':'';};
+  burger.addEventListener('click',function(){setOpen(!nav.classList.contains('open'));});
+  navMenu.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
+  document.addEventListener('click',function(e){if(nav.classList.contains('open')&&!e.target.closest('#navMenu')&&!e.target.closest('#burger'))setOpen(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>=1080)setOpen(false);});
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  }else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});}
+
+  var form=document.getElementById('contactForm'),note=document.getElementById('formNote');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var first=form.first.value.trim(),last=form.last.value.trim(),email=form.email.value.trim();
+    if(!first||!last||!email||email.indexOf('@')<1){
+      note.style.color='var(--accent)';
+      note.textContent='Please add your name and a valid email so Jill can reply.';
+      return;
+    }
+    var body=encodeURIComponent('Name: '+first+' '+last+'\nEmail: '+email+'\n\n'+form.comment.value.trim());
+    note.style.color='var(--ink-soft)';
+    note.textContent='Opening your email app…';
+    window.location.href='mailto:jill@jillchristensenintl.com?subject='+encodeURIComponent('Speaking inquiry from '+first+' '+last)+'&body='+body;
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Books &amp; Blog — Jill Christensen</title>
+<meta name="description" content="Jill Christensen's best-selling book 'If Not You, Who?' and 'Remote 101', plus her award-winning blog on employee engagement, leadership, and the future of work." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ffffff; --paper2:#f5f3fa; --paper3:#faf9fc;
+  --ink:#070459; --ink-soft:#4a487a;
+  --accent:#C007D9; --accent-2:#7B10D8; --lilac:#d8a6e6;
+  --rule:rgba(7,4,89,.13);
+  --display:'Jost',system-ui,-apple-system,sans-serif;
+  --sans:'Jost',system-ui,sans-serif;
+  --edit:'Instrument Serif',Georgia,serif;
+  --pad:clamp(18px,5vw,64px); --max:1280px;
+  --sec:clamp(44px,5.6vw,84px);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{background:var(--paper);color:var(--ink-soft);font-family:var(--sans);
+  font-size:clamp(15.5px,1vw,16.5px);line-height:1.68;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img,svg{max-width:100%;height:auto;display:block;}
+section{scroll-margin-top:70px;}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--pad);}
+h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:400;line-height:1.12;letter-spacing:-.02em;}
+.label{font-family:var(--edit);font-style:italic;font-weight:400;
+  font-size:clamp(21px,2.3vw,30px);line-height:1.1;color:var(--accent);display:block;}
+.eyebrow{font:600 10px/1.5 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--accent);display:block;}
+.display{font-size:clamp(29px,4.1vw,54px);line-height:1.08;letter-spacing:-.03em;font-weight:300;}
+.h2{font-size:clamp(25px,3.1vw,40px);line-height:1.14;letter-spacing:-.025em;font-weight:300;}
+.h3{font-size:clamp(20px,2.1vw,27px);line-height:1.2;letter-spacing:-.02em;font-weight:400;}
+.lede{font-size:clamp(15.5px,1.25vw,18px);line-height:1.62;}
+.pink{color:var(--accent);}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font:600 11px/1.35 var(--sans);letter-spacing:.15em;text-transform:uppercase;
+  padding:15px 26px;min-height:48px;cursor:pointer;text-align:center;white-space:normal;
+  transition:.22s;border:1px solid transparent;width:100%;}
+.btn svg{width:16px;height:10px;flex-shrink:0;}
+.btn.solid{background:var(--accent);color:#fff;}
+.btn.solid:hover{background:var(--ink);}
+.btn.line{border-color:var(--accent);color:var(--accent);background:transparent;}
+.btn.line:hover{background:var(--accent);color:#fff;}
+.btn.onDark{background:#fff;color:var(--ink);}
+.btn.onDark:hover{background:var(--accent);color:#fff;}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btns{display:flex;flex-wrap:wrap;gap:10px;}
+@media (min-width:560px){.btn{width:auto;}}
+
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+.js .rv.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;}html{scroll-behavior:auto;}}
+
+/* ===== NAV ===== */
+.nav{position:absolute;top:0;left:0;right:0;z-index:60;}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:16px;}
+.nav-logo{height:clamp(40px,4.4vw,58px);width:auto;filter:brightness(0) invert(1) drop-shadow(0 2px 12px rgba(0,0,0,.35));}
+.burger{display:flex;flex-direction:column;gap:5px;width:44px;height:44px;border:0;background:none;
+  cursor:pointer;align-items:center;justify-content:center;}
+.burger span{width:23px;height:1.5px;background:#fff;transition:.3s;}
+.nav.open .burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav.open .burger span:nth-child(2){opacity:0;}
+.nav.open .burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.nav-menu{position:absolute;top:100%;left:0;right:0;background:var(--ink);display:flex;flex-direction:column;
+  align-items:stretch;max-height:0;overflow:hidden;transition:max-height .35s,padding .35s;padding:0 var(--pad);}
+.nav.open .nav-menu{max-height:600px;padding:6px var(--pad) 22px;}
+.nav-menu a{font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#fff;
+  padding:15px 0;border-bottom:1px solid rgba(255,255,255,.14);min-height:44px;display:flex;align-items:center;}
+.nav-cta{display:flex;flex-direction:column;gap:10px;padding-top:16px;}
+.nav-cta .btn{width:100%;}
+@media (min-width:1080px){
+  .burger{display:none;}
+  .nav-menu{position:static;flex-direction:row;align-items:center;gap:clamp(16px,1.9vw,28px);
+    max-height:none;overflow:visible;padding:0;background:none;}
+  .nav-menu a{color:#fff;padding:4px 0;border:0;min-height:0;position:relative;transition:color .2s;}
+  .nav-menu a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;
+    background:var(--lilac);transition:right .25s;}
+  .nav-menu a:hover{color:var(--lilac);} .nav-menu a:hover::after{right:0;}
+  .nav-cta{flex-direction:row;padding-top:0;gap:8px;margin-left:6px;}
+  .nav-cta .btn{width:auto;min-height:40px;padding:11px 18px;font-size:10px;}
+}
+
+/* ===== HERO ===== */
+.phero{position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(150deg,#070459 0%,#170a6e 52%,#3a0b78 100%);}
+.phero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(120% 80% at 82% -10%,rgba(192,7,217,.34),transparent 60%);}
+.phero .wrap{position:relative;z-index:2;padding-block:clamp(120px,15vw,168px) clamp(44px,5.6vw,84px);text-align:center;}
+.phero .eyebrow{color:var(--lilac);}
+.phero h1{color:#fff;font-size:clamp(30px,5vw,62px);font-weight:300;line-height:1.06;letter-spacing:-.03em;
+  margin:14px auto 0;max-width:none;}
+@media (min-width:760px){.phero h1{white-space:nowrap;}}
+.phero h1 em{font-style:normal;color:var(--lilac);}
+.phero p{color:rgba(255,255,255,.9);max-width:60ch;margin:16px auto 0;font-size:clamp(15.5px,1.3vw,18px);line-height:1.6;}
+
+/* ===== BOOK BLOCKS ===== */
+.book{padding-block:var(--sec);}
+.book:nth-of-type(even){background:var(--paper2);}
+.book-grid{display:grid;grid-template-columns:1fr;gap:clamp(26px,4vw,60px);align-items:center;}
+.book-media{min-width:0;line-height:0;display:flex;justify-content:center;position:relative;}
+.book-media::before{content:"";position:absolute;inset:auto;width:70%;aspect-ratio:1;
+  background:radial-gradient(circle,rgba(192,7,217,.22),transparent 68%);filter:blur(46px);z-index:0;}
+.book-media img{position:relative;z-index:1;max-width:min(320px,80%);width:auto;
+  filter:drop-shadow(0 26px 52px rgba(7,4,89,.28));}
+.book-body{min-width:0;}
+.book-body .kick{font:600 9.5px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--accent);}
+.book-body h2{margin:8px 0 4px;}
+.book-body .sub{font-family:var(--display);font-weight:400;font-size:clamp(13px,1.2vw,15px);
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);}
+.book-body p{margin-top:14px;}
+.book-list{list-style:none;margin-top:16px;}
+.book-list li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:15px;line-height:1.5;color:var(--ink);}
+.book-list svg{width:14px;height:14px;flex-shrink:0;margin-top:4px;color:var(--accent);}
+.book-body .btns{margin-top:20px;}
+@media (min-width:860px){
+  .book-grid{grid-template-columns:.8fr 1.2fr;gap:clamp(40px,5vw,80px);}
+  .book.flip .book-media{order:2;}
+  .book.flip .book-body{order:1;}
+}
+
+/* ===== BLOG ===== */
+.blog{padding-block:var(--sec);background:var(--ink);color:#fff;position:relative;overflow:hidden;}
+.blog::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 88% -12%,rgba(192,7,217,.26),transparent 58%);}
+.blog .wrap{position:relative;z-index:1;}
+.blog .sechead{text-align:center;max-width:760px;margin:0 auto clamp(28px,3.6vw,48px);}
+.blog .label{color:var(--lilac);}
+.blog .sechead h2{color:#fff;margin-top:4px;}
+.blog .sechead p{color:rgba(255,255,255,.86);margin-top:12px;}
+.posts{display:grid;grid-template-columns:1fr;gap:clamp(18px,2.4vw,28px);}
+@media (min-width:760px){.posts{grid-template-columns:1fr 1fr;}}
+.post{display:flex;flex-direction:column;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.14);border-top:3px solid var(--accent);
+  padding:clamp(22px,2.6vw,32px);min-width:0;transition:transform .3s ease,background .3s ease,box-shadow .3s ease;}
+.post:hover{transform:translateY(-5px);background:rgba(255,255,255,.08);box-shadow:0 22px 46px rgba(0,0,0,.28);}
+.post .date{font:600 9.5px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--lilac);}
+.post h3{color:#fff;margin:10px 0 10px;font-size:clamp(18px,1.9vw,23px);line-height:1.24;}
+.post p{color:rgba(255,255,255,.82);font-size:15px;line-height:1.6;flex:1;}
+.post .more{margin-top:16px;font:600 10px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);
+  display:inline-flex;align-items:center;gap:8px;transition:gap .25s;}
+.post:hover .more{gap:14px;}
+.post .more svg{width:16px;height:10px;}
+.blog-more{text-align:center;margin-top:clamp(26px,3.2vw,40px);}
+.recent{margin-top:clamp(28px,3.4vw,44px);border-top:1px solid rgba(255,255,255,.16);padding-top:clamp(22px,2.6vw,32px);}
+.recent .rt{font:600 9.5px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--lilac);text-align:center;margin-bottom:16px;}
+.recent ul{list-style:none;display:grid;grid-template-columns:1fr;gap:2px;max-width:820px;margin:0 auto;}
+.recent li a{display:block;padding:11px 0;font-size:15px;color:rgba(255,255,255,.85);
+  border-bottom:1px solid rgba(255,255,255,.12);transition:color .2s;}
+.recent li a:hover{color:var(--lilac);}
+
+/* ===== SUBSCRIBE / CTA ===== */
+.sub-band{position:relative;overflow:hidden;color:#fff;text-align:center;padding-block:var(--sec);
+  background:var(--ink) url('https://cdn.katalyst-crm.com/t1/5%20(2).png') center/cover no-repeat;}
+.sub-band::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(150deg,rgba(7,4,89,.90) 0%,rgba(23,10,110,.86) 52%,rgba(58,11,120,.88) 100%);}
+.sub-band::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 15% 110%,rgba(192,7,217,.34),transparent 60%);}
+.sub-band .wrap{position:relative;z-index:1;max-width:1560px;}
+.sub-band .label{color:var(--lilac);}
+.sub-band h2{color:#fff;max-width:none;margin:4px auto 12px;}
+.sub-band p{color:rgba(255,255,255,.92);max-width:none;margin:0 auto;}
+@media (min-width:820px){
+  .sub-band h2,.sub-band p{white-space:nowrap;}
+}
+.sub-band .btns{justify-content:center;margin-top:22px;}
+
+/* ===== FOOTER ===== */
+.foot{background:var(--ink);color:rgba(255,255,255,.8);padding-block:clamp(36px,4.4vw,60px) 32px;}
+.foot .cols{display:grid;grid-template-columns:1fr;gap:24px;}
+.foot-logo{height:clamp(48px,4.4vw,62px);width:auto;filter:brightness(0) invert(1);}
+.foot h5{font:600 10px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--lilac);margin-bottom:12px;}
+.foot a{display:block;padding:6px 0;font-size:15px;color:rgba(255,255,255,.8);transition:color .2s;}
+.foot a:hover{color:var(--lilac);}
+.foot .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
+  margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);
+  font-size:11px;letter-spacing:.06em;text-transform:uppercase;}
+.foot .legal a{display:inline;padding:0;border-bottom:1px solid currentColor;}
+@media (min-width:760px){.foot .cols{grid-template-columns:1.5fr 1fr 1fr;gap:clamp(24px,3.4vw,54px);}}
+
+.book-body p,.post p{overflow-wrap:anywhere;}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+<svg style="position:absolute;width:0;height:0" aria-hidden="true">
+  <symbol id="arw" viewBox="0 0 36 11"><path d="M0 5.5h33M28 1l5 4.5L28 10" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  <symbol id="chk" viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+</svg>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="jill-christensen-homepage-revised.html"><img class="nav-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="260" height="58"></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="jill-christensen-homepage-revised.html">Home</a>
+      <a href="jill-christensen-homepage-revised.html#work">Speaking</a>
+      <a href="jill-christensen-books-blog.html">Books &amp; Blog</a>
+      <a href="jill-christensen-clients.html">Clients</a>
+      <a href="jill-christensen-about-preview.html">About</a>
+      <div class="nav-cta">
+        <a class="btn solid" href="jill-christensen-book-jill.html">Book Jill</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="phero">
+    <div class="wrap">
+      <span class="eyebrow">Books &amp; Blog</span>
+      <h1>Ideas that <em>inspire employees to soar.</em></h1>
+      <p>A global best-seller, a practical field guide for remote teams, and an award-winning blog ranked alongside Apple and Microsoft &mdash; everything Jill knows about building workplaces people can&rsquo;t imagine leaving.</p>
+    </div>
+  </section>
+
+  <!-- ===== BOOK 1 ===== -->
+  <section class="book">
+    <div class="wrap">
+      <div class="book-grid rv">
+        <div class="book-media">
+          <img src="https://jillchristensenintl.com/wp-content/uploads/2024/09/book-of-jill-christensen.png" alt="If Not You, Who? by Jill Christensen" loading="lazy">
+        </div>
+        <div class="book-body">
+          <span class="kick">Best-Selling Book &middot; Third Edition (2026)</span>
+          <h2 class="display">If Not You, Who?</h2>
+          <p class="sub">Cracking the Code of Employee Disengagement</p>
+          <p>Now in its Third Edition, this best-seller is a must-have for anyone striving to build a workplace no one can imagine leaving. Inside, Jill reveals:</p>
+          <ul class="book-list">
+            <li><svg><use href="#chk"/></svg><span>The ugly truths about global employee engagement</span></li>
+            <li><svg><use href="#chk"/></svg><span>Why most engagement initiatives fail</span></li>
+            <li><svg><use href="#chk"/></svg><span>How to engage managers and senior leaders in your culture journey</span></li>
+            <li><svg><use href="#chk"/></svg><span>A proven strategy you can apply immediately to re-engage employees</span></li>
+            <li><svg><use href="#chk"/></svg><span>Clarity on next steps and inspiration to achieve your goals</span></li>
+          </ul>
+          <div class="btns">
+            <a class="btn solid" href="https://www.amazon.com/Cracking-Code-Employee-Disengagement-Second/dp/0997476400/" target="_blank" rel="noopener"><span>Book or Audiobook on Amazon</span> <svg><use href="#arw"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOK 2 ===== -->
+  <section class="book flip">
+    <div class="wrap">
+      <div class="book-grid rv">
+        <div class="book-media">
+          <img src="https://cdn.katalyst-crm.com/t1/image-13-2.png" alt="Remote 101 by Jill Christensen" loading="lazy">
+        </div>
+        <div class="book-body">
+          <span class="kick">Field Guide for Managers</span>
+          <h2 class="display">Remote 101</h2>
+          <p class="sub">The Secret to Engaging Virtual Workers</p>
+          <p>This book uncovers proven tactics that make your life as a manager easier. You&rsquo;ll learn:</p>
+          <ul class="book-list">
+            <li><svg><use href="#chk"/></svg><span>What the future of work holds</span></li>
+            <li><svg><use href="#chk"/></svg><span>The one thing you must know to keep remote employees engaged, enthused, and effective</span></li>
+            <li><svg><use href="#chk"/></svg><span>The four primary needs of remote workers</span></li>
+            <li><svg><use href="#chk"/></svg><span>Secrets and proven tactics to engage virtual employees</span></li>
+            <li><svg><use href="#chk"/></svg><span>Simple ways to measure your success</span></li>
+          </ul>
+          <div class="btns">
+            <a class="btn solid" href="https://www.amazon.com/Remote-101-Engaging-Virtual-Workers/dp/0997476419/" target="_blank" rel="noopener"><span>Book on Amazon</span> <svg><use href="#arw"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG ===== -->
+  <section class="blog" id="blog">
+    <div class="wrap">
+      <div class="sechead rv">
+        <span class="label">The Blog</span>
+        <h2 class="display">Inspire Employees to Soar</h2>
+        <p>An award-winning blog on engagement, leadership, and the future of work &mdash; named a Top 100 Corporate Blog alongside Apple and Microsoft.</p>
+      </div>
+
+      <div class="posts rv">
+        <article class="post">
+          <span class="date">31 July 2026</span>
+          <h3>Mental Health Is No Longer an HR Issue. It&rsquo;s a Leadership Issue.</h3>
+          <p>A survey of 20,000 employees found nearly half felt depressed by their work at least sometimes. The fix is surprisingly simple &mdash; give people more autonomy. When people are mentally healthier, they don&rsquo;t just feel better. They perform better.</p>
+          <a class="more" href="https://jillchristensenintl.com/mental-health-is-no-longer-an-hr-issue-its-a-leadership-issue/" target="_blank" rel="noopener">Read More <svg><use href="#arw"/></svg></a>
+        </article>
+        <article class="post">
+          <span class="date">3 July 2026</span>
+          <h3>The One Quality That Still Gets You Hired in the Age of AI</h3>
+          <p>Employers face a different problem than the headlines suggest: finding exceptional people. The deciding factor is a strong work ethic &mdash; and the candidates who pair it with AI skills hold a powerful competitive advantage.</p>
+          <a class="more" href="https://jillchristensenintl.com/the-one-quality-that-still-gets-you-hired-in-the-age-of-ai/" target="_blank" rel="noopener">Read More <svg><use href="#arw"/></svg></a>
+        </article>
+      </div>
+
+      <div class="recent rv">
+        <div class="rt">More Recent Posts</div>
+        <ul>
+          <li><a href="https://jillchristensenintl.com/meta-made-billions-so-why-are-employees-miserable/" target="_blank" rel="noopener">Meta Made Billions. So Why Are Employees Miserable?</a></li>
+          <li><a href="https://jillchristensenintl.com/burned-out-managers-are-killing-performance-retention-and-growth/" target="_blank" rel="noopener">Burned-Out Managers Are Killing Performance, Retention, and Growth</a></li>
+          <li><a href="https://jillchristensenintl.com/ai-isnt-eliminating-management-its-redefining-it/" target="_blank" rel="noopener">AI Isn&rsquo;t Eliminating Management &mdash; It&rsquo;s Redefining It</a></li>
+        </ul>
+      </div>
+
+      <div class="blog-more">
+        <a class="btn onDark" href="https://jillchristensenintl.com/blog/" target="_blank" rel="noopener"><span>Visit the Full Blog</span> <svg><use href="#arw"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUBSCRIBE ===== -->
+  <section class="sub-band">
+    <div class="wrap">
+      <span class="label">Join Our Community</span>
+      <h2 class="display">Get Jill&rsquo;s latest thinking <span style="color:var(--lilac);">in your inbox.</span></h2>
+      <p>New ideas on culture, engagement, and leadership &mdash; delivered straight to you.</p>
+      <div class="btns">
+        <a class="btn onDark" href="http://proze.jillchristensenintl.com/u/lp/Employee-Engagement/t/c-c8jKx6q2RXVEDv-QIOpsHBtY2RXQ-QdgZiWeM-QkW8Ab/m/e/Newsletter-Sign-Up.htm" target="_blank" rel="noopener"><span>Subscribe Now</span> <svg><use href="#arw"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img class="foot-logo" src="https://cdn.katalyst-crm.com/t1/Ekran%20Resmi%202026-07-20%2000.26.38%201.png" alt="Jill Christensen" width="230" height="52">
+        <p style="margin-top:12px;font-size:15px;line-height:1.65;">Jill Christensen International LLC<br>Goodyear, Arizona, USA</p>
+      </div>
+      <div>
+        <h5>Navigate</h5>
+        <a href="jill-christensen-homepage-revised.html">Home</a>
+        <a href="jill-christensen-homepage-revised.html#work">Speaking</a>
+        <a href="jill-christensen-books-blog.html">Books &amp; Blog</a>
+        <a href="jill-christensen-clients.html">Clients</a>
+        <a href="jill-christensen-about-preview.html">About</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="mailto:jill@jillchristensenintl.com">jill@jillchristensenintl.com</a>
+        <a href="tel:+13039999224">+1.303.999.9224</a>
+        <a href="https://www.linkedin.com/in/jillchristensen" target="_blank" rel="noopener">LinkedIn: /in/jillchristensen</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 Jill Christensen International LLC</span>
+      <span><a href="https://katek-ai.com" target="_blank" rel="noopener">Built by KATEK</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),navMenu=document.getElementById('navMenu');
+  var setOpen=function(o){nav.classList.toggle('open',o);burger.setAttribute('aria-expanded',o?'true':'false');document.body.style.overflow=o?'hidden':'';};
+  burger.addEventListener('click',function(){setOpen(!nav.classList.contains('open'));});
+  navMenu.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
+  document.addEventListener('click',function(e){if(nav.classList.contains('open')&&!e.target.closest('#navMenu')&&!e.target.closest('#burger'))setOpen(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>=1080)setOpen(false);});
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  }else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});}
+
+  /* keep the hero headline on one line at any desktop width */
+  var h1=document.querySelector('.phero h1');
+  function fitEl(el,floor,bp){
+    if(!el)return;
+    el.style.fontSize='';
+    if(window.innerWidth<bp)return;
+    var size=parseFloat(getComputedStyle(el).fontSize),guard=0;
+    while(el.scrollWidth>el.clientWidth+0.5&&size>floor&&guard++<400){
+      size-=0.5;el.style.fontSize=size+'px';
+    }
+  }
+  function fitH1(){
+    fitEl(h1,18,760);
+    fitEl(document.querySelector('.sub-band h2'),18,820);
+    fitEl(document.querySelector('.sub-band p'),12,820);
+  }
+  fitH1();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitH1);
+  window.addEventListener('load',fitH1);
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(fitH1,120);});
+})();
+</script>
+</body>
+</html>
